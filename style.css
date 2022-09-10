@@ -26,6 +26,11 @@ body {
   padding: 50px;
 }
 
+.name {
+  font-weight: bold;
+  font-size: 36px;
+}
+
 .navbar-lewagon {
   justify-content: space-between;
   margin-bottom: 64px;
