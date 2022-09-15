@@ -247,6 +247,15 @@ body {
   width: 40px;
 }
 
+.digital-business-card a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.digital-business-card a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
 
 
 /* -----------  RESPONSIVE ----------- */
