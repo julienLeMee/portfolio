@@ -1,13 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Encode+Sans+Condensed:wght@100&family=Poiret+One&family=Poppins:wght@200;400&family=Press+Start+2P&family=Teko:wght@300&family=VT323&display=swap');
-/* font-family: 'Anton', sans-serif;
-font-family: 'Encode Sans Condensed', sans-serif;
-font-family: 'Poiret One', cursive;
-font-family: 'Press Start 2P', cursive;
-font-family: 'Teko', sans-serif;
-font-family: 'VT323', monospace;
-font-family: 'Poppins', sans-serif;
-background-color: #3b3b3b; */
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500&display=swap');
 * {
   box-sizing: border-box;
   margin: 0;
@@ -15,12 +6,17 @@ background-color: #3b3b3b; */
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
-  font-weight: lighter;
+  font-family: 'Roboto', sans-serif;
   letter-spacing: 0.5px;
   font-size: 16px;
   background-color: rgb(20, 20, 20);
-  color: #ffffff;
+  color: rgb(21, 21, 21);
+}
+
+.main-content {
+  height: 100vh;
+  width: 100v;
+  background-color: #DFDBD9;
 }
 
 .main-bloc {
@@ -29,13 +25,27 @@ body {
 
 .name {
   font-weight: bold;
-  font-size: 36px;
+  font-size: 100px;
+  margin-top: 150px;
+  color: #E85914;
+}
+
+.navbar {
+  transition: 0.3s ease-in-out;
 }
 
 .navbar-lewagon {
   justify-content: space-between;
-  margin-bottom: 64px;
   position: relative;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.scrolled {
+  background-color: rgba(21, 21, 21);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -46,35 +56,40 @@ body {
   width: 200px;
 }
 
-.avatar {
-  position: absolute;
-  top: -60px;
-  left: -90px;
+.barre {
+  width: 100%;
+  margin-right: 16px;
+  margin-left: 16px;
+  height: 4px;
+  background-color: rgb(21, 21, 21);
 }
 
 .nav-link {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgb(21, 21, 21);
 }
 
 .nav-link:hover {
-  color: #fff;
+  color: rgba(21, 21, 21, 0.5);
+  text-decoration: underline;
 }
 
 .about {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgb(21, 21, 21);
 }
 
 .about-english {
-  color: rgba(255, 255, 255, 0.5);
-  margin-bottom: 81px;
+  /* color: rgb(21, 21, 21);
+  margin-bottom: 81px; */
+  display: none;
 }
 
 .about-meet-ball {
+  color: #DFDBD9;
   margin-bottom: 150px;
 }
 
 .phrase-projet {
-  color: rgba(255, 255, 255, 0.5);
+  color: #DFDBD9;
   font-size: 16px;
   font-weight: lighter;
 }
@@ -110,29 +125,32 @@ body {
 }
 
 .card-meet-ball {
-  background-color: #AEE7FA;
+  background-color: #DFDBD9;
+  color: rgb(21, 21, 21);
 }
 
 .card-meet-ball:hover {
-  box-shadow: 0 10px 30px rgba(255,255,255,.5);
+  box-shadow: 0 1px 30px rgb(231, 88, 20);
 }
 
 .card-airbingame {
-  background-color: #6BD490;
+  background-color: #DFDBD9;
+  color: rgb(21, 21, 21);
 }
 
 .card-airbingame:hover {
-  box-shadow: 0 10px 30px rgba(255,255,255,.5);
+  box-shadow: 0 1px 30px rgb(231, 88, 20);
 }
 
 .card-experience {
-  background-color: #EAC4D5;
+  background-color: #DFDBD9;
+  color: rgb(21, 21, 21);
   width: 600px;
-  height: 250px;
+  height: 350px;
 }
 
 .card-experience:hover {
-  box-shadow: 0 10px 30px rgba(255,255,255,.5);
+  box-shadow: 0 1px 30px rgb(231, 88, 20);
 }
 
 .footer {
@@ -253,6 +271,7 @@ body {
 .digital-business-card a {
   color: #fff;
   text-decoration: none;
+  font-weight: lighter;
 }
 
 .digital-business-card a:hover {
@@ -270,6 +289,37 @@ body {
   width: 120px;
   margin-left: 16px;
 }
+
+.title {
+  color: #DFDBD9;
+}
+
+.contact {
+  text-decoration: none;
+  font-weight: bold;
+  color: #E85914;
+  font-size: 35px;
+  transform:rotate(-90deg);
+}
+
+.contact:hover {
+  text-decoration: underline;
+  color: #E85914;
+}
+
+.linkedin {
+  text-decoration: none;
+  font-weight: bold;
+  color: #E85914;
+  font-size: 35px;
+  margin-right: 16px;
+}
+
+.linkedin:hover {
+  text-decoration: underline;
+  color: #E85914;
+}
+
 
 /* -----------  RESPONSIVE ----------- */
 

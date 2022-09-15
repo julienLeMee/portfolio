@@ -12,59 +12,54 @@
 <title>Julien Le Mée</title>
 </head>
 <body>
-  <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <div id="navbar" class="navbar navbar-expand-sm navbar-light navbar-lewagon">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">
-        <img class="avatar" src="ressources/profil-pixel.png">
-      </a>
+      <div class="barre"></div>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse mt-2" id="navbarSupportedContent">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#XP">Compétences</a>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="#projets">Projets</a>
-            </li>
-            <li class="nav-item dropdown">
-              <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <a class="dropdown-item" data-turbo-method="delete" href="#">Log out</a>
-              </div>
-            </li>
-            <!--li class="nav-item"-->
-            <!--/li-->
+          <li class="nav-item">
+            <a class="nav-link" href="#XP">Compétences</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#projets">Projets</a>
+          </li>
+          <li class="nav-item dropdown">
+            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" data-turbo-method="delete" href="#">Log out</a>
+            </div>
+          </li>
         </ul>
       </div>
     </div>
   </div>
-
-  <div class="container main-bloc">
-    <div class="d-flex justify-content-center flex-column">
-      <h1 class="name">HI, I'M JULIEN LE MEE</h1>
-      <h2>Web développeur Full-Stack.</h2>
+  <div class="main-content d-flex flex-column justify-content-around">
+    <div class="container">
+      <div class="d-flex justify-content-center flex-column">
+        <h1 class="name">JULIEN <br> LE MEE</h1>
+        <h2>Web développeur Full-Stack.</h2>
+      </div>
+      <p class="mt-3 about">Diplômé du bootcamp Le Wagon, j'opère un changement de carrière en me perfectionnant dans le développement web et mobile.
+        Je souhaite continuer à développer mes compétences, continuer à apprendre, et explorer toutes les possibilités qu'offre le métier de développeur web Full-Stack.</p>
+        <br>
+        <p class="about-english">
+          Graduate Full Stack Web Development training at Wagon Montreal.
+          Always passionate about new technologies, I challenge myself to learn to code in the Wagon.
+          I want to learn web development and have the necessary skills to continue progressing after the bootcamp. <br> I would like to improve in the development of mobile applications and then work in the world of video games.
+        </p>
+      </div>
+      <div class="button-on-top d-flex justify-content-end me-4">
+        <a class="linkedin" href="https://www.linkedin.com/in/julien-le-mee/">LinkedIn</a>
+      </div>
     </div>
-    <p class="mt-3 about">Diplômé du bootcamp Le Wagon, j'opère un changement de carrière en me perfectionnant dans le développement web et mobile.
-      Je souhaite continuer à développer mes compétences, continuer à apprendre, et explorer toutes les possibilités qu'offre le métier de développeur web Full-Stack.</p>
-      <br>
-      <p class="about-english">
-      Graduate Full Stack Web Development training at Wagon Montreal.
-      Always passionate about new technologies, I challenge myself to learn to code in the Wagon.
-      I want to learn web development and have the necessary skills to continue progressing after the bootcamp. <br> I would like to improve in the development of mobile applications and then work in the world of video games.
-    </p>
-    <br>
-    <div class="button-on-top">
-        <a class="btn btn-primary linkedin-button" href="https://www.linkedin.com/in/julien-le-mee/"><i class="fab fa-linkedin"></i> LinkedIn</a>
-        <a class="btn btn-secondary mail-button" href="mailto:julemee@gmail.com"><i class="fa-regular fa-envelope"></i> Mail</a>
-    </div>
-    <h2 class="mt-5" id="projets">Projets</h2>
+    <div class="container mt-5">
+    <a class="contact" href="mailto:julemee@gmail.com">Contact</a>
+    <h2 class="mt-5 title" id="projets">Projets</h2>
     <h4 class="mb-5 phrase-projet">Projets réalisés en équipe pendant le bootcamp Le Wagon</h4>
     <div class="project-cards">
       <div class="d-flex justify-content-center">
@@ -85,7 +80,7 @@
         </div>
       </div>
       <br>
-      </div>
+    </div>
       <div class="container">
         <div class="card-trip mt-5">
           <img src="ressources/meetball-banner.png" />
@@ -110,10 +105,10 @@
         </p>
       </div>
         <div class="container mt-5 d-flex flex-column">
-          <h3 class="mb-4">Expériences</h3>
+          <h3 class="mb-4 title">Formations</h3>
           <div class="d-flex justify-content-center">
             <div class="card-project card-experience">
-              <h2>10 semaines de coding bootcamp</h2>
+              <h2>10 semaines de coding bootcamp <br> LE WAGON</h2>
               <h4 class="year-cards">2022</h4>
               <hr>
               <p>Cours théoriques et challenges quotidiens pendant 10 semaines, sur différents langages tels que: <br>
@@ -124,7 +119,7 @@
           </div>
         </div>
       <div class="container mt-5 d-flex flex-column justify-content-center">
-        <h3 id="XP" class="mb-4">Compétences</h3>
+        <h3 id="XP" class="mb-4 title">Compétences</h3>
         <ul class="d-flex align-items-center justify-content-around skills">
           <li><img src="ressources/ruby-logo.png" alt="ruby"></li>
           <li><img src="ressources/html-logo.png" alt="html"></li>
@@ -141,14 +136,15 @@
         </ul>
       </div>
       <div class="container mt-5 d-flex flex-column justify-content-center">
-        <h3 class="mb-4">Currently learning</h3>
+        <h3 class="mb-4 title">Currently learning</h3>
         <ul class="d-flex align-items-center justify-content-around skills p-0">
           <li><img src="ressources/react-logo.png" alt="ruby"></li>
         </ul>
       </div>
-      <h4 class="text-center digital-business-card">☞ <a href="https://edigital-business-card.netlify.app"> Digital business card fait avec React</a></h4>
-   </div>
-   <hr>
+      <h4 class="text-center digital-business-card"><a href="https://edigital-business-card.netlify.app"> Digital business card fait avec React</a></h4>
+    </div>
+  </div>
+   <hr class="title">
    <div class="footer d-flex justify-content-center">
     <div class="footer-links mb-3">
       <a href="https://github.com/julienLeMee"><i class="fab fa-github"></i></a>
