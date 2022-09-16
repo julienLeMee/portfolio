@@ -25,9 +25,17 @@ body {
 
 .name {
   font-weight: bold;
-  font-size: 100px;
-  margin-top: 150px;
+  font-size: 180px;
+  letter-spacing: -12px;
+  line-height: 0.8;
+  margin-top: 100px;
   color: #E85914;
+  margin-right: 48px;
+}
+
+.intro {
+  max-width: 400px;
+  margin-top: 300px;
 }
 
 .navbar {
