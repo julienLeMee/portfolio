@@ -33,10 +33,9 @@ body {
   color: #E85914;
 }
 
-/* .name span {
-  font-style: italic;
-  margin-right: 8px;
-} */
+.name span {
+  font-size: 95px;
+}
 
 .intro {
   max-width: 400px;
@@ -393,6 +392,10 @@ body {
     width: 100%;
     margin: 0;
     text-align: center;
+  }
+
+  .name span {
+    font-size: 95px;
   }
 
   .linkedin {
