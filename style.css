@@ -21,30 +21,44 @@ body {
 }
 
 .main-bloc {
+  margin-top: 48px;
   padding:30px;
-}
-
-.name {
-  font-weight: 900;
-  font-size: 180px;
-  letter-spacing: -12px;
-  line-height: 0.8;
-  margin-top: 100px;
-  color: #E85914;
+  opacity: 0;
+  animation: apparition 0.3s ease-in-out 0.5s forwards;
 }
 
 .name span {
-  font-size: 95px;
+  font-weight: 900;
+  font-size: 150px;
+  letter-spacing: -8px;
+  line-height: 0.8;
+  color: #E85914;
+  display: inline-block;
+}
+
+.name h1 > span:nth-child(1) {
+  animation: apparition 0.4s ease-in-out 0.5s forwards;
+  transform: translateX(-30px);
+}
+
+.name span:nth-child(2) {
+  animation: apparition 0.8s ease-in-out 0.5s forwards;
+  transform: translateX(-30px);
 }
 
 .intro {
   max-width: 400px;
   margin-top: 300px;
   margin-left: 32px;
+  animation: apparition 0.6s ease-in-out 0.5s forwards;
+  transform: translateX(30px);
 }
 
 .navbar {
-  transition: 0.3s ease-in-out;
+  /* transition: 0.3s ease-in-out; */
+  opacity: 0;
+  transform: translateY(-30px);
+  animation: apparition 1s ease-in-out 0.5s forwards;
 }
 
 .navbar-lewagon {
@@ -59,14 +73,6 @@ body {
 .scrolled {
   background-color: rgba(21, 21, 21);
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
-}
-
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
-}
-
-.navbar-lewagon .navbar-brand img {
-  width: 200px;
 }
 
 .barre {
@@ -89,7 +95,9 @@ body {
 }
 
 .bloc-title {
-  width: 100vw;
+  width: 100%;
+  margin-left: 12px;
+  justify-content: space-between;
 }
 
 .nav-link {
@@ -118,6 +126,7 @@ body {
   color: #DFDBD9;
   font-size: 16px;
   font-weight: lighter;
+  margin-left: 16px;
 }
 
 .card-project {
@@ -326,6 +335,8 @@ body {
   font-size: 35px;
   margin-right: 16px;
   margin-bottom: 32px;
+  transform: translateX(-30px);
+  animation: apparition 1s ease-in-out 0.5s forwards;
 }
 
 .linkedin:hover {
@@ -361,6 +372,17 @@ body {
   text-decoration: underline;
   background-color: #DFDBD9;
   color: rgb(20, 20, 20);
+}
+
+.button-on-top {
+  margin-bottom: 48px;
+}
+
+@keyframes apparition {
+  100% {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 
