@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500&display=swap');
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -11,11 +12,12 @@ body {
   font-size: 16px;
   background-color: rgb(20, 20, 20);
   color: rgb(21, 21, 21);
+  scroll-behavior: smooth;
 }
 
 .main-content {
   height: 100vh;
-  width: 100v;
+  width: 100wh;
   background-color: #DFDBD9;
 }
 
@@ -25,9 +27,17 @@ body {
 
 .name {
   font-weight: bold;
-  font-size: 100px;
-  margin-top: 150px;
+  font-size: 180px;
+  letter-spacing: -12px;
+  line-height: 0.8;
+  margin-top: 100px;
   color: #E85914;
+  margin-right: 48px;
+}
+
+.intro {
+  max-width: 400px;
+  margin-top: 300px;
 }
 
 .navbar {
@@ -69,7 +79,7 @@ body {
 }
 
 .nav-link:hover {
-  color: rgba(21, 21, 21, 0.5);
+  color: #E85914;
   text-decoration: underline;
 }
 
@@ -78,8 +88,6 @@ body {
 }
 
 .about-english {
-  /* color: rgb(21, 21, 21);
-  margin-bottom: 81px; */
   display: none;
 }
 
@@ -127,6 +135,7 @@ body {
 .card-meet-ball {
   background-color: #DFDBD9;
   color: rgb(21, 21, 21);
+  width: 100%;
 }
 
 .card-meet-ball:hover {
@@ -136,6 +145,7 @@ body {
 .card-airbingame {
   background-color: #DFDBD9;
   color: rgb(21, 21, 21);
+  width: 100%;
 }
 
 .card-airbingame:hover {
@@ -172,36 +182,6 @@ body {
 }
 .footer-links a:hover {
   opacity: 1;
-}
-
-.btn-ghost {
-  color: #fff;
-  background-color: #4A4A4A;
-  padding: 8px 24px;
-  border-radius: 8px;
-  transition: opacity 0.3s ease;
-  margin-left: 30px;
-}
-
-.btn-ghost:hover {
-  border: 1px solid #fff;
-  opacity: 1;
-  text-decoration: underline;
-}
-
-.btn-flat {
-  color: white;
-  padding: 8px 24px;
-  border-radius: 8px;
-  background: rgb(20, 20, 20);
-  transition: background 0.3s ease;
-  width: 130px;
-}
-
-.btn-flat:hover {
-  background: #4A4A4A;
-  color: white;
-  text-decoration: underline;
 }
 
 .skills {
@@ -279,17 +259,6 @@ body {
   text-decoration: underline;
 }
 
-.linkedin-button {
-  font-weight: lighter;
-  width: 120px;
-}
-
-.mail-button {
-  font-weight: lighter;
-  width: 120px;
-  margin-left: 16px;
-}
-
 .title {
   color: #DFDBD9;
 }
@@ -298,13 +267,37 @@ body {
   text-decoration: none;
   font-weight: bold;
   color: #E85914;
+  border: 1px solid #E85914;
+  border-radius: 16px;
+  padding: 8px 16px;
   font-size: 35px;
-  transform:rotate(-90deg);
+  width: 48px;
+  /* transform:rotate(-90deg); */
+}
+
+.github {
+  text-decoration: none;
+  font-weight: bold;
+  background-color: #E85914;
+  font-size: 35px;
+  border: 1px solid #E85914;
+  border-radius: 16px;
+  padding: 8px 16px;
+  width: 48px;
+  color: #DFDBD9;
+}
+
+.github:hover {
+  text-decoration: underline;
+  color: #E85914;
+  border: 1px solid #E85914;
+  background-color: #DFDBD9;
 }
 
 .contact:hover {
   text-decoration: underline;
-  color: #E85914;
+  background-color: #E85914;
+  color: #DFDBD9;
 }
 
 .linkedin {
@@ -313,6 +306,7 @@ body {
   color: #E85914;
   font-size: 35px;
   margin-right: 16px;
+  margin-bottom: 32px;
 }
 
 .linkedin:hover {
@@ -320,18 +314,88 @@ body {
   color: #E85914;
 }
 
+.main-bloc {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
 
-/* -----------  RESPONSIVE ----------- */
+.projets {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-flat {
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+  background-color: rgb(21, 21, 21);
+  color: #DFDBD9;
+  border: 1px solid rgb(20, 20, 20);
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 150px;
+}
+
+.btn-flat:hover {
+  text-decoration: underline;
+  background-color: #DFDBD9;
+  color: rgb(20, 20, 20);
+}
+
+
+/* ----------------------  RESPONSIVE ---------------------- */
 
 
 @media (max-width: 768px) {
 
-  .about-english {
+  .main-bloc {
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  .title {
+    text-align: center;
+  }
+
+  .name {
+    font-size: 100px;
+    letter-spacing: -3px;
+    margin-left: 16px;
+    width: 100%;
+  }
+
+  .linkedin {
+    margin-top: 400px;
+    margin-bottom: 0;
+    margin-right: 0;
+  }
+
+  .projets {
+    flex-direction: column;
+    margin: 16px;
+  }
+
+  .intro {
+    margin-top: 32px;
+    margin-right: 45px;
+    width: 100%;
+  }
+
+  .function {
+    font-size: 32px;
+  }
+
+  .about {
     display: none;
   }
 
   .card-project {
-    height: 400px;
+    height: 300px;
     font-size: 12px;
   }
 
@@ -347,6 +411,11 @@ body {
   .card-experience {
     width: 400px;
     height: 300px;
+    margin: 16px;
+  }
+
+  .barre {
+    display: none;
   }
 
 }
