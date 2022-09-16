@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;900&display=swap');
 * {
   box-sizing: border-box;
   margin: 0;
@@ -22,22 +21,27 @@ body {
 }
 
 .main-bloc {
-  padding: 50px;
+  padding:30px;
 }
 
 .name {
-  font-weight: bold;
+  font-weight: 900;
   font-size: 180px;
   letter-spacing: -12px;
   line-height: 0.8;
   margin-top: 100px;
   color: #E85914;
-  margin-right: 48px;
 }
+
+/* .name span {
+  font-style: italic;
+  margin-right: 8px;
+} */
 
 .intro {
   max-width: 400px;
   margin-top: 300px;
+  margin-left: 32px;
 }
 
 .navbar {
@@ -70,8 +74,23 @@ body {
   width: 100%;
   margin-right: 16px;
   margin-left: 16px;
-  height: 4px;
+  height: 3px;
   background-color: rgb(21, 21, 21);
+}
+
+.barre-orange {
+  width: 100%;
+  margin-left: 16px;
+  height: 2px;
+  background-color: #E85914;
+}
+
+.second-bloc {
+  margin-top: 72px;
+}
+
+.bloc-title {
+  width: 100vw;
 }
 
 .nav-link {
@@ -189,6 +208,7 @@ body {
   margin-top: 32px;
   flex-wrap: wrap;
   display: flex;
+  padding: 0;
 }
 
 .skills li {
@@ -350,6 +370,10 @@ body {
 
 @media (max-width: 768px) {
 
+  .navbar {
+    display: none;
+  }
+
   .main-bloc {
     flex-direction: column;
     position: absolute;
@@ -367,10 +391,12 @@ body {
     letter-spacing: -3px;
     margin-left: 16px;
     width: 100%;
+    margin: 0;
+    text-align: center;
   }
 
   .linkedin {
-    margin-top: 400px;
+    margin-top: 300px;
     margin-bottom: 0;
     margin-right: 0;
   }
@@ -397,6 +423,7 @@ body {
   .card-project {
     height: 300px;
     font-size: 12px;
+    margin: 0;
   }
 
   .card-project a {
@@ -416,6 +443,16 @@ body {
 
   .barre {
     display: none;
+  }
+
+  .github {
+    font-size: 24px;
+    border-radius: 10px;
+  }
+
+  .contact {
+    font-size: 24px;
+    border-radius: 10px;
   }
 
 }
