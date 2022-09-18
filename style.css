@@ -380,6 +380,16 @@ body {
   margin-bottom: 48px;
 }
 
+.unity-logo {
+  height: 48px;
+  object-fit: cover;
+  margin: 32px;
+}
+
+.currently-skills li:nth-child(2) {
+  width: 200px;
+}
+
 @keyframes apparition {
   100% {
     opacity: 1;
