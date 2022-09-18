@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@200;300;400&display=swap');
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -201,7 +203,7 @@ body {
 }
 .footer-links a {
   color: #fff;
-  opacity: 0.15;
+  opacity: 0.5;
   text-decoration: none;
   font-size: 32px;
   padding: 0px 10px;
