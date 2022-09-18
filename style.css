@@ -29,6 +29,25 @@ body {
   animation: apparition 0.3s ease-in-out 0.5s forwards;
 }
 
+.circle {
+  display: flex;
+  width: 640px;
+  height: 640px;
+  border-radius: 50%;
+  background-color: #F2F2F2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  filter: blur(24px);
+  z-index: -1;
+  box-shadow: 0 0 0 1px #E85914;
+}
+
+#arrow {
+  margin-left: 16px;
+}
+
 .name span {
   font-weight: 900;
   font-size: 150px;
@@ -321,7 +340,7 @@ body {
   text-decoration: underline;
   color: #E85914;
   border: 1px solid #E85914;
-  background-color: #DFDBD9;
+  background-color: transparent;
 }
 
 .contact:hover {
@@ -400,8 +419,36 @@ body {
 
 /* ----------------------  RESPONSIVE ---------------------- */
 
+@media screen and (max-width: 999px) {
 
-@media (max-width: 768px) {
+  .main-bloc {
+    display: inline;
+  }
+
+  .intro {
+    margin-top: 32px;
+  }
+
+  .about {
+    display: none;
+  }
+
+  .name {
+    margin-top: 150px;
+  }
+
+  .name span {
+    display: flex;
+  }
+
+  .navbar {
+    display: block;
+  }
+
+}
+
+
+@media screen and (max-width: 768px) {
 
   .navbar {
     display: none;
@@ -413,6 +460,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
+    display: flex;
   }
 
   .title {
