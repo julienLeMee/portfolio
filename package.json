@@ -1,0 +1,19 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "<h1 align=\"center\">Hi 👋, I'm JULIEN</h1> <h3 align=\"center\">A passionate full-stack web developer from Montréal</h3>",
+  "main": "main.js",
+  "scripts": {
+    "sass": "sass --watch ./main.scss:./public/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/julienLeMee/portfolio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/julienLeMee/portfolio/issues"
+  },
+  "homepage": "https://github.com/julienLeMee/portfolio#readme"
+}
