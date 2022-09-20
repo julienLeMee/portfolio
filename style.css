@@ -79,6 +79,7 @@ body {
   /* transition: 0.3s ease-in-out; */
   opacity: 0;
   transform: translateY(-30px);
+  transition: 0.3s ease-in-out;
   animation: apparition 1s ease-in-out 0.5s forwards;
 }
 
