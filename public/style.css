@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@200;300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@200;300;400;500;900&display=swap");
 * {
   box-sizing: border-box;
   margin: 0;
@@ -10,15 +10,15 @@ body {
   font-family: "Roboto", sans-serif;
   letter-spacing: 0.5px;
   font-size: 16px;
-  background-color: rgb(20, 20, 20);
-  color: rgb(21, 21, 21);
+  background-color: #151515;
+  color: #151515;
   scroll-behavior: smooth;
 }
 
 .main-content {
   height: 100vh;
   width: 100wh;
-  background-color: #F2F2F2;
+  background-color: #4e5726;
 }
 
 .main-bloc {
@@ -28,23 +28,14 @@ body {
   animation: apparition 0.3s ease-in-out 0.5s forwards;
 }
 
-.circle {
-  display: flex;
-  width: 640px;
-  height: 640px;
-  border-radius: 50%;
-  background-color: #F2F2F2;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  filter: blur(24px);
-  z-index: -1;
-  box-shadow: 0 0 0 1px #E85914;
-}
-
 #arrow {
   margin-left: 16px;
+}
+
+.name h1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .name span {
@@ -52,8 +43,22 @@ body {
   font-size: 150px;
   letter-spacing: -8px;
   line-height: 0.8;
-  color: #E85914;
-  display: inline-block;
+  color: #F2F2F2;
+}
+
+#hover1:hover {
+  color: #333;
+  transform: translateX(8px);
+}
+
+#hover2:hover {
+  color: #523249;
+  transform: translateX(8px);
+}
+
+#hover3:hover {
+  color: #f19a3e;
+  transform: translateX(8px);
 }
 
 .name h1 > span:nth-child(1) {
@@ -68,10 +73,21 @@ body {
 
 .intro {
   max-width: 400px;
-  margin-top: 300px;
+  margin-top: 200px;
   margin-left: 32px;
   animation: apparition 0.6s ease-in-out 0.5s forwards;
   transform: translateX(30px);
+  border: 1px solid #F2F2F2;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 0 0 1px #F2F2F2;
+}
+
+.function {
+  margin-top: 24px;
+  font-size: 32px;
+  font-weight: 500;
+  color: #F2F2F2;
 }
 
 .navbar {
@@ -92,8 +108,8 @@ body {
 }
 
 .scrolled {
-  background-color: rgb(21, 21, 21);
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+  background-color: #151515;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
 }
 
 .barre {
@@ -101,14 +117,14 @@ body {
   margin-right: 16px;
   margin-left: 16px;
   height: 3px;
-  background-color: rgb(21, 21, 21);
+  background-color: #F2F2F2;
 }
 
 .barre-orange {
   width: 100%;
   margin-left: 16px;
   height: 2px;
-  background-color: #E85914;
+  background-color: #F2F2F2;
 }
 
 .second-bloc {
@@ -122,16 +138,15 @@ body {
 }
 
 .nav-link {
-  color: rgb(21, 21, 21);
+  color: #F2F2F2;
 }
 
 .nav-link:hover {
-  color: #E85914;
-  text-decoration: underline;
+  color: #151515;
 }
 
 .about {
-  color: rgb(21, 21, 21);
+  color: #151515;
 }
 
 .about-english {
@@ -139,39 +154,40 @@ body {
 }
 
 .about-meet-ball {
-  color: #DFDBD9;
-  margin-bottom: 150px;
+  color: #F2F2F2;
+  margin-bottom: 36px;
 }
 
 .phrase-projet {
-  color: #DFDBD9;
+  color: #F2F2F2;
   font-size: 16px;
   font-weight: lighter;
   margin-left: 16px;
 }
 
 .card-project {
-  overflow: hidden;
-  height: 300px;
-  width: 300px;
-  background: rgba(40, 40, 40, 0.8);
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-  display: flex;
-  flex-direction: column;
-  margin: 8px;
-  padding: 16px;
-  border-radius: 16px;
+  max-width: 400px;
+  margin-left: 32px;
+  border: 1px solid #F2F2F2;
+  padding: 24px;
+  border-radius: 8px;
+  color: #F2F2F2;
   position: relative;
-  color: rgb(20, 20, 20);
-  font-family: "Poppins", sans-serif;
-  font-size: 14px;
-  margin-bottom: 64px;
 }
 
-.card-project a {
+#arrow-btn {
+  margin-left: 8px;
+}
+
+.card-meet-ball a {
   position: absolute;
-  bottom: 24px;
-  left: 24px;
+  bottom: -16px;
+  right: 16px;
+  z-index: 1;
+  color: #F2F2F2;
+  background-color: #151515;
+  border: 1px solid #F2F2F2;
+  border-radius: 8px;
 }
 
 .year-cards {
@@ -180,35 +196,43 @@ body {
   font-size: 16px;
 }
 
-.card-meet-ball {
-  background-color: #DFDBD9;
-  color: rgb(21, 21, 21);
-  width: 100%;
-}
-
 .card-meet-ball:hover {
-  box-shadow: 0 1px 30px rgb(231, 88, 20);
+  box-shadow: 0 1px 10px rgb(250, 250, 250);
 }
 
-.card-airbingame {
-  background-color: #DFDBD9;
-  color: rgb(21, 21, 21);
-  width: 100%;
+.card-airbingame a {
+  position: absolute;
+  bottom: -16px;
+  right: 16px;
+  z-index: 1;
+  color: #F2F2F2;
+  background-color: #151515;
+  border: 1px solid #F2F2F2;
+  border-radius: 8px;
 }
 
 .card-airbingame:hover {
-  box-shadow: 0 1px 30px rgb(231, 88, 20);
+  box-shadow: 0 1px 30px rgb(250, 250, 250);
 }
 
 .card-experience {
-  background-color: #DFDBD9;
-  color: rgb(21, 21, 21);
-  width: 600px;
-  height: 350px;
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+.card-experience a {
+  position: absolute;
+  bottom: -16px;
+  right: 16px;
+  z-index: 1;
+  color: #F2F2F2;
+  background-color: #151515;
+  border: 1px solid #F2F2F2;
+  border-radius: 8px;
 }
 
 .card-experience:hover {
-  box-shadow: 0 1px 30px rgb(231, 88, 20);
+  box-shadow: 0 1px 30px rgb(250, 250, 250);
 }
 
 .footer {
@@ -223,7 +247,7 @@ body {
 }
 
 .footer-links a {
-  color: #fff;
+  color: #F2F2F2;
   opacity: 0.5;
   text-decoration: none;
   font-size: 32px;
@@ -241,6 +265,7 @@ body {
   flex-wrap: wrap;
   display: flex;
   padding: 0;
+  max-width: 70%;
 }
 
 .skills li {
@@ -259,7 +284,7 @@ body {
 
 .card-trip {
   overflow: hidden;
-  background: white;
+  background: #F2F2F2;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   margin-bottom: 64px;
   border-radius: 8px;
@@ -272,13 +297,13 @@ body {
 }
 
 .card-trip h2 {
-  font-size: 16px;
+  font-size: 24px;
   font-weight: bold;
   margin: 0;
 }
 
 .card-trip p {
-  font-size: 12px;
+  font-size: 16px;
   opacity: 0.7;
   margin: 0;
 }
@@ -289,7 +314,7 @@ body {
   justify-content: space-between;
   align-items: flex-end;
   position: relative;
-  color: #4A4A4A;
+  color: #151515;
 }
 
 .card-trip-infos .card-trip-user {
@@ -300,61 +325,39 @@ body {
 }
 
 .digital-business-card a {
-  color: #fff;
+  color: #F2F2F2;
   text-decoration: none;
   font-weight: lighter;
 }
 
 .digital-business-card a:hover {
-  color: #fff;
+  color: #F2F2F2;
   text-decoration: underline;
 }
 
 .title {
-  color: #DFDBD9;
+  color: #F2F2F2;
 }
 
-.contact {
-  text-decoration: none;
-  font-weight: bold;
-  color: #E85914;
-  border: 1px solid #E85914;
-  border-radius: 16px;
-  padding: 8px 16px;
-  font-size: 35px;
-  width: 48px;
-  /* transform:rotate(-90deg); */
+.links-title a {
+  color: #F2F2F2;
+  font-size: 32px;
+  margin: 16px;
 }
 
-.github {
-  text-decoration: none;
-  font-weight: bold;
-  background-color: #E85914;
-  font-size: 35px;
-  border: 1px solid #E85914;
-  border-radius: 16px;
-  padding: 8px 16px;
-  width: 48px;
-  color: #DFDBD9;
+.links-title a:hover {
+  color: #151515;
 }
 
-.github:hover {
-  text-decoration: underline;
-  color: #E85914;
-  border: 1px solid #E85914;
-  background-color: transparent;
-}
-
-.contact:hover {
-  text-decoration: underline;
-  background-color: #E85914;
-  color: #DFDBD9;
+#robot {
+  width: 300px;
+  height: 300px;
 }
 
 .linkedin {
   text-decoration: none;
   font-weight: bold;
-  color: #E85914;
+  color: #F2F2F2;
   font-size: 35px;
   margin-right: 16px;
   margin-bottom: 32px;
@@ -364,7 +367,7 @@ body {
 
 .linkedin:hover {
   text-decoration: underline;
-  color: #E85914;
+  color: #151515;
 }
 
 .main-bloc {
@@ -383,18 +386,18 @@ body {
   text-decoration: none;
   text-align: center;
   font-weight: bold;
-  background-color: rgb(21, 21, 21);
-  color: #DFDBD9;
-  border: 1px solid rgb(20, 20, 20);
+  background-color: #151515;
+  color: #F2F2F2;
+  border: 1px solid #151515;
   border-radius: 8px;
   padding: 8px 16px;
-  width: 150px;
+  width: 130px;
 }
 
 .btn-flat:hover {
   text-decoration: underline;
-  background-color: #DFDBD9;
-  color: rgb(20, 20, 20);
+  background-color: #F2F2F2;
+  color: #151515;
 }
 
 .button-on-top {
@@ -488,14 +491,7 @@ body {
     height: 300px;
     font-size: 12px;
     margin: 0;
-  }
-  .card-project a {
-    position: absolute;
-    bottom: 16px;
-    left: 16px;
-    width: 92px;
-    height: 40px;
-    font-size: 14px;
+    margin-top: 16px;
   }
   .card-experience {
     width: 400px;
