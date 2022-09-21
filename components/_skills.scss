@@ -1,0 +1,33 @@
+.skills {
+  list-style: none;
+  margin-top: 32px;
+  flex-wrap: wrap;
+  display: flex;
+  padding: 0;
+  max-width: 70%;
+}
+
+.skills li {
+  width: 100px;
+  height: 100px;
+  border-radius: 16px;
+  margin: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skills li img {
+  width: 80%;
+}
+
+
+.unity-logo {
+  height: 48px;
+  object-fit: cover;
+  margin: 32px;
+}
+
+.currently-skills li:nth-child(2) {
+  width: 200px;
+}

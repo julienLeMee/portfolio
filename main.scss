@@ -1,4 +1,9 @@
-@import 'variables';
+@import './components/variables';
+@import './components/buttons';
+@import './components/cards';
+@import './components/navbar';
+@import './components/skills';
+@import './components/footer';
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@200;300;400;500;900&display=swap');
@@ -10,7 +15,7 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: $font-main;
   letter-spacing: 0.5px;
   font-size: 16px;
   background-color: $black;
@@ -93,37 +98,7 @@ body {
   color: $ligth;
 }
 
-.navbar {
-  /* transition: 0.3s ease-in-out; */
-  opacity: 0;
-  transform: translateY(-30px);
-  transition: 0.3s ease-in-out;
-  animation: apparition 1s ease-in-out 0.5s forwards;
-}
-
-.navbar-lewagon {
-  justify-content: space-between;
-  position: relative;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1;
-}
-
-.scrolled {
-  background-color: $black;
-  box-shadow: 0 0 10px 0 $shadow;
-}
-
-.barre {
-  width: 100%;
-  margin-right: 16px;
-  margin-left: 16px;
-  height: 3px;
-  background-color: $ligth;
-}
-
-.barre-orange {
+.barre-section {
   width: 100%;
   margin-left: 16px;
   height: 2px;
@@ -138,14 +113,6 @@ body {
   width: 100%;
   margin-left: 12px;
   justify-content: space-between;
-}
-
-.nav-link {
-  color: $ligth;
-}
-
-.nav-link:hover {
-  color: $black;
 }
 
 .about {
@@ -168,217 +135,13 @@ body {
   margin-left: 16px;
 }
 
-.card-project {
-  max-width: 400px;
-  margin-left: 32px;
-  border: 1px solid $ligth;
-  padding: 24px;
-  border-radius: 8px;
-  color: $ligth;
-  position: relative;
-}
-
-#arrow-btn {
-  margin-left: 8px;
-}
-
-.intro a {
-  position: absolute;
-  bottom: -16px;
-  right: 16px;
-  z-index: 1;
-  color: $ligth;
-  background-color: $vert;
-  border: 1px solid $ligth;
-  border-radius: 8px;
-}
-
-.card-meet-ball a {
-  position: absolute;
-  bottom: -16px;
-  right: 16px;
-  z-index: 1;
-  color: $ligth;
-  background-color: $black;
-  border: 1px solid $ligth;
-  border-radius: 8px;
-}
-
-.year-cards {
-  margin-bottom: -12px;
-  margin-top: -8px;
-  font-size: 16px;
-}
-
-.card-meet-ball:hover {
-  box-shadow: 0 1px 10px rgb(250, 250, 250);
-}
-
-.card-airbingame a {
-  position: absolute;
-  bottom: -16px;
-  right: 16px;
-  z-index: 1;
-  color: $ligth;
-  background-color: $black;
-  border: 1px solid $ligth;
-  border-radius: 8px;
-}
-
-.card-airbingame:hover {
-  box-shadow: 0 1px 30px rgb(250, 250, 250);
-}
-
-.card-experience {
-  margin-top: 32px;
-  margin-bottom: 32px;
-}
-
-.card-experience a {
-  position: absolute;
-  bottom: -16px;
-  right: 16px;
-  z-index: 1;
-  color: $ligth;
-  background-color: $black;
-  border: 1px solid $ligth;
-  border-radius: 8px;
-}
-
-.card-experience:hover {
-  box-shadow: 0 1px 30px rgb(250, 250, 250);
-}
-
-.footer {
-  display: flex;
-  align-items: center;
-  height: 100px;
-}
-.footer-links {
-  display: flex;
-  align-items: center;
-}
-.footer-links a {
-  color: $ligth;
-  opacity: 0.5;
-  text-decoration: none;
-  font-size: 32px;
-  padding: 0px 10px;
-  margin: 16px;
-}
-.footer-links a:hover {
-  opacity: 1;
-}
-
-.skills {
-  list-style: none;
-  margin-top: 32px;
-  flex-wrap: wrap;
-  display: flex;
-  padding: 0;
-  max-width: 70%;
-}
-
-.skills li {
-  width: 100px;
-  height: 100px;
-  border-radius: 16px;
-  margin: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.skills li img {
-  width: 80%;
-}
-
-.card-trip {
-  overflow: hidden;
-  background: $ligth;
-  box-shadow: 0 0 15px $shadow;
-  margin-bottom: 64px;
-  border-radius: 8px;
-}
-
-.card-trip > img {
-  height: 100%;
-  width: 100%;
-  object-fit: contain;
-}
-
-.card-trip h2 {
-  font-size: 24px;
-  font-weight: bold;
-  margin: 0;
-}
-
-.card-trip p {
-  font-size: 16px;
-  opacity: .7;
-  margin: 0;
-}
-
-.card-trip .card-trip-infos {
-  padding: 16px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  position: relative;
-  color: $black;
-}
-
-.card-trip-infos .card-trip-user {
-  position: absolute;
-  right: 16px;
-  top: -20px;
-  width: 40px;
-}
-
-.digital-business-card a {
-  color: $ligth;
-  text-decoration: none;
-  font-weight: lighter;
-}
-
-.digital-business-card a:hover {
-  color: $ligth;
-  text-decoration: underline;
-}
-
 .title {
   color: $ligth;
-}
-
-.links-title a {
-  color: $ligth;
-  font-size: 32px;
-  margin: 16px;
-}
-
-.links-title a:hover {
-  color: $black;
 }
 
 #robot {
   width: 300px;
   height: 300px;
-}
-
-.linkedin {
-  text-decoration: none;
-  font-weight: bold;
-  color: $ligth;
-  font-size: 35px;
-  margin-right: 16px;
-  margin-bottom: 32px;
-  transform: translateX(-30px);
-  animation: apparition 1s ease-in-out 0.5s forwards;
-}
-
-.linkedin:hover {
-  text-decoration: underline;
-  color: $black;
 }
 
 .main-bloc {
@@ -391,38 +154,6 @@ body {
 .projets {
   display: flex;
   justify-content: center;
-}
-
-.btn-flat {
-  text-decoration: none;
-  text-align: center;
-  font-weight: bold;
-  background-color: $black;
-  color: $ligth;
-  border: 1px solid $black;
-  border-radius: 8px;
-  padding: 8px 16px;
-  width: 130px;
-}
-
-.btn-flat:hover {
-  text-decoration: underline;
-  background-color: $ligth;
-  color: $black;
-}
-
-.button-on-top {
-  margin-bottom: 48px;
-}
-
-.unity-logo {
-  height: 48px;
-  object-fit: cover;
-  margin: 32px;
-}
-
-.currently-skills li:nth-child(2) {
-  width: 200px;
 }
 
 @keyframes apparition {

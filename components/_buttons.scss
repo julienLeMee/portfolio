@@ -1,0 +1,62 @@
+.btn-flat {
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+  background-color: $black;
+  color: $ligth;
+  border: 1px solid $black;
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 130px;
+}
+
+.btn-flat:hover {
+  text-decoration: underline;
+  background-color: $ligth;
+  color: $black;
+}
+
+.button-on-top {
+  margin-bottom: 48px;
+}
+
+.linkedin {
+  text-decoration: none;
+  font-weight: bold;
+  color: $ligth;
+  font-size: 35px;
+  margin-right: 16px;
+  margin-bottom: 32px;
+  transform: translateX(-30px);
+  animation: apparition 1s ease-in-out 0.5s forwards;
+}
+
+.linkedin:hover {
+  text-decoration: underline;
+  color: $black;
+}
+
+.links-title a {
+  color: $ligth;
+  font-size: 32px;
+  margin: 16px;
+}
+
+.links-title a:hover {
+  color: $black;
+}
+
+#arrow-btn {
+  margin-left: 8px;
+}
+
+.intro a {
+  position: absolute;
+  bottom: -16px;
+  right: 16px;
+  z-index: 1;
+  color: $ligth;
+  background-color: $vert;
+  border: 1px solid $ligth;
+  border-radius: 8px;
+}

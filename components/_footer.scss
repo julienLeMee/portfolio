@@ -1,0 +1,20 @@
+.footer {
+  display: flex;
+  align-items: center;
+  height: 100px;
+}
+.footer-links {
+  display: flex;
+  align-items: center;
+}
+.footer-links a {
+  color: $ligth;
+  opacity: 0.5;
+  text-decoration: none;
+  font-size: 32px;
+  padding: 0px 10px;
+  margin: 16px;
+}
+.footer-links a:hover {
+  opacity: 1;
+}

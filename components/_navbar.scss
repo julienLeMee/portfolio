@@ -1,0 +1,37 @@
+.navbar {
+  /* transition: 0.3s ease-in-out; */
+  opacity: 0;
+  transform: translateY(-30px);
+  transition: 0.3s ease-in-out;
+  animation: apparition 1s ease-in-out 0.5s forwards;
+}
+
+.navbar-lewagon {
+  justify-content: space-between;
+  position: relative;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.scrolled {
+  background-color: $black;
+  box-shadow: 0 0 10px 0 $shadow;
+}
+
+.barre {
+  width: 100%;
+  margin-right: 16px;
+  margin-left: 16px;
+  height: 3px;
+  background-color: $ligth;
+}
+
+.nav-link {
+  color: $ligth;
+}
+
+.nav-link:hover {
+  color: $black;
+}
