@@ -4,6 +4,7 @@
 @import './components/navbar';
 @import './components/skills';
 @import './components/footer';
+@import './components/tab';
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@200;300;400;500;900&display=swap');
@@ -266,6 +267,14 @@ body {
   .links-title {
     display: flex;
     justify-content: center;
+  }
+
+  .tab-content img {
+    display: none;
+  }
+
+  .tab-content p {
+    font-size: 2.5vw;
   }
 
 }

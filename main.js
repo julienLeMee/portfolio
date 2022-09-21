@@ -15,6 +15,7 @@
 const navbar = document.getElementById('navbar');
 const navlinks = document.querySelectorAll('.nav-link');
 const barre = document.querySelector('.barre');
+const allTab = document.querySelectorAll('.tab');
 
 window.addEventListener('scroll', () => {
   if (window.scrollY > 100) {
@@ -28,4 +29,17 @@ window.addEventListener('scroll', () => {
       link.style = 'color: #rgba(21, 21, 21)';
     });
   }
+});
+
+allTab.forEach((tab) => {
+  tab.addEventListener('click', (event) => {
+    event.currentTarget.classList.toggle('open');
+    // enlever la classe open sur les autres tab :
+    allTab.forEach((tab) => {
+      if (tab !== event.currentTarget) {
+        tab.classList.remove('open');
+      }
+    })
+  })
+  
 });
