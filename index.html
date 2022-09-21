@@ -31,16 +31,30 @@
     <div class="container">
       <div class="main-bloc">
         <div>
-          <div class="name d-flex flex-column">
-            <div class="circle"></div>
+          <div class="name">
             <h1>
-              <span>JULIEN</span>
-              <span>LE MEE</span>
+              <div class="d-flex">
+                <span id="hover1">J</span>
+                <span id="hover2">u</span>
+                <span id="hover3">l</span>
+                <span id="hover2">i</span>
+                <span id="hover3">e</span>
+                <span id="hover1">n</span>
+              </div>
+              <div class="d-flex">
+                <span id="hover1">L</span>
+                <span id="hover3">e</span>
+                <span>&nbsp;</span>
+                <span id="hover2">M</span>
+                <span id="hover1">é</span>
+                <span id="hover3">e</span>
+              </div>
             </h1>
           </div>
           <div class="links-title mt-5">
-            <button class="btn btn-github"><a class="github" href="https://github.com/julienLeMee">Github</a></button>
-            <button class="btn btn-contact"><a class="contact" href="mailto:julemee@gmail.com">Contact</a></button>
+            <a href="https://github.com/julienLeMee"><i class="fab fa-github"></i></a>
+            <a href="https://twitter.com/majin__bun"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/julien-le-mee/"><i class="fab fa-linkedin"></i></a>
           </div>
         </div>
         <div class="intro d-flex flex-column">
@@ -52,7 +66,7 @@
         <br>
       </div>
       <div class="button-on-top d-flex align-items-center justify-content-end me-5">
-        <a class="linkedin" href="https://www.linkedin.com/in/julien-le-mee/">Linkedin<i id="arrow" class="fa-solid fa-arrow-right-long"></i></a>
+        <a class="linkedin" href="mailto:julemee@gmail.com">Contact<i id="arrow" class="fa-solid fa-arrow-right-long"></i></a>
       </div>
     </div>
     <div class="container second-bloc">
@@ -61,14 +75,14 @@
         <div class="barre-orange"></div>
       </div>
     <h4 class="mb-5 phrase-projet">Projets réalisés en équipe pendant le bootcamp Le Wagon</h4>
-    <div class="project-cards">
-      <div class="projets">
+    <div class="project-cards d-flex justify-content-center">
+      <div class="projets mt-5 mb-5">
         <div class="card-project card-meet-ball">
           <h2>MEET BALL</h2>
           <h4 class="year-cards d-flex justify-content-end">2022</h4>
           <hr>
-          <p>Web app dédiée aux joueurs de basketball montréalais. Cela leur permet de trouver des terrains de jeux, des joueurs et de rejoindre des parties à proximité. <br>Développée en Ruby on rails, avec de la gamification et des features intéressantes comme un système de points, de rang, de badges et un sytème de messagerie. </p>
-          <a class="btn-flat" href="http://www.meet-ball.me">Projet</a>
+          <p>Web app dédiée aux joueurs de basketball montréalais. Cela leur permet de trouver des terrains de jeux, des joueurs et de rejoindre des parties à proximité. <br>Développée en Ruby on rails, avec de la gamification, notamment un système de points, de rangs, de badges et un sytème de messagerie. </p>
+          <a class="btn-flat" href="http://www.meet-ball.me">Projet<i id="arrow-btn" class="fa-solid fa-arrow-right-long"></i></a>
         </div>
         <br>
         <div class="card-project card-airbingame">
@@ -76,7 +90,7 @@
           <h4 class="year-cards d-flex justify-content-end">2022</h4>
           <hr>
           <p>Airb in Game est un clone d'Airbnb, dans lequel on peut réserver un séjour dans les mondes de nos jeux vidéo préférés. <br> <br>Développée en Ruby on rails</p>
-          <a class="btn-flat" href="http://www.http://airb-in-game.herokuapp.com/">Projet</a>
+          <a class="btn-flat" href="http://www.http://airb-in-game.herokuapp.com/">Projet<i id="arrow-btn" class="fa-solid fa-arrow-right-long"></i></a>
         </div>
       </div>
       <br>
@@ -89,18 +103,16 @@
               <h2>Meet Ball</h2>
               <p>Web app présentée lors du Demo Day #931 au Wagon Montréal</p>
             </div>
-            <img src="ressources/meetball-logo.png" class="card-trip-user avatar-bordered" />
           </div>
         </div>
       </div>
       <div class="container mb-1">
         <p class=" container about-meet-ball">Meet-Ball est une web application dédiée aux joueurs de basketball montréalais. Cela leur permet de trouver des terrains de jeux, des joueurs et de rejoindre des parties à proximité.
-
           Meet-Ball à été pensée en intégrant de la gamification, avec notamment un système de classement qui permet aux utilisateurs de l'application de jouer contre des joueurs de leur niveau lorsque le mode de jeu est "compétitif" et un système de badges.
         </p>
       </div>
         <div class="container d-flex flex-column">
-          <div class="d-flex align-items-center mb-3 bloc-title">
+          <div class="d-flex align-items-center bloc-title mt-5 mb-5">
             <h3 class="title">Formations</h3>
             <div class="barre-orange"></div>
           </div>
@@ -112,7 +124,7 @@
               <p>Cours théoriques et challenges quotidiens pendant 10 semaines, sur différents langages tels que: <br>
               Ruby, SQL, HTML, CSS, JavaScript, Ruby on Rails, Stimulus, Bootstrap...
               </p>
-              <a class="btn-flat" href="https://github.com/julienLeMee">Github</a>
+              <a class="btn-flat" href="https://github.com/julienLeMee">Github<i id="arrow-btn" class="fa-solid fa-arrow-right-long"></i></a>
             </div>
           </div>
         </div>
@@ -121,8 +133,8 @@
           <h3 class="title">Compétences</h3>
           <div class="barre-orange"></div>
         </div>
-        <div class="container">
-          <ul class="d-flex align-items-center justify-content-around skills">
+        <div class="container d-flex justify-content-center">
+          <ul class="d-flex align-items-center justify-content-center skills">
             <li><img src="ressources/ruby-logo.png" alt="ruby"></li>
             <li><img src="ressources/html-logo.png" alt="html"></li>
             <li><img src="ressources/css-logo.png" alt="css"></li>
@@ -143,10 +155,12 @@
           <h3 class="title">Currently</h3>
           <div class="barre-orange"></div>
         </div>
-        <ul class="d-flex align-items-center justify-content-around skills currently-skills p-0">
-          <li><img src="ressources/react-logo.png" alt="react"></li>
-          <li><img src="ressources/unity-logo.png" class="unity-logo" alt="unity"></li>
-        </ul>
+        <div class="d-flex align-items-center justify-content-center">
+          <ul class="d-flex align-items-center justify-content-center skills currently-skills p-0">
+            <li><img src="ressources/react-logo.png" alt="react"></li>
+            <li><img src="ressources/unity-logo.png" class="unity-logo" alt="unity"></li>
+          </ul>
+        </div>
       </div>
       <h4 class="text-center digital-business-card mb-5"><a href="https://edigital-business-card.netlify.app"><i class="fa-solid fa-arrow-right-long"></i> Digital business card fait avec React</a></h4>
     </div>
