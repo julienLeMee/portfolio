@@ -73,14 +73,14 @@ body {
 
 .intro {
   max-width: 400px;
-  margin-top: 200px;
-  margin-left: 32px;
+  margin: 32px;
   animation: apparition 0.6s ease-in-out 0.5s forwards;
   transform: translateX(30px);
   border: 1px solid #F2F2F2;
   padding: 24px;
   border-radius: 8px;
   box-shadow: 0 0 0 1px #F2F2F2;
+  font-weight: 500;
 }
 
 .function {
@@ -177,6 +177,17 @@ body {
 
 #arrow-btn {
   margin-left: 8px;
+}
+
+.intro a {
+  position: absolute;
+  bottom: -16px;
+  right: 16px;
+  z-index: 1;
+  color: #F2F2F2;
+  background-color: #4e5726;
+  border: 1px solid #F2F2F2;
+  border-radius: 8px;
 }
 
 .card-meet-ball a {
@@ -423,16 +434,13 @@ body {
 /* ----------------------  RESPONSIVE ---------------------- */
 @media screen and (max-width: 999px) {
   .main-bloc {
-    display: inline;
+    display: flex;
   }
   .intro {
     margin-top: 32px;
   }
   .about {
     display: none;
-  }
-  .name {
-    margin-top: 150px;
   }
   .name span {
     display: flex;
@@ -456,16 +464,8 @@ body {
   .title {
     text-align: center;
   }
-  .name {
-    font-size: 100px;
-    letter-spacing: -3px;
-    margin-left: 16px;
-    width: 100%;
-    margin: 0;
-    text-align: center;
-  }
   .name span {
-    font-size: 90px;
+    font-size: 100px;
   }
   .linkedin {
     margin-top: 300px;
@@ -479,10 +479,11 @@ body {
   .intro {
     margin-top: 32px;
     margin-right: 45px;
-    width: 100%;
+    max-width: 80%;
   }
   .function {
     font-size: 32px;
+    margin-top: 6px;
   }
   .about {
     display: none;
