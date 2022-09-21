@@ -184,10 +184,6 @@ body {
     display: flex;
   }
 
-  .navbar {
-    display: block;
-  }
-
 }
 
 
@@ -227,7 +223,7 @@ body {
 
   .intro {
     margin-top: 32px;
-    margin-right: 45px;
+    margin-right: 32px;
     max-width: 80%;
   }
 
@@ -265,6 +261,11 @@ body {
   .contact {
     font-size: 24px;
     border-radius: 10px;
+  }
+
+  .links-title {
+    display: flex;
+    justify-content: center;
   }
 
 }
