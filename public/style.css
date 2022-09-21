@@ -357,6 +357,11 @@
   font-weight: bold;
 }
 
+.tab-logo {
+  color: #151515;
+  font-size: 24px;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
