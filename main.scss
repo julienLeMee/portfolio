@@ -70,13 +70,18 @@ body {
   transform: translateX(8px);
 }
 
-.name h1 > span:nth-child(1) {
+.name #hover1 {
+  animation: apparition 0.8s ease-in-out 0.5s forwards;
+  transform: translateX(-30px);
+}
+
+.name #hover2 {
   animation: apparition 0.4s ease-in-out 0.5s forwards;
   transform: translateX(-30px);
 }
 
-.name span:nth-child(2) {
-  animation: apparition 0.8s ease-in-out 0.5s forwards;
+.name #hover3 {
+  animation: apparition 0.6s ease-in-out 0.5s forwards;
   transform: translateX(-30px);
 }
 

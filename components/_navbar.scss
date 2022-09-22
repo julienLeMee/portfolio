@@ -2,7 +2,7 @@
   /* transition: 0.3s ease-in-out; */
   opacity: 0;
   transform: translateY(-30px);
-  transition: 0.3s ease-in-out;
+  transition: 0.5s ease-in-out;
   animation: apparition 1s ease-in-out 0.5s forwards;
 }
 
@@ -24,7 +24,7 @@
   width: 100%;
   margin-right: 16px;
   margin-left: 16px;
-  height: 3px;
+  height: 2px;
   background-color: $ligth;
 }
 
