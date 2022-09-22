@@ -16,6 +16,13 @@ const navbar = document.getElementById('navbar');
 const navlinks = document.querySelectorAll('.nav-link');
 const barre = document.querySelector('.barre');
 const allTab = document.querySelectorAll('.tab');
+const containerBubble = document.querySelector('.container-bubble-menu');
+const btnBubble = document.querySelector('.bubble-btn');
+
+btnBubble.addEventListener('click', () => {
+  containerBubble.classList.toggle('active');
+});
+
 
 window.addEventListener('scroll', () => {
   if (window.scrollY > 100) {
@@ -41,5 +48,5 @@ allTab.forEach((tab) => {
       }
     })
   })
-  
+
 });
