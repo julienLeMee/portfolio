@@ -25,7 +25,7 @@ btnBubble.addEventListener('click', () => {
 
 
 window.addEventListener('scroll', () => {
-  if (window.scrollY > 100) {
+    containerBubble.classList.remove('active');  if (window.scrollY > 100) {
     navbar.classList.add('scrolled');
     navlinks.forEach((link) => {
       link.style = 'color: #DFDBD9';

@@ -4,6 +4,7 @@
   transform: translateY(-30px);
   transition: 0.5s ease-in-out;
   animation: apparition 1s ease-in-out 0.5s forwards;
+  z-index: 1;
 }
 
 .navbar-lewagon {
@@ -12,12 +13,11 @@
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 10;
 }
 
 .scrolled {
-  background-color: $black;
-  box-shadow: 0 0 10px 0 $shadow;
+  background-color: transparent;
 }
 
 .barre {

@@ -190,6 +190,7 @@
   transform: translateY(-30px);
   transition: 0.5s ease-in-out;
   animation: apparition 1s ease-in-out 0.5s forwards;
+  z-index: 1;
 }
 
 .navbar-lewagon {
@@ -198,12 +199,11 @@
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 10;
 }
 
 .scrolled {
-  background-color: #151515;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  background-color: transparent;
 }
 
 .barre {
@@ -380,9 +380,10 @@ body {
 .container-bubble-menu {
   width: 200px;
   height: 200px;
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 0;
+  z-index: 10;
 }
 
 .icon {
@@ -394,7 +395,7 @@ body {
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  background-color: #ffffff;
+  border: 0.1px solid #F2F2F2;
   position: absolute;
   top: 10%;
   right: 10%;
@@ -416,34 +417,136 @@ body {
   align-items: center;
 }
 
-.bubble-2 {
-  background-color: #f19a3e;
+.bubble-1-1 {
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  position: absolute;
+  top: 26%;
+  right: 28%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.bubble-1-2 {
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  position: absolute;
+  top: 15%;
+  right: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.bubble-1-3 {
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  position: absolute;
+  top: 31%;
+  right: 18%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.container-bubble-menu.active .bubble-1-1 {
+  top: 20%;
+  right: 20%;
+  transition: all 0.2s 0.1s ease-in-out;
+}
+
+.container-bubble-menu.active .bubble-1-2 {
+  top: 20%;
+  right: 20%;
   transition: all 0.2s 0.2s ease-in-out;
 }
 
-.bubble-3 {
-  background-color: #f19a3e;
+.container-bubble-menu.active .bubble-1-3 {
+  top: 20%;
+  right: 20%;
   transition: all 0.2s 0.3s ease-in-out;
 }
 
+.bubble-2 {
+  text-decoration: none;
+  background-color: transparent;
+  color: #F2F2F2;
+  opacity: 0;
+  z-index: 9;
+  border: 0.1px solid #F2F2F2;
+  transition: all 0.2s 0.2s ease-in-out;
+}
+
+.bubble-2:hover {
+  color: #f19a3e;
+  border: 0.1px solid #f19a3e;
+  transition: 0.2s ease-in-out;
+}
+
+.bubble-3 {
+  text-decoration: none;
+  background-color: transparent;
+  color: #F2F2F2;
+  opacity: 0;
+  z-index: 5;
+  border: 0.1px solid #F2F2F2;
+  transition: all 0.2s 0.3s ease-in-out;
+}
+
+.bubble-3:hover {
+  color: #f19a3e;
+  border: 0.1px solid #f19a3e;
+  transition: 0.2s ease-in-out;
+}
+
 .bubble-1 {
-  background-color: #f19a3e;
+  text-decoration: none;
+  background-color: transparent;
+  color: #F2F2F2;
+  opacity: 0;
+  z-index: 5;
+  border: 0.1px solid #F2F2F2;
   transition: all 0.2s 0.1s ease-in-out;
+}
+
+.bubble-1:hover {
+  color: #f19a3e;
+  border: 0.1px solid #f19a3e;
+  transition: 0.2s ease-in-out;
 }
 
 .container-bubble-menu.active .bubble-2 {
   top: 40%;
   right: 40%;
+  opacity: 1;
+  box-shadow: 0 0 10px 1px #F2F2F2;
+  background-color: #151515;
 }
 
 .container-bubble-menu.active .bubble-3 {
   top: 10%;
   right: 50%;
+  opacity: 1;
+  box-shadow: 0 0 10px 1px #F2F2F2;
+  background-color: #151515;
 }
 
 .container-bubble-menu.active .bubble-1 {
   top: 50%;
   right: 10%;
+  opacity: 1;
+  box-shadow: 0 0 10px 1px #F2F2F2;
+  background-color: #151515;
 }
 
 .main-content {
@@ -606,9 +709,6 @@ body {
   }
 }
 @media screen and (max-width: 768px) {
-  .navbar {
-    display: none;
-  }
   .main-bloc {
     flex-direction: column;
     position: absolute;
