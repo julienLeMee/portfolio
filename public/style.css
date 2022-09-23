@@ -65,6 +65,39 @@
   border-radius: 8px;
 }
 
+.container-btn-to-top {
+  display: flex;
+  justify-content: end;
+  margin: 32px;
+}
+
+.btn-to-top {
+  width: 32px;
+  height: 32px;
+  z-index: 1;
+  color: #F2F2F2;
+  border: 0.1px solid #F2F2F2;
+  border-radius: 50%;
+  box-shadow: 0 0 10px 1px #F2F2F2;
+  transition: all 0.2s 0.1s ease-in-out;
+}
+
+.btn-to-top a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #F2F2F2;
+}
+
+.btn-to-top:hover {
+  color: #f19a3e;
+  border: 0.1px solid #f19a3e;
+  box-shadow: 0 0 10px 1px #f19a3e;
+}
+
 .card-project {
   max-width: 400px;
   margin-left: 32px;
@@ -408,6 +441,10 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
+.bubble-btn:hover {
+  border: 0.1px solid #f19a3e;
+}
+
 .bubble {
   width: 32px;
   height: 32px;
@@ -432,7 +469,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.2s 0.2s ease-in-out;
 }
 
 .bubble-1-2 {
@@ -446,7 +483,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.2s 0.3s ease-in-out;
 }
 
 .bubble-1-3 {
@@ -460,25 +497,22 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.2s 0.1s ease-in-out;
 }
 
 .container-bubble-menu.active .bubble-1-1 {
   top: 20%;
   right: 20%;
-  transition: all 0.2s 0.1s ease-in-out;
 }
 
 .container-bubble-menu.active .bubble-1-2 {
   top: 20%;
   right: 20%;
-  transition: all 0.2s 0.2s ease-in-out;
 }
 
 .container-bubble-menu.active .bubble-1-3 {
   top: 20%;
   right: 20%;
-  transition: all 0.2s 0.3s ease-in-out;
 }
 
 .bubble-2 {

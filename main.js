@@ -18,11 +18,27 @@ const barre = document.querySelector('.barre');
 const allTab = document.querySelectorAll('.tab');
 const containerBubble = document.querySelector('.container-bubble-menu');
 const btnBubble = document.querySelector('.bubble-btn');
+const btnToTop = document.querySelector('.btn-to-top');
+
+
+// window.addEventListener('scroll', () => {
+//   if (window.scrollY > 100) {
+//     btnToTop.classList.add('show');
+//   } else {
+//     btnToTop.classList.remove('show');
+//   }
+// });
+
+btnToTop.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
 
 btnBubble.addEventListener('click', () => {
   containerBubble.classList.toggle('active');
 });
-
 
 window.addEventListener('scroll', () => {
     containerBubble.classList.remove('active');  if (window.scrollY > 100) {
