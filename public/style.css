@@ -184,6 +184,10 @@
   text-decoration: underline;
 }
 
+.projet-promo {
+  max-width: 80%;
+}
+
 .navbar {
   /* transition: 0.3s ease-in-out; */
   opacity: 0;
@@ -650,13 +654,10 @@ body {
   color: #151515;
 }
 
-.about-english {
-  display: none;
-}
-
 .about-meet-ball {
   color: #F2F2F2;
   margin-bottom: 36px;
+  max-width: 80%;
 }
 
 .phrase-projet {
