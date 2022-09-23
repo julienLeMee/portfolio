@@ -585,16 +585,11 @@ body {
 }
 
 #hover1:hover {
-  color: #333;
-  transform: translateX(8px);
-}
-
-#hover2:hover {
   color: #523249;
   transform: translateX(8px);
 }
 
-#hover3:hover {
+#hover2:hover {
   color: #f19a3e;
   transform: translateX(8px);
 }
