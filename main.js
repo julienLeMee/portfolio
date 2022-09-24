@@ -22,7 +22,7 @@ const btnToTop = document.querySelector('.btn-to-top');
 
 
 // window.addEventListener('scroll', () => {
-//   if (window.scrollY > 100) {
+//   if (window.scrollY > 300) {
 //     btnToTop.classList.add('show');
 //   } else {
 //     btnToTop.classList.remove('show');
