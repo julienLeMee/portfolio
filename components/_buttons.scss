@@ -11,6 +11,7 @@
 }
 
 .btn-flat:hover {
+  transition: 0.3s ease-in-out;
   text-decoration: underline;
   background-color: $ligth;
   color: $black;
@@ -44,6 +45,7 @@
 
 .links-title a:hover {
   color: $black;
+  transition: 0.2s ease-in-out;
 }
 
 #arrow-btn {
@@ -92,4 +94,5 @@
   color: $safran;
   border: 0.1px solid $safran;
   box-shadow: 0 0 10px 1px $safran;
+  transform: scale(1.1);
 }
