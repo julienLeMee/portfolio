@@ -37,10 +37,14 @@
   color: $black;
 }
 
+.links-title {
+  margin-top: 100px;
+}
+
 .links-title a {
   color: $ligth;
-  font-size: 32px;
-  margin: 16px;
+  font-size: 36px;
+  margin-right: 24px;
 }
 
 .links-title a:hover {

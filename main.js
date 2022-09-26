@@ -1,17 +1,3 @@
-// import { Controller } from "@hotwired/stimulus"
-// import Typed from "typed.js"
-
-// // Connects to data-controller="typed-js"
-// export default class extends Controller {
-//   connect() {
-//     new Typed(this.element, {
-//       strings: ["Have a break", "Have a KitKat"],
-//       typeSpeed: 80,
-//       loop: true
-//     })
-//   }
-// }
-
 const navbar = document.getElementById('navbar');
 const navlinks = document.querySelectorAll('.nav-link');
 const barre = document.querySelector('.barre');
@@ -19,7 +5,7 @@ const allTab = document.querySelectorAll('.tab');
 const containerBubble = document.querySelector('.container-bubble-menu');
 const btnBubble = document.querySelector('.bubble-btn');
 const btnToTop = document.querySelector('.btn-to-top');
-
+const textAnim = document.querySelector('.title-writer');
 
 // window.addEventListener('scroll', () => {
 //   if (window.scrollY > 300) {
@@ -28,6 +14,29 @@ const btnToTop = document.querySelector('.btn-to-top');
 //     btnToTop.classList.remove('show');
 //   }
 // });
+
+new Typewriter(textAnim, {
+  loop: true,
+  delay: 75,
+})
+.pauseFor(2000)
+.typeString('Développeur web <span style="color: #D8829D;">HTML</span>')
+.pauseFor(1000)
+.deleteChars(4)
+.typeString('<span style="color: #8EDCE6;">CSS</span>')
+.pauseFor(1000)
+.deleteChars(3)
+.typeString('<span style="color: #E9B44C;">Javascript</span>')
+.pauseFor(1000)
+.deleteChars(10)
+.typeString('<span style="color: #FB4D3D;">Ruby</span>')
+.pauseFor(1000)
+.deleteChars(4)
+.typeString('<span style="color: #FF6B35;">Ruby on Rails</span>')
+.pauseFor(1000)
+.deleteChars(13)
+.start();
+
 
 btnToTop.addEventListener('click', () => {
   window.scrollTo({
@@ -66,3 +75,18 @@ allTab.forEach((tab) => {
   })
 
 });
+
+
+// import { Controller } from "@hotwired/stimulus"
+// import Typed from "typed.js"
+
+// // Connects to data-controller="typed-js"
+// export default class extends Controller {
+//   connect() {
+//     new Typed(this.element, {
+//       strings: ["Have a break", "Have a KitKat"],
+//       typeSpeed: 80,
+//       loop: true
+//     })
+//   }
+// }

@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/julienLeMee/portfolio/issues"
   },
-  "homepage": "https://github.com/julienLeMee/portfolio#readme"
+  "homepage": "https://github.com/julienLeMee/portfolio#readme",
+  "dependencies": {
+    "typewriter-effect": "^2.19.0"
+  }
 }

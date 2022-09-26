@@ -41,10 +41,14 @@
   color: #151515;
 }
 
+.links-title {
+  margin-top: 100px;
+}
+
 .links-title a {
   color: #F2F2F2;
-  font-size: 32px;
-  margin: 16px;
+  font-size: 36px;
+  margin-right: 24px;
 }
 
 .links-title a:hover {
@@ -560,6 +564,14 @@ body {
   background-color: #151515;
   color: #151515;
   scroll-behavior: smooth;
+}
+
+.title-writer {
+  color: #F2F2F2;
+  display: flex;
+  margin-bottom: 16px;
+  margin-top: 16px;
+  position: absolute;
 }
 
 .main-content {
