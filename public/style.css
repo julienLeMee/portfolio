@@ -2,6 +2,120 @@
 @import url("https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@200;300;400;500;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@200;300;400;500;900&display=swap");
+.main-content {
+  height: 100vh;
+  width: 100wh;
+  background-color: #4e5726;
+}
+
+.main-bloc {
+  margin-top: 48px;
+  padding: 30px;
+  opacity: 0;
+  animation: apparition 0.3s ease-in-out 0.5s forwards;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.name h1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.name span {
+  font-weight: 900;
+  font-size: 150px;
+  letter-spacing: -8px;
+  line-height: 0.8;
+  color: #F2F2F2;
+}
+
+#hover1:hover {
+  color: #523249;
+  transform: translateX(8px);
+}
+
+#hover2:hover {
+  color: #f19a3e;
+  transform: translateX(8px);
+}
+
+.name #hover1 {
+  animation: apparition 0.8s ease-in-out 0.5s forwards;
+  transform: translateX(-30px);
+}
+
+.name #hover2 {
+  animation: apparition 0.4s ease-in-out 0.5s forwards;
+  transform: translateX(-30px);
+}
+
+.name #hover3 {
+  animation: apparition 0.6s ease-in-out 0.5s forwards;
+  transform: translateX(-30px);
+}
+
+.intro {
+  max-width: 400px;
+  margin: 32px;
+  animation: apparition 0.6s ease-in-out 0.5s forwards;
+  transform: translateX(30px);
+  border: 1px solid #F2F2F2;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 0 0 1px #F2F2F2;
+  font-weight: 500;
+}
+
+.function {
+  width: 100%;
+  margin-top: 24px;
+  font-size: 32px;
+  font-weight: 500;
+  color: #F2F2F2;
+}
+
+.barre-section {
+  width: 100%;
+  margin-left: 16px;
+  height: 2px;
+  background-color: #F2F2F2;
+}
+
+.second-bloc {
+  margin-top: 72px;
+}
+
+.bloc-title {
+  width: 100%;
+  margin-left: 12px;
+  justify-content: space-between;
+}
+
+.about {
+  color: #151515;
+}
+
+.about-meet-ball {
+  color: #F2F2F2;
+  margin-bottom: 36px;
+  max-width: 80%;
+}
+
+.phrase-projet {
+  color: #F2F2F2;
+  font-size: 16px;
+  font-weight: lighter;
+  margin-left: 12px;
+}
+
+.title {
+  color: #F2F2F2;
+}
+
 .btn-flat {
   text-decoration: none;
   text-align: center;
@@ -103,6 +217,15 @@
   border: 0.1px solid #f19a3e;
   box-shadow: 0 0 10px 1px #f19a3e;
   transform: scale(1.1);
+}
+
+#arrow {
+  margin-left: 16px;
+}
+
+.projets {
+  display: flex;
+  justify-content: center;
 }
 
 .card-project {
@@ -551,6 +674,14 @@
   font-size: 24px;
 }
 
+.title-writer {
+  color: #F2F2F2;
+  display: flex;
+  margin-bottom: 16px;
+  margin-top: 16px;
+  position: absolute;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -564,145 +695,6 @@ body {
   background-color: #151515;
   color: #151515;
   scroll-behavior: smooth;
-}
-
-.title-writer {
-  color: #F2F2F2;
-  display: flex;
-  margin-bottom: 16px;
-  margin-top: 16px;
-  position: absolute;
-}
-
-.main-content {
-  height: 100vh;
-  width: 100wh;
-  background-color: #4e5726;
-}
-
-.main-bloc {
-  margin-top: 48px;
-  padding: 30px;
-  opacity: 0;
-  animation: apparition 0.3s ease-in-out 0.5s forwards;
-}
-
-#arrow {
-  margin-left: 16px;
-}
-
-.name h1 {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-.name span {
-  font-weight: 900;
-  font-size: 150px;
-  letter-spacing: -8px;
-  line-height: 0.8;
-  color: #F2F2F2;
-}
-
-#hover1:hover {
-  color: #523249;
-  transform: translateX(8px);
-}
-
-#hover2:hover {
-  color: #f19a3e;
-  transform: translateX(8px);
-}
-
-.name #hover1 {
-  animation: apparition 0.8s ease-in-out 0.5s forwards;
-  transform: translateX(-30px);
-}
-
-.name #hover2 {
-  animation: apparition 0.4s ease-in-out 0.5s forwards;
-  transform: translateX(-30px);
-}
-
-.name #hover3 {
-  animation: apparition 0.6s ease-in-out 0.5s forwards;
-  transform: translateX(-30px);
-}
-
-.intro {
-  max-width: 400px;
-  margin: 32px;
-  animation: apparition 0.6s ease-in-out 0.5s forwards;
-  transform: translateX(30px);
-  border: 1px solid #F2F2F2;
-  padding: 24px;
-  border-radius: 8px;
-  box-shadow: 0 0 0 1px #F2F2F2;
-  font-weight: 500;
-}
-
-.function {
-  width: 100%;
-  margin-top: 24px;
-  font-size: 32px;
-  font-weight: 500;
-  color: #F2F2F2;
-}
-
-.barre-section {
-  width: 100%;
-  margin-left: 16px;
-  height: 2px;
-  background-color: #F2F2F2;
-}
-
-.second-bloc {
-  margin-top: 72px;
-}
-
-.bloc-title {
-  width: 100%;
-  margin-left: 12px;
-  justify-content: space-between;
-}
-
-.about {
-  color: #151515;
-}
-
-.about-meet-ball {
-  color: #F2F2F2;
-  margin-bottom: 36px;
-  max-width: 80%;
-}
-
-.phrase-projet {
-  color: #F2F2F2;
-  font-size: 16px;
-  font-weight: lighter;
-  margin-left: 12px;
-}
-
-.title {
-  color: #F2F2F2;
-}
-
-#robot {
-  width: 300px;
-  height: 300px;
-}
-
-.main-bloc {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.projets {
-  display: flex;
-  justify-content: center;
 }
 
 @keyframes apparition {

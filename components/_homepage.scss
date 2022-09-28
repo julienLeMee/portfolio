@@ -1,0 +1,75 @@
+.main-content {
+  height: 100vh;
+  width: 100wh;
+  background-color: $vert;
+}
+
+.main-bloc {
+  margin-top: 48px;
+  padding:30px;
+  opacity: 0;
+  animation: apparition 0.3s ease-in-out 0.5s forwards;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.name h1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.name span {
+  font-weight: 900;
+  font-size: 150px;
+  letter-spacing: -8px;
+  line-height: 0.8;
+  color: $ligth;
+}
+
+#hover1:hover {
+  color: $cerise_noire;
+  transform: translateX(8px);
+}
+
+#hover2:hover {
+  color: $safran;
+  transform: translateX(8px);
+}
+
+.name #hover1 {
+  animation: apparition 0.8s ease-in-out 0.5s forwards;
+  transform: translateX(-30px);
+}
+
+.name #hover2 {
+  animation: apparition 0.4s ease-in-out 0.5s forwards;
+  transform: translateX(-30px);
+}
+
+.name #hover3 {
+  animation: apparition 0.6s ease-in-out 0.5s forwards;
+  transform: translateX(-30px);
+}
+
+.intro {
+  max-width: 400px;
+  margin: 32px;
+  animation: apparition 0.6s ease-in-out 0.5s forwards;
+  transform: translateX(30px);
+  border: 1px solid $ligth;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 0 0 1px $ligth;
+  font-weight: 500;
+}
+
+.function {
+  width: 100%;
+  margin-top: 24px;
+  font-size: 32px;
+  font-weight: 500;
+  color: $ligth;
+}

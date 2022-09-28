@@ -1,10 +1,13 @@
 @import './components/variables';
+@import './components/homepage';
+@import './components/content';
 @import './components/buttons';
 @import './components/cards';
 @import './components/bubble-menu';
 @import './components/skills';
 @import './components/footer';
 @import './components/tab';
+@import './components/typewriter';
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@200;300;400;500;900&display=swap');
@@ -22,145 +25,6 @@ body {
   background-color: $black;
   color: $black;
   scroll-behavior: smooth;
-}
-
-.title-writer {
-  color: $ligth;
-  display: flex;
-  margin-bottom: 16px;
-  margin-top: 16px;
-  position: absolute;
-}
-
-.main-content {
-  height: 100vh;
-  width: 100wh;
-  background-color: $vert;
-}
-
-.main-bloc {
-  margin-top: 48px;
-  padding:30px;
-  opacity: 0;
-  animation: apparition 0.3s ease-in-out 0.5s forwards;
-}
-
-#arrow {
-  margin-left: 16px;
-}
-
-.name h1 {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-.name span {
-  font-weight: 900;
-  font-size: 150px;
-  letter-spacing: -8px;
-  line-height: 0.8;
-  color: $ligth;
-}
-
-#hover1:hover {
-  color: $cerise_noire;
-  transform: translateX(8px);
-}
-
-#hover2:hover {
-  color: $safran;
-  transform: translateX(8px);
-}
-
-.name #hover1 {
-  animation: apparition 0.8s ease-in-out 0.5s forwards;
-  transform: translateX(-30px);
-}
-
-.name #hover2 {
-  animation: apparition 0.4s ease-in-out 0.5s forwards;
-  transform: translateX(-30px);
-}
-
-.name #hover3 {
-  animation: apparition 0.6s ease-in-out 0.5s forwards;
-  transform: translateX(-30px);
-}
-
-.intro {
-  max-width: 400px;
-  margin: 32px;
-  animation: apparition 0.6s ease-in-out 0.5s forwards;
-  transform: translateX(30px);
-  border: 1px solid $ligth;
-  padding: 24px;
-  border-radius: 8px;
-  box-shadow: 0 0 0 1px $ligth;
-  font-weight: 500;
-}
-
-.function {
-  width: 100%;
-  margin-top: 24px;
-  font-size: 32px;
-  font-weight: 500;
-  color: $ligth;
-}
-
-.barre-section {
-  width: 100%;
-  margin-left: 16px;
-  height: 2px;
-  background-color: $ligth;
-}
-
-.second-bloc {
-  margin-top: 72px;
-}
-
-.bloc-title {
-  width: 100%;
-  margin-left: 12px;
-  justify-content: space-between;
-}
-
-.about {
-  color: $black;
-}
-
-.about-meet-ball {
-  color: $ligth;
-  margin-bottom: 36px;
-  max-width: 80%;
-}
-
-.phrase-projet {
-  color: $ligth;
-  font-size: 16px;
-  font-weight: lighter;
-  margin-left: 12px;
-}
-
-.title {
-  color: $ligth;
-}
-
-#robot {
-  width: 300px;
-  height: 300px;
-}
-
-.main-bloc {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.projets {
-  display: flex;
-  justify-content: center;
 }
 
 @keyframes apparition {
