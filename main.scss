@@ -8,6 +8,8 @@
 @import './components/footer';
 @import './components/tab';
 @import './components/typewriter';
+@import './components/media-queries';
+
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@200;300;400;500;900&display=swap');
@@ -32,116 +34,4 @@ body {
     opacity: 1;
     transform: none;
   }
-}
-
-
-/* ----------------------  RESPONSIVE ---------------------- */
-
-@media screen and (max-width: 999px) {
-
-  .main-bloc {
-    display: flex;
-  }
-
-  .intro {
-    margin-top: 32px;
-  }
-
-  .about {
-    display: none;
-  }
-
-  .name span {
-    display: flex;
-  }
-
-}
-
-
-@media screen and (max-width: 768px) {
-
-
-  .main-bloc {
-    flex-direction: column;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-  }
-
-  .title {
-    text-align: center;
-  }
-
-  .name span {
-    font-size: 100px;
-  }
-
-  .linkedin {
-    margin-top: 300px;
-    margin-bottom: 0;
-    margin-right: 0;
-  }
-
-  .projets {
-    flex-direction: column;
-    margin: 16px;
-  }
-
-  .intro {
-    margin-top: 32px;
-    margin-right: 32px;
-    max-width: 80%;
-  }
-
-  .function {
-    font-size: 32px;
-    margin-top: 6px;
-  }
-
-  .about {
-    display: none;
-  }
-
-  .card-project {
-    height: 300px;
-    font-size: 12px;
-    margin: 0;
-    margin-top: 16px;
-  }
-
-  .card-experience {
-    width: 400px;
-    height: 300px;
-    margin: 16px;
-  }
-
-  .barre {
-    display: none;
-  }
-
-  .github {
-    font-size: 24px;
-    border-radius: 10px;
-  }
-
-  .contact {
-    font-size: 24px;
-    border-radius: 10px;
-  }
-
-  .links-title {
-    display: flex;
-    justify-content: center;
-  }
-
-  .tab-content img {
-    display: none;
-  }
-
-  .tab-content p {
-    font-size: 2.5vw;
-  }
-
 }
