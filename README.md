@@ -1,13 +1,7 @@
 <h1 align="center">Hi 👋, I'm JULIEN</h1>
 <h3 align="center">A passionate full-stack web developer from Montréal</h3>
 
-- 🔭 I’m currently working on **my portfolio**
-
-- 🌱 I’m currently learning **React**
-
-- 👨‍💻 All of my projects are available at [www.julienlemee.com](www.julienlemee.com)
-
-- 📫 How to reach me **julemee@gmail.com**
+- 👾 This is **my portfolio**
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
