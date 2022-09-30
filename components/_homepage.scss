@@ -6,13 +6,13 @@
 
 .main-bloc {
   margin-top: 48px;
-  padding:30px;
   opacity: 0;
   animation: apparition 0.3s ease-in-out 0.5s forwards;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  width: 100%;
 }
 
 .name h1 {

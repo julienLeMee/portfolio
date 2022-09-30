@@ -10,13 +10,13 @@
 
 .main-bloc {
   margin-top: 48px;
-  padding: 30px;
   opacity: 0;
   animation: apparition 0.3s ease-in-out 0.5s forwards;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  width: 100%;
 }
 
 .name h1 {
@@ -157,12 +157,15 @@
 
 .links-title {
   margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .links-title a {
   color: #F2F2F2;
   font-size: 36px;
-  margin-right: 24px;
+  margin: 0 16px;
 }
 
 .links-title a:hover {
@@ -682,20 +685,6 @@
   position: absolute;
 }
 
-@media screen and (max-width: 999px) {
-  .main-bloc {
-    display: flex;
-  }
-  .intro {
-    margin-top: 32px;
-  }
-  .about {
-    display: none;
-  }
-  .name span {
-    display: flex;
-  }
-}
 @media screen and (max-width: 768px) {
   .main-bloc {
     flex-direction: column;
@@ -704,6 +693,10 @@
     left: 0;
     width: 100%;
     display: flex;
+  }
+  .name {
+    margin-top: 32px;
+    margin-bottom: 32px;
   }
   .title {
     text-align: center;
@@ -720,9 +713,12 @@
     flex-direction: column;
     margin: 16px;
   }
+  .experience {
+    flex-direction: column;
+    margin: 16px;
+  }
   .intro {
-    margin-top: 32px;
-    margin-right: 32px;
+    margin: 24px;
     max-width: 80%;
   }
   .function {

@@ -1,24 +1,3 @@
-@media screen and (max-width: 999px) {
-
-  .main-bloc {
-    display: flex;
-  }
-
-  .intro {
-    margin-top: 32px;
-  }
-
-  .about {
-    display: none;
-  }
-
-  .name span {
-    display: flex;
-  }
-
-}
-
-
 @media screen and (max-width: 768px) {
 
 
@@ -29,6 +8,11 @@
     left: 0;
     width: 100%;
     display: flex;
+  }
+
+  .name {
+    margin-top: 32px;
+    margin-bottom: 32px;
   }
 
   .title {
@@ -50,9 +34,13 @@
     margin: 16px;
   }
 
+  .experience {
+    flex-direction: column;
+    margin: 16px;
+  }
+
   .intro {
-    margin-top: 32px;
-    margin-right: 32px;
+    margin: 24px;
     max-width: 80%;
   }
 
