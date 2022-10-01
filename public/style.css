@@ -735,9 +735,8 @@
     margin-top: 16px;
   }
   .card-experience {
-    width: 400px;
     height: 300px;
-    margin: 16px;
+    margin: 0;
   }
   .barre {
     display: none;
