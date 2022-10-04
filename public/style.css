@@ -9,7 +9,7 @@
 }
 
 .main-bloc {
-  margin-top: 48px;
+  margin-top: 36px;
   opacity: 0;
   animation: apparition 0.3s ease-in-out 0.5s forwards;
   display: flex;
@@ -763,6 +763,9 @@
   .skills li {
     width: 72px;
     height: 72px;
+  }
+  .projet-promo {
+    max-width: 100%;
   }
 }
 * {
