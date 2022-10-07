@@ -107,3 +107,46 @@
 #arrow {
   margin-left: 16px;
 }
+
+.container-dark-mode-btn {
+  display: flex;
+  justify-content: start;
+  background-color: $vert;
+  position: absolute;
+}
+
+.dark-mode-btn {
+  width: 32px;
+  height: 32px;
+  margin: 16px;
+  z-index: 1;
+  color: $ligth;
+  border: 0.1px solid $ligth;
+  border-radius: 50%;
+  box-shadow: 0 0 10px 1px $ligth;
+  transition: all 0.2s 0.1s ease-in-out;
+}
+
+.dark-mode-btn:hover {
+  color: $safran;
+  cursor: pointer;
+  border: 0.1px solid $safran;
+  box-shadow: 0 0 10px 1px $safran;
+  transform: scale(1.1);
+}
+
+.dark-mode-btn a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: $ligth;
+  transition: all 0.2s 0.1s ease-in-out;
+}
+
+.dark-mode-btn a:hover {
+  transform: rotate(180deg);
+}
+

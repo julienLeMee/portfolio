@@ -29,6 +29,18 @@ body {
   scroll-behavior: smooth;
 }
 
+.dark-mode {
+  transition: 0.5s;
+  background-color: $black;
+  color: $ligth;
+}
+
+.light-mode {
+  transition: 0.5s;
+  background-color: $ligth;
+  color: $black;
+}
+
 @keyframes apparition {
   100% {
     opacity: 1;

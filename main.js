@@ -1,4 +1,4 @@
-const navbar = document.getElementById('navbar');
+// const navbar = document.getElementById('navbar');
 const navlinks = document.querySelectorAll('.nav-link');
 const barre = document.querySelector('.barre');
 const allTab = document.querySelectorAll('.tab');
@@ -6,6 +6,12 @@ const containerBubble = document.querySelector('.container-bubble-menu');
 const btnBubble = document.querySelector('.bubble-btn');
 const btnToTop = document.querySelector('.btn-to-top');
 const textAnim = document.querySelector('.title-writer');
+const darkMode = document.querySelector('.dark-mode-btn');
+const homepage = document.querySelector('.main-content');
+const contact = document.querySelectorAll('.intro a');
+const about = document.querySelector('.about');
+const tabBloc = document.querySelector('.tab-bloc');
+const btnHomepage = document.getElementById('btn-homepage');
 
 // window.addEventListener('scroll', () => {
 //   if (window.scrollY > 300) {
@@ -51,12 +57,12 @@ btnBubble.addEventListener('click', () => {
 
 window.addEventListener('scroll', () => {
     containerBubble.classList.remove('active');  if (window.scrollY > 100) {
-    navbar.classList.add('scrolled');
+    // navbar.classList.add('scrolled');
     navlinks.forEach((link) => {
       link.style = 'color: #DFDBD9';
     });
   } else {
-    navbar.classList.remove('scrolled');
+    // navbar.classList.remove('scrolled');
     navlinks.forEach((link) => {
       link.style = 'color: #rgba(21, 21, 21)';
     });
@@ -76,17 +82,25 @@ allTab.forEach((tab) => {
 
 });
 
+darkMode.addEventListener('click', () => {
+  homepage.classList.toggle('dark-mode');
+  darkMode.classList.toggle('dark-mode');
+  tabBloc.classList.toggle('dark-mode');
+  darkMode.parentNode.classList.toggle('dark-mode');
+  about.classList.toggle('dark-mode');
+  contact.classList.toggle('dark-mode');
+  btnHomepage.classList.toggle('dark-mode');
+});
 
-// import { Controller } from "@hotwired/stimulus"
-// import Typed from "typed.js"
-
-// // Connects to data-controller="typed-js"
-// export default class extends Controller {
-//   connect() {
-//     new Typed(this.element, {
-//       strings: ["Have a break", "Have a KitKat"],
-//       typeSpeed: 80,
-//       loop: true
-//     })
-//   }
-// }
+// darkMode.addEventListener('click', () => {
+//   document.body.classList.toggle('light-mode');
+//   homepage.classList.toggle('light-mode');
+//   darkMode.classList.toggle('light-mode');
+//   tabBloc.classList.toggle('light-mode');
+//   darkMode.parentNode.classList.toggle('light-mode');
+//   about.classList.toggle('light-mode');
+//   contact.forEach((link) => {
+//     link.classList.toggle('light-mode');
+//   });
+//   btnHomepage.classList.toggle('light-mode');
+// });
