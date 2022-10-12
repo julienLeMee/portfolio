@@ -397,6 +397,12 @@
   transition: 0.3s ease-in-out;
 }
 
+#game-link {
+  color: #F2F2F2;
+  text-decoration: none;
+  font-weight: lighter;
+}
+
 .projet-promo {
   max-width: 80%;
 }
@@ -829,6 +835,15 @@ body {
   background-color: #151515;
   color: #151515;
   scroll-behavior: smooth;
+}
+
+iframe {
+  display: block;
+  max-width: 700px;
+  height: 100%;
+  transition: 0.4s ease-out;
+  position: relative;
+  border-radius: 4px;
 }
 
 .dark-mode {

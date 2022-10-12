@@ -13,6 +13,7 @@ const about = document.querySelector('.about');
 const tabBloc = document.querySelector('.tab-bloc');
 const btnHomepage = document.getElementById('btn-homepage');
 
+
 // window.addEventListener('scroll', () => {
 //   if (window.scrollY > 300) {
 //     btnToTop.classList.add('show');
@@ -79,8 +80,8 @@ allTab.forEach((tab) => {
       }
     })
   })
-
 });
+
 
 darkMode.addEventListener('click', () => {
   homepage.classList.toggle('dark-mode');
@@ -92,15 +93,15 @@ darkMode.addEventListener('click', () => {
   btnHomepage.classList.toggle('dark-mode');
 });
 
-// darkMode.addEventListener('click', () => {
-//   document.body.classList.toggle('light-mode');
-//   homepage.classList.toggle('light-mode');
-//   darkMode.classList.toggle('light-mode');
-//   tabBloc.classList.toggle('light-mode');
-//   darkMode.parentNode.classList.toggle('light-mode');
-//   about.classList.toggle('light-mode');
-//   contact.forEach((link) => {
-//     link.classList.toggle('light-mode');
-//   });
-//   btnHomepage.classList.toggle('light-mode');
-// });
+darkMode.addEventListener('click', () => {
+  document.body.classList.toggle('light-mode');
+  homepage.classList.toggle('light-mode');
+  darkMode.classList.toggle('light-mode');
+  tabBloc.classList.toggle('light-mode');
+  darkMode.parentNode.classList.toggle('light-mode');
+  about.classList.toggle('light-mode');
+  contact.forEach((link) => {
+    link.classList.toggle('light-mode');
+  });
+  btnHomepage.classList.toggle('light-mode');
+});

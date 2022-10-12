@@ -128,6 +128,12 @@
   transition: 0.3s ease-in-out;
 }
 
+#game-link {
+  color: $ligth;
+  text-decoration: none;
+  font-weight: lighter;
+}
+
 .projet-promo {
   max-width: 80%;
 }

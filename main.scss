@@ -29,6 +29,15 @@ body {
   scroll-behavior: smooth;
 }
 
+iframe {
+  display: block;
+  max-width: 700px;
+  height: 100%;
+  transition: 0.4s ease-out;
+  position: relative;
+  border-radius: 4px;
+}
+
 .dark-mode {
   transition: 0.5s;
   background-color: $black;
