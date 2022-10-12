@@ -849,6 +849,12 @@ iframe {
   border-radius: 4px;
 }
 
+iframe:hover {
+  transform: scale(1.1);
+  transition: 0.4s ease-out;
+  filter: drop-shadow(0 0 0.75rem #ffffff);
+}
+
 .dark-mode {
   transition: 0.5s;
   background-color: #151515;
