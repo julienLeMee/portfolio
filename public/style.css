@@ -821,6 +821,9 @@
   .projet-promo {
     max-width: 100%;
   }
+  iframe {
+    width: 80% !important;
+  }
 }
 * {
   box-sizing: border-box;
