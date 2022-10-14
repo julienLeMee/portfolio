@@ -40,14 +40,14 @@
 .links-title {
   margin-top: 100px;
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
 }
 
 .links-title a {
   color: $ligth;
   font-size: 36px;
-  margin: 16px 16px;
+  margin-right: 32px;
 }
 
 .links-title a:hover {
