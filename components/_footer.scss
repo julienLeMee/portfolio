@@ -2,13 +2,14 @@
   display: flex;
   align-items: center;
   height: 100px;
+  background-color: $white;
 }
 .footer-links {
   display: flex;
   align-items: center;
 }
 .footer-links a {
-  color: $ligth;
+  color: $black;
   opacity: 0.5;
   text-decoration: none;
   font-size: 32px;
@@ -19,3 +20,4 @@
   opacity: 1;
   transition: 0.2s ease-in-out;
 }
+

@@ -186,7 +186,7 @@
 .container-btn-to-top {
   display: flex;
   justify-content: end;
-  margin: 32px;
+  margin: 32px 32px -32px 0;
 }
 
 .btn-to-top {
@@ -618,6 +618,7 @@
   display: flex;
   align-items: center;
   height: 100px;
+  background-color: #ffffff;
 }
 
 .footer-links {
@@ -626,7 +627,7 @@
 }
 
 .footer-links a {
-  color: #F2F2F2;
+  color: #151515;
   opacity: 0.5;
   text-decoration: none;
   font-size: 32px;
