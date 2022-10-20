@@ -143,7 +143,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  filter: grayscale(100%);
+  filter: grayscale(50%);
   border: none;
   text-decoration: none;
 }
@@ -153,9 +153,10 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  filter: grayscale(100%);
+  filter: grayscale(50%);
   border: none;
   text-decoration: none;
+  text-align: center;
 }
 
 .to-do-list {
@@ -163,7 +164,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  filter: grayscale(100%);
+  filter: grayscale(50%);
   border: none;
   text-decoration: none;
 }
@@ -173,14 +174,24 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  filter: grayscale(100%);
   border: none;
   text-decoration: none;
+  filter: grayscale(50%);
+}
+
+.business-card {
+  background-image: url("../ressources/business-card.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+  text-decoration: none;
+  filter: grayscale(50%);
 }
 
 .projet-perso:hover {
-  filter: grayscale(0%);
   transition: 0.3s ease-in-out;
+  filter: grayscale(0%);
 }
 
 .projet-perso h2 {
