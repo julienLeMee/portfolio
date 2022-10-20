@@ -407,6 +407,64 @@
   max-width: 80%;
 }
 
+.test-technique {
+  background-image: url("../ressources/test-technique.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: grayscale(100%);
+  border: none;
+  text-decoration: none;
+}
+
+.la-ferme-de-novelle {
+  background-image: url("../ressources/poule-mange-dans-la-main.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: grayscale(100%);
+  border: none;
+  text-decoration: none;
+}
+
+.to-do-list {
+  background-image: url("../ressources/to-do-list.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: grayscale(100%);
+  border: none;
+  text-decoration: none;
+}
+
+.airbnb-react {
+  background-image: url("../ressources/airbnb-clone-react.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: grayscale(100%);
+  border: none;
+  text-decoration: none;
+}
+
+.projet-perso:hover {
+  filter: grayscale(0%);
+  transition: 0.3s ease-in-out;
+}
+
+.projet-perso h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  color: #F2F2F2;
+  font-size: 36px;
+  font-weight: bold;
+  text-decoration: none;
+  text-shadow: 0 0 10px #151515;
+}
+
 .container-bubble-menu {
   width: 200px;
   height: 200px;
