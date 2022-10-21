@@ -139,59 +139,75 @@
 }
 
 .test-technique {
-  background-image: url("../ressources/test-technique.png");
+  background-image: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%), url("../ressources/test-technique.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  filter: grayscale(50%);
   border: none;
   text-decoration: none;
 }
 
+.test-technique:hover {
+  transition: 0.3s ease-in-out;
+  background-image: url("../ressources/test-technique.png");
+}
+
+
 .la-ferme-de-novelle {
-  background-image: url("../ressources/poule-mange-dans-la-main.jpg");
+  background-image: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%), url("../ressources/poule-mange-dans-la-main.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  filter: grayscale(50%);
   border: none;
   text-decoration: none;
   text-align: center;
 }
 
+.la-ferme-de-novelle:hover {
+  transition: 0.3s ease-in-out;
+  background-image: url("../ressources/poule-mange-dans-la-main.jpg");
+}
+
 .to-do-list {
-  background-image: url("../ressources/to-do-list.png");
   background-size: cover;
+  background-image: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%), url("../ressources/to-do-list.png");
   background-position: center;
   background-repeat: no-repeat;
-  filter: grayscale(50%);
   border: none;
   text-decoration: none;
+}
+
+.to-do-list:hover {
+  transition: 0.3s ease-in-out;
+  background-image: url("../ressources/to-do-list.png");
 }
 
 .airbnb-react {
-  background-image: url("../ressources/airbnb-clone-react.png");
+  background-image: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%), url("../ressources/airbnb-clone-react.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   border: none;
   text-decoration: none;
-  filter: grayscale(50%);
+}
+
+.airbnb-react:hover {
+  transition: 0.3s ease-in-out;
+  background-image: url("../ressources/airbnb-clone-react.png");
 }
 
 .business-card {
-  background-image: url("../ressources/business-card.png");
+  background-image: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%), url("../ressources/business-card.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   border: none;
   text-decoration: none;
-  filter: grayscale(50%);
 }
 
-.projet-perso:hover {
+.business-card:hover {
   transition: 0.3s ease-in-out;
-  filter: grayscale(0%);
+  background-image: url("../ressources/business-card.png");
 }
 
 .projet-perso h2 {
@@ -205,4 +221,22 @@
   font-weight: bold;
   text-decoration: none;
   text-shadow: 0 0 10px $black;
+  z-index: 100;
+}
+
+.projets-perso-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+}
+
+.projets-perso-cards a {
+  height: 300px;
+  width: 300px;
+  margin: 24px;
+  display: flex;
+  justify-content: center;
+  border-radius: 8px;
 }
