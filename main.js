@@ -165,7 +165,6 @@ function tick() {
   renderer.render(scene, camera) // affiche la scène avec la caméra
   // camera.lookAt(0, 0, 0) // fait regarder la caméra vers le centre de la scène
   requestAnimationFrame(tick) // demande à la fonction tick de s'exécuter à nouveau
-  // group.rotation.y = time * 0.1 // fait tourner le groupe sur l'axe y
   const ratio = (mouseX / window.innerWidth - 0.5) * 2 // calcule le ratio de la position de la souris sur l'axe x par rapport à la largeur de la fenêtre (entre -1 et 1)
   cubeMesh.rotation.y = ratio * Math.PI * 0.1 // fait tourner le groupe sur l'axe y en fonction du ratio
   const ratioY = (mouseY / window.innerHeight - 0.5) * 2 // calcule le ratio de la position de la souris sur l'axe y par rapport à la hauteur de la fenêtre (entre -1 et 1)
