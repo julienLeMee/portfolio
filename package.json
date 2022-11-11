@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/julienLeMee/portfolio#readme",
   "dependencies": {
+    "three": "^0.146.0",
     "typewriter-effect": "^2.19.0"
   }
 }

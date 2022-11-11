@@ -1,5 +1,9 @@
 @media screen and (max-width: 768px) {
 
+  canvas {
+    width: 100% !important;
+    height: auto !important;
+  }
 
   .main-bloc {
     flex-direction: column;

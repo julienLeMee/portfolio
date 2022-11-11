@@ -83,25 +83,93 @@ allTab.forEach((tab) => {
 });
 
 
-darkMode.addEventListener('click', () => {
-  homepage.classList.toggle('dark-mode');
-  darkMode.classList.toggle('dark-mode');
-  tabBloc.classList.toggle('dark-mode');
-  darkMode.parentNode.classList.toggle('dark-mode');
-  about.classList.toggle('dark-mode');
-  contact.classList.toggle('dark-mode');
-  btnHomepage.classList.toggle('dark-mode');
-});
+// darkMode.addEventListener('click', () => {
+//   homepage.classList.toggle('dark-mode');
+//   darkMode.classList.toggle('dark-mode');
+//   tabBloc.classList.toggle('dark-mode');
+//   darkMode.parentNode.classList.toggle('dark-mode');
+//   about.classList.toggle('dark-mode');
+//   contact.classList.toggle('dark-mode');
+//   btnHomepage.classList.toggle('dark-mode');
+// });
 
-darkMode.addEventListener('click', () => {
-  document.body.classList.toggle('light-mode');
-  homepage.classList.toggle('light-mode');
-  darkMode.classList.toggle('light-mode');
-  tabBloc.classList.toggle('light-mode');
-  darkMode.parentNode.classList.toggle('light-mode');
-  about.classList.toggle('light-mode');
-  contact.forEach((link) => {
-    link.classList.toggle('light-mode');
-  });
-  btnHomepage.classList.toggle('light-mode');
-});
+// darkMode.addEventListener('click', () => {
+//   document.body.classList.toggle('light-mode');
+//   homepage.classList.toggle('light-mode');
+//   darkMode.classList.toggle('light-mode');
+//   tabBloc.classList.toggle('light-mode');
+//   darkMode.parentNode.classList.toggle('light-mode');
+//   about.classList.toggle('light-mode');
+//   contact.forEach((link) => {
+//     link.classList.toggle('light-mode');
+//   });
+//   btnHomepage.classList.toggle('light-mode');
+// });
+
+///////////////////// THREE JS //////////////////////
+
+const canvas = document.querySelector('.webgl');
+
+// Sizes
+const sizes = {
+    width: 800,
+    height: 600
+}
+
+// Scene
+const scene = new THREE.Scene()
+
+// Object
+
+const sphereGeometry = new THREE.SphereGeometry(0.5, 32, 32)
+const sphereMaterial = new THREE.MeshBasicMaterial({color: 0xff0000})
+const sphere = new THREE.Mesh(sphereGeometry, sphereMaterial)
+scene.add(sphere)
+const cubeGeometry = new THREE.BoxGeometry(2, 2, 2)
+const cubeMaterial = new THREE.MeshBasicMaterial({
+    color: 0xffffff,
+    wireframe: true
+})
+const cubeMesh = new THREE.Mesh(cubeGeometry, cubeMaterial)
+scene.add(cubeMesh)
+
+// Camera
+const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height)
+camera.position.z = 3
+scene.add(camera)
+
+// Renderer
+const renderer = new THREE.WebGLRenderer({
+    canvas: canvas,
+    alpha: true,
+    antialias: true
+})
+renderer.setSize(sizes.width, sizes.height)
+renderer.render(scene, camera)
+
+window.addEventListener('resize', () => {
+  camera.aspect = window.innerWidth / window.innerHeight // définit le ratio de la caméra
+  camera.updateProjectionMatrix() // met à jour la matrice de projection de la caméra
+  renderer.setSize(window.innerWidth, window.innerHeight) // définit la taille du renderer
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2)) // définit le ratio de pixel du renderer
+})
+
+let mouseX = 0 // position de la souris sur l'axe x
+let mouseY = 0 // position de la souris sur l'axe y
+window.addEventListener('mousemove', e => {
+  mouseX = e.clientX // récupère la position de la souris sur l'axe x
+  mouseY = e.clientY // récupère la position de la souris sur l'axe y
+})
+
+function tick() {
+  renderer.render(scene, camera) // affiche la scène avec la caméra
+  // camera.lookAt(0, 0, 0) // fait regarder la caméra vers le centre de la scène
+  requestAnimationFrame(tick) // demande à la fonction tick de s'exécuter à nouveau
+  // group.rotation.y = time * 0.1 // fait tourner le groupe sur l'axe y
+  const ratio = (mouseX / window.innerWidth - 0.5) * 2 // calcule le ratio de la position de la souris sur l'axe x par rapport à la largeur de la fenêtre (entre -1 et 1)
+  cubeMesh.rotation.y = ratio * Math.PI * 0.1 // fait tourner le groupe sur l'axe y en fonction du ratio
+  const ratioY = (mouseY / window.innerHeight - 0.5) * 2 // calcule le ratio de la position de la souris sur l'axe y par rapport à la hauteur de la fenêtre (entre -1 et 1)
+  cubeMesh.rotation.x = ratioY * Math.PI * 0.1 // fait tourner le groupe sur l'axe x en fonction du ratio
+}
+
+tick() // exécute la fonction tick

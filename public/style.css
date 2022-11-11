@@ -834,6 +834,10 @@
 }
 
 @media screen and (max-width: 768px) {
+  canvas {
+    width: 100% !important;
+    height: auto !important;
+  }
   .main-bloc {
     flex-direction: column;
     position: absolute;
@@ -937,6 +941,12 @@ body {
   background-color: #151515;
   color: #151515;
   scroll-behavior: smooth;
+}
+
+canvas {
+  position: absolute;
+  z-index: -1;
+  opacity: 0.2;
 }
 
 iframe {
