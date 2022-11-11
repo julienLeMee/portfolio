@@ -161,6 +161,14 @@ window.addEventListener('mousemove', e => {
   mouseY = e.clientY // récupère la position de la souris sur l'axe y
 })
 
+// recuperer la position du doigt sur l'ecran
+let touchX = 0 // position du doigt sur l'axe x
+let touchY = 0 // position du doigt sur l'axe y
+window.addEventListener('touchmove', e => {
+  touchX = e.touches[0].clientX // récupère la position du doigt sur l'axe x
+  touchY = e.touches[0].clientY // récupère la position du doigt sur l'axe y
+}) 
+
 function tick() {
   renderer.render(scene, camera) // affiche la scène avec la caméra
   // camera.lookAt(0, 0, 0) // fait regarder la caméra vers le centre de la scène
@@ -169,6 +177,14 @@ function tick() {
   cubeMesh.rotation.y = ratio * Math.PI * 0.1 // fait tourner le groupe sur l'axe y en fonction du ratio
   const ratioY = (mouseY / window.innerHeight - 0.5) * 2 // calcule le ratio de la position de la souris sur l'axe y par rapport à la hauteur de la fenêtre (entre -1 et 1)
   cubeMesh.rotation.x = ratioY * Math.PI * 0.1 // fait tourner le groupe sur l'axe x en fonction du ratio
+
+  if (window.matchMedia("(max-width: 768px)").matches) {
+    const ratioTouchX = (touchX / window.innerWidth - 0.5) * 2 // calcule le ratio de la position de la souris sur l'axe x par rapport à la largeur de la fenêtre (entre -1 et 1)
+    cubeMesh.rotation.y = ratioTouchX * Math.PI * 0.1 // fait tourner le groupe sur l'axe y en fonction du ratio
+    const ratioTouchY = (touchY / window.innerHeight - 0.5) * 2 // calcule le ratio de la position de la souris sur l'axe y par rapport à la hauteur de la fenêtre (entre -1 et 1)
+    cubeMesh.rotation.x = ratioTouchY * Math.PI * 0.1 // fait tourner le groupe sur l'axe x en fonction du ratio
+  }
+
 }
 
 tick() // exécute la fonction tick
