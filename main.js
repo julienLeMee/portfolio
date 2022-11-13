@@ -170,6 +170,7 @@ window.addEventListener('touchmove', e => {
 })
 
 function tick() {
+  cubeMesh.rotation.y += 1
   renderer.render(scene, camera) // affiche la scène avec la caméra
   // camera.lookAt(0, 0, 0) // fait regarder la caméra vers le centre de la scène
   requestAnimationFrame(tick) // demande à la fonction tick de s'exécuter à nouveau
