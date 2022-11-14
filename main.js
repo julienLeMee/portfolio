@@ -121,7 +121,7 @@ const scene = new THREE.Scene()
 
 // Object
 
-const sphereGeometry = new THREE.SphereGeometry(0.5, 32, 32)
+const sphereGeometry = new THREE.SphereGeometry(0.4, 32, 32)
 const sphereMaterial = new THREE.MeshBasicMaterial({color: 0xff0000})
 const sphere = new THREE.Mesh(sphereGeometry, sphereMaterial)
 scene.add(sphere)
@@ -132,6 +132,13 @@ const cubeMaterial = new THREE.MeshBasicMaterial({
 })
 const cubeMesh = new THREE.Mesh(cubeGeometry, cubeMaterial)
 scene.add(cubeMesh)
+
+const octahedronGeometry = new THREE.OctahedronGeometry(0.1, 0)
+const octahedronMaterial = new THREE.MeshNormalMaterial()
+
+const octahedron = new THREE.Mesh(octahedronGeometry, octahedronMaterial)
+scene.add(octahedron)
+
 
 // Camera
 const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height)
@@ -169,7 +176,18 @@ window.addEventListener('touchmove', e => {
   touchY = e.touches[0].clientY // récupère la position du doigt sur l'axe y
 })
 
+// Animation
+
+const clock = new THREE.Clock()
+
 function tick() {
+  const elapsedTime = clock.getElapsedTime()
+
+  // Update objects
+  octahedron.position.y = Math.cos(elapsedTime)
+  octahedron.position.x = Math.sin(elapsedTime)
+  octahedron.rotation.y = elapsedTime
+  octahedron.rotation.x = elapsedTime
   cubeMesh.rotation.y += 1
   renderer.render(scene, camera) // affiche la scène avec la caméra
   // camera.lookAt(0, 0, 0) // fait regarder la caméra vers le centre de la scène
