@@ -133,11 +133,37 @@ const cubeMaterial = new THREE.MeshBasicMaterial({
 const cubeMesh = new THREE.Mesh(cubeGeometry, cubeMaterial)
 scene.add(cubeMesh)
 
-const octahedronGeometry = new THREE.OctahedronGeometry(0.1, 0)
-const octahedronMaterial = new THREE.MeshNormalMaterial()
+// const octahedronGeometry = new THREE.OctahedronGeometry(0.1, 0)
+// const octahedronMaterial = new THREE.MeshNormalMaterial()
 
-const octahedron = new THREE.Mesh(octahedronGeometry, octahedronMaterial)
-scene.add(octahedron)
+// const octahedron = new THREE.Mesh(octahedronGeometry, octahedronMaterial)
+// scene.add(octahedron)
+
+
+const particleGeometry = new THREE.BufferGeometry()
+const particleCount = 80000
+
+const positionsArray = new Float32Array(particleCount * 3);
+
+
+
+for (let i = 0; i < particleCount * 3; i++) {
+    positionsArray[i] = (Math.random() - 0.5) * 2
+}
+
+const positionAttribute = new THREE.BufferAttribute(positionsArray, 3);
+particleGeometry.setAttribute('position', positionAttribute);
+
+const cubeParticles = new THREE.Points( particleGeometry, new THREE.PointsMaterial({
+  size: 0.001,
+  color: 0xffffff,
+  transparent: true, // pour que la couleur soit transparente
+  opacity: 0.5,
+  depthWrite: false, // pour que les particules ne soient pas cachées par les autres objets
+  blending: THREE.AdditiveBlending, // pour que les particules soient plus lumineuses
+  sizeAttenuation: true // pour que les particules soient plus petites quand elles sont loin
+}));
+scene.add(cubeParticles);
 
 
 // Camera
@@ -184,11 +210,12 @@ function tick() {
   const elapsedTime = clock.getElapsedTime()
 
   // Update objects
-  octahedron.position.y = Math.cos(elapsedTime)
-  octahedron.position.x = Math.sin(elapsedTime)
-  octahedron.rotation.y = elapsedTime
-  octahedron.rotation.x = elapsedTime
+  // octahedron.position.y = Math.cos(elapsedTime)
+  // octahedron.position.x = Math.sin(elapsedTime)
+  // octahedron.rotation.y = elapsedTime
+  // octahedron.rotation.x = elapsedTime
   cubeMesh.rotation.y += 1
+  cubeParticles.rotation.y += 1
   renderer.render(scene, camera) // affiche la scène avec la caméra
   // camera.lookAt(0, 0, 0) // fait regarder la caméra vers le centre de la scène
   requestAnimationFrame(tick) // demande à la fonction tick de s'exécuter à nouveau
@@ -196,6 +223,8 @@ function tick() {
   cubeMesh.rotation.y = ratio * Math.PI * 0.5 // fait tourner le groupe sur l'axe y en fonction du ratio
   const ratioY = (mouseY / window.innerHeight - 0.5) * 2 // calcule le ratio de la position de la souris sur l'axe y par rapport à la hauteur de la fenêtre (entre -1 et 1)
   cubeMesh.rotation.x = ratioY * Math.PI * 0.5 // fait tourner le groupe sur l'axe x en fonction du ratio
+  cubeParticles.rotation.y = ratio * Math.PI * 0.5 // fait tourner le groupe sur l'axe y en fonction du ratio
+  cubeParticles.rotation.x = ratioY * Math.PI * 0.5 // fait tourner le groupe sur l'axe x en fonction du ratio
 
   if (window.matchMedia("(max-width: 768px)").matches) {
     const ratioTouchX = (touchX / window.innerWidth - 0.5) * 2 // calcule le ratio de la position de la souris sur l'axe x par rapport à la largeur de la fenêtre (entre -1 et 1)
