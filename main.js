@@ -122,7 +122,7 @@ const scene = new THREE.Scene()
 // Object
 
 const sphereGeometry = new THREE.SphereGeometry(0.4, 32, 32)
-const sphereMaterial = new THREE.MeshNormalMaterial({color: 0xff0000})
+const sphereMaterial = new THREE.MeshNormalMaterial()
 const sphere = new THREE.Mesh(sphereGeometry, sphereMaterial)
 scene.add(sphere)
 const cubeGeometry = new THREE.BoxGeometry(2, 2, 2)
@@ -155,11 +155,10 @@ const positionAttribute = new THREE.BufferAttribute(positionsArray, 3);
 particleGeometry.setAttribute('position', positionAttribute);
 
 const cubeParticles = new THREE.Points( particleGeometry, new THREE.PointsMaterial({
-  size: 0.001,
+  size: 0.0001,
   color: 0xffffff,
   transparent: true, // pour que la couleur soit transparente
-  opacity: 0.5,
-  depthWrite: false, // pour que les particules ne soient pas cachées par les autres objets
+  opacity: 0.5, // pour que les particules ne soient pas cachées par les autres objets
   blending: THREE.AdditiveBlending, // pour que les particules soient plus lumineuses
   sizeAttenuation: true // pour que les particules soient plus petites quand elles sont loin
 }));
@@ -210,10 +209,13 @@ function tick() {
   const elapsedTime = clock.getElapsedTime()
 
   // Update objects
-  // octahedron.position.y = Math.cos(elapsedTime)
+
+  sphere.position.y = Math.cos(elapsedTime) * 0.2
+  sphere.position.x = Math.sin(elapsedTime) * 0.2
   // octahedron.position.x = Math.sin(elapsedTime)
   // octahedron.rotation.y = elapsedTime
   // octahedron.rotation.x = elapsedTime
+
   cubeMesh.rotation.y += 1
   cubeParticles.rotation.y += 1
   renderer.render(scene, camera) // affiche la scène avec la caméra
