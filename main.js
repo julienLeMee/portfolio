@@ -122,7 +122,7 @@ const scene = new THREE.Scene()
 // Object
 
 const sphereGeometry = new THREE.SphereGeometry(0.4, 32, 32)
-const sphereMaterial = new THREE.MeshBasicMaterial({color: 0xff0000})
+const sphereMaterial = new THREE.MeshNormalMaterial({color: 0xff0000})
 const sphere = new THREE.Mesh(sphereGeometry, sphereMaterial)
 scene.add(sphere)
 const cubeGeometry = new THREE.BoxGeometry(2, 2, 2)
@@ -233,7 +233,8 @@ function tick() {
     cubeParticles.rotation.y = ratioTouchX * Math.PI // fait tourner le groupe sur l'axe y en fonction du ratio
     cubeParticles.rotation.x = ratioTouchY * Math.PI // fait tourner le groupe sur l'axe x en fonction du ratio
   }
-
+  // sphere.rotation.y += 0.01
+  // sphere.rotation.x += 0.01
   requestAnimationFrame(tick) // demande à la fonction tick de s'exécuter à nouveau
 }
 
