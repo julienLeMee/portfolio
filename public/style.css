@@ -14,7 +14,7 @@
   animation: apparition 0.3s ease-in-out 0.5s forwards;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
 }
@@ -852,6 +852,7 @@
   canvas {
     width: 100% !important;
     height: auto !important;
+    opacity: 0.2;
   }
   .main-bloc {
     flex-direction: column;
@@ -961,7 +962,10 @@ body {
 canvas {
   position: absolute;
   z-index: -1;
-  opacity: 0.2;
+  opacity: 0.3;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 iframe {
