@@ -59,6 +59,7 @@
   border-radius: 8px;
   box-shadow: 0 0 0 1px $ligth;
   font-weight: 500;
+  background: transparentize($color: $vert, $amount: 0.2);
 }
 
 .function {

@@ -112,7 +112,7 @@ const canvas = document.querySelector('.webgl');
 // Sizes
 const sizes = {
   width: window.innerWidth,
-  height: window.innerHeight
+  height: window.innerHeight * 2
 }
 
 // Scene
@@ -145,15 +145,53 @@ const matCapTexture3 = textureLoader.load('/textures/matcaps/7.png')
 // const particlesSphere = new THREE.Points(particlesGeometry, particlesMaterial)
 // scene.add(particlesSphere)
 
+const particlesTexture = textureLoader.load('/textures/particles/2.png')
+
+/**
+ * Particles
+ */
+// Geometry
+const particlesGeometry = new THREE.BufferGeometry()
+const count = 1000
+
+const positions = new Float32Array(count * 3)
+const colors = new Float32Array(count * 3)
+
+for (let i = 0; i < count * 3; i++)
+{
+    positions[i] = (Math.random() - 0.5) * 10
+    colors[i] = Math.random()
+}
+
+particlesGeometry.setAttribute('position', new THREE.BufferAttribute(positions, 3))
+particlesGeometry.setAttribute('color', new THREE.BufferAttribute(colors, 3))
+
+// Material
+const particlesMaterial = new THREE.PointsMaterial({
+    size: 0.1,
+    sizeAttenuation: true
+})
+// on peut aussi instancier un PointsMaterial vide et lui ajouter ensuite les propriétés
+// particlesMaterial.color = new THREE.Color('#ff88cc')
+particlesMaterial.transparent = true
+particlesMaterial.alphaMap = particlesTexture
+particlesMaterial.depthWrite = false // pour que les particules ne soient pas cachées par les objets de la scène
+particlesMaterial.blending = THREE.AdditiveBlending // pour avoir un effet de lumière
+particlesMaterial.vertexColors = true // pour que les particules aient des couleurs différentes
+
+// Points
+const bubbles = new THREE.Points(particlesGeometry, particlesMaterial)
+scene.add(bubbles)
+
 /**
  * Sphere & Cube
  */
 
-const sphereGeometry = new THREE.SphereGeometry(0.4, 32, 32)
+const sphereGeometry = new THREE.SphereGeometry(0.1, 32, 32)
 const sphereMaterial = new THREE.MeshMatcapMaterial({ matcap: matCapTexture })
 const sphere = new THREE.Mesh(sphereGeometry, sphereMaterial)
 scene.add(sphere)
-const cubeGeometry = new THREE.BoxGeometry(2, 2, 2)
+const cubeGeometry = new THREE.BoxGeometry(1, 1, 1)
 const cubeMaterial = new THREE.MeshBasicMaterial({
     color: 0xffffff,
     wireframe: true
@@ -168,7 +206,7 @@ const cubeMesh = new THREE.Mesh(cubeGeometry, cubeMaterial)
 // scene.add(octahedron)
 
 
-const particleGeometry = new THREE.BufferGeometry()
+const particleGeometry = new THREE.BufferGeometry();
 const particleCount = 80000
 
 const particles = new Float32Array(particleCount * 3);
@@ -176,7 +214,7 @@ const particles = new Float32Array(particleCount * 3);
 
 
 for (let i = 0; i < particleCount * 3; i++) {
-    particles[i] = (Math.random() - 0.5) * 2
+    particles[i] = (Math.random() - 0.5)
 }
 
 const positionAttribute = new THREE.BufferAttribute(particles, 3);
@@ -186,7 +224,7 @@ const cubeParticles = new THREE.Points( particleGeometry, new THREE.PointsMateri
   size: 0.0001,
   color: 0xffffff,
   transparent: true, // pour que la couleur soit transparente
-  opacity: 0.8, // pour que les particules ne soient pas cachées par les autres objets
+  opacity: 0.5, // pour que les particules ne soient pas cachées par les autres objets
   blending: THREE.AdditiveBlending, // pour que les particules soient plus lumineuses
   sizeAttenuation: true // pour que les particules soient plus petites quand elles sont loin
 }));
@@ -255,6 +293,8 @@ function tick() {
   cubeMesh.rotation.x = ratioY * Math.PI * 0.5 // fait tourner le groupe sur l'axe x en fonction du ratio
   cubeParticles.rotation.y = ratio * Math.PI * 0.5 // fait tourner le groupe sur l'axe y en fonction du ratio
   cubeParticles.rotation.x = ratioY * Math.PI * 0.5 // fait tourner le groupe sur l'axe x en fonction du ratio
+  // bubbles.rotation.y = ratio * Math.PI * 0.5 // fait tourner le groupe sur l'axe y en fonction du ratio
+  // bubbles.rotation.x = ratioY * Math.PI * 0.5 // fait tourner le groupe sur l'axe x en fonction du ratio
   // particlesSphere.rotation.y = ratio * Math.PI // fait tourner le groupe sur l'axe y en fonction du ratio
   // particlesSphere.rotation.x = ratioY * Math.PI // fait tourner le groupe sur l'axe x en fonction du ratio
 
@@ -265,10 +305,12 @@ function tick() {
     cubeMesh.rotation.x = ratioTouchY * Math.PI // fait tourner le groupe sur l'axe x en fonction du ratio
     cubeParticles.rotation.y = ratioTouchX * Math.PI // fait tourner le groupe sur l'axe y en fonction du ratio
     cubeParticles.rotation.x = ratioTouchY * Math.PI // fait tourner le groupe sur l'axe x en fonction du ratio
+    // bubbles.rotation.y = ratioTouchX * Math.PI // fait tourner le groupe sur l'axe y en fonction du ratio
+    // bubbles.rotation.x = ratioTouchY * Math.PI // fait tourner le groupe sur l'axe x en fonction du ratio
   }
-  cubeParticles.position.z = Math.cos(elapsedTime) * 0.5
-  // sphere.rotation.y += 0.01
-  // sphere.rotation.x += 0.01
+  cubeParticles.position.z = Math.cos(elapsedTime) * 0.5 // fait bouger le groupe sur l'axe z en fonction du temps
+  bubbles.rotation.y = elapsedTime * 0.1
+  bubbles.rotation.x = elapsedTime * 0.1
 
   requestAnimationFrame(tick) // demande à la fonction tick de s'exécuter à nouveau
 }
