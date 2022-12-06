@@ -112,17 +112,23 @@ const canvas = document.querySelector('.webgl');
 
 // Sizes
 const sizes = {
-    width: 800,
-    height: 600
+  width: window.innerWidth,
+  height: window.innerHeight
 }
 
 // Scene
 const scene = new THREE.Scene()
 
+// Textures
+const textureLoader = new THREE.TextureLoader()
+const matCapTexture = textureLoader.load('/textures/matcaps/8.png')
+const matCapTexture2 = textureLoader.load('/textures/matcaps/4.png')
+const matCapTexture3 = textureLoader.load('/textures/matcaps/7.png')
+
 // Object
 
 const sphereGeometry = new THREE.SphereGeometry(0.4, 32, 32)
-const sphereMaterial = new THREE.MeshNormalMaterial()
+const sphereMaterial = new THREE.MeshMatcapMaterial({ matcap: matCapTexture })
 const sphere = new THREE.Mesh(sphereGeometry, sphereMaterial)
 scene.add(sphere)
 const cubeGeometry = new THREE.BoxGeometry(2, 2, 2)
@@ -131,7 +137,7 @@ const cubeMaterial = new THREE.MeshBasicMaterial({
     wireframe: true
 })
 const cubeMesh = new THREE.Mesh(cubeGeometry, cubeMaterial)
-scene.add(cubeMesh)
+// scene.add(cubeMesh)
 
 // const octahedronGeometry = new THREE.OctahedronGeometry(0.1, 0)
 // const octahedronMaterial = new THREE.MeshNormalMaterial()
@@ -143,22 +149,22 @@ scene.add(cubeMesh)
 const particleGeometry = new THREE.BufferGeometry()
 const particleCount = 80000
 
-const positionsArray = new Float32Array(particleCount * 3);
+const particles = new Float32Array(particleCount * 3);
 
 
 
 for (let i = 0; i < particleCount * 3; i++) {
-    positionsArray[i] = (Math.random() - 0.5) * 2
+    particles[i] = (Math.random() - 0.5) * 2
 }
 
-const positionAttribute = new THREE.BufferAttribute(positionsArray, 3);
+const positionAttribute = new THREE.BufferAttribute(particles, 3);
 particleGeometry.setAttribute('position', positionAttribute);
 
 const cubeParticles = new THREE.Points( particleGeometry, new THREE.PointsMaterial({
   size: 0.0001,
   color: 0xffffff,
   transparent: true, // pour que la couleur soit transparente
-  opacity: 0.5, // pour que les particules ne soient pas cachées par les autres objets
+  opacity: 0.8, // pour que les particules ne soient pas cachées par les autres objets
   blending: THREE.AdditiveBlending, // pour que les particules soient plus lumineuses
   sizeAttenuation: true // pour que les particules soient plus petites quand elles sont loin
 }));
@@ -236,8 +242,10 @@ function tick() {
     cubeParticles.rotation.y = ratioTouchX * Math.PI // fait tourner le groupe sur l'axe y en fonction du ratio
     cubeParticles.rotation.x = ratioTouchY * Math.PI // fait tourner le groupe sur l'axe x en fonction du ratio
   }
+  cubeParticles.position.z = Math.cos(elapsedTime) * 0.5
   // sphere.rotation.y += 0.01
   // sphere.rotation.x += 0.01
+
   requestAnimationFrame(tick) // demande à la fonction tick de s'exécuter à nouveau
 }
 
