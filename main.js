@@ -107,7 +107,6 @@ allTab.forEach((tab) => {
 // });
 
 ///////////////////// THREE JS //////////////////////
-
 const canvas = document.querySelector('.webgl');
 
 // Sizes
