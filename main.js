@@ -126,6 +126,29 @@ const matCapTexture3 = textureLoader.load('/textures/matcaps/7.png')
 
 // Object
 
+/**
+ * Particles
+ */
+// Geometry
+// const particlesGeometry = new THREE.SphereGeometry(1, 32, 32)
+
+// // Material
+// const particlesMaterial = new THREE.PointsMaterial({
+//     size: 0.02,
+//     sizeAttenuation: true
+// })
+// // on peut aussi instancier un PointsMaterial vide et lui ajouter ensuite les propriétés
+// // particlesMaterial.size = 0.02
+// // particlesMaterial.sizeAttenuation = true
+
+// // Points
+// const particlesSphere = new THREE.Points(particlesGeometry, particlesMaterial)
+// scene.add(particlesSphere)
+
+/**
+ * Sphere & Cube
+ */
+
 const sphereGeometry = new THREE.SphereGeometry(0.4, 32, 32)
 const sphereMaterial = new THREE.MeshMatcapMaterial({ matcap: matCapTexture })
 const sphere = new THREE.Mesh(sphereGeometry, sphereMaterial)
@@ -232,6 +255,8 @@ function tick() {
   cubeMesh.rotation.x = ratioY * Math.PI * 0.5 // fait tourner le groupe sur l'axe x en fonction du ratio
   cubeParticles.rotation.y = ratio * Math.PI * 0.5 // fait tourner le groupe sur l'axe y en fonction du ratio
   cubeParticles.rotation.x = ratioY * Math.PI * 0.5 // fait tourner le groupe sur l'axe x en fonction du ratio
+  // particlesSphere.rotation.y = ratio * Math.PI // fait tourner le groupe sur l'axe y en fonction du ratio
+  // particlesSphere.rotation.x = ratioY * Math.PI // fait tourner le groupe sur l'axe x en fonction du ratio
 
   if (window.matchMedia("(max-width: 768px)").matches) {
     const ratioTouchX = (touchX / window.innerWidth - 0.5) * 2 // calcule le ratio de la position de la souris sur l'axe x par rapport à la largeur de la fenêtre (entre -1 et 1)
