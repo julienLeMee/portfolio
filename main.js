@@ -152,7 +152,7 @@ const particlesTexture = textureLoader.load('/textures/particles/2.png')
  */
 // Geometry
 const particlesGeometry = new THREE.BufferGeometry()
-const count = 1000
+const count = 10000
 
 const positions = new Float32Array(count * 3)
 const colors = new Float32Array(count * 3)
@@ -169,7 +169,8 @@ particlesGeometry.setAttribute('color', new THREE.BufferAttribute(colors, 3))
 // Material
 const particlesMaterial = new THREE.PointsMaterial({
     size: 0.1,
-    sizeAttenuation: true
+    sizeAttenuation: true,
+    opacity: 0.7
 })
 // on peut aussi instancier un PointsMaterial vide et lui ajouter ensuite les propriétés
 // particlesMaterial.color = new THREE.Color('#ff88cc')
@@ -184,19 +185,28 @@ const bubbles = new THREE.Points(particlesGeometry, particlesMaterial)
 scene.add(bubbles)
 
 /**
- * Sphere & Cube
+ * Objects
  */
 
-const sphereGeometry = new THREE.SphereGeometry(0.1, 32, 32)
-const sphereMaterial = new THREE.MeshMatcapMaterial({ matcap: matCapTexture })
-const sphere = new THREE.Mesh(sphereGeometry, sphereMaterial)
-scene.add(sphere)
-const cubeGeometry = new THREE.BoxGeometry(1, 1, 1)
-const cubeMaterial = new THREE.MeshBasicMaterial({
-    color: 0xffffff,
-    wireframe: true
-})
-const cubeMesh = new THREE.Mesh(cubeGeometry, cubeMaterial)
+// Cone
+// const coneGeometry = new THREE.ConeGeometry(0.1, 0.2, 32)
+// const coneMaterial = new THREE.MeshMatcapMaterial({ matcap: matCapTexture })
+// const cone = new THREE.Mesh(coneGeometry, coneMaterial)
+// scene.add(cone)
+
+// Sphere
+// const sphereGeometry = new THREE.SphereGeometry(0.1, 32, 32)
+// const sphereMaterial = new THREE.MeshMatcapMaterial({ matcap: matCapTexture })
+// const sphere = new THREE.Mesh(sphereGeometry, sphereMaterial)
+// scene.add(sphere)
+
+// Cube
+// const cubeGeometry = new THREE.BoxGeometry(1, 1, 1)
+// const cubeMaterial = new THREE.MeshBasicMaterial({
+//     color: 0xffffff,
+//     wireframe: true
+// })
+// const cubeMesh = new THREE.Mesh(cubeGeometry, cubeMaterial)
 // scene.add(cubeMesh)
 
 // const octahedronGeometry = new THREE.OctahedronGeometry(0.1, 0)
@@ -206,27 +216,27 @@ const cubeMesh = new THREE.Mesh(cubeGeometry, cubeMaterial)
 // scene.add(octahedron)
 
 
-const particleGeometry = new THREE.BufferGeometry();
-const particleCount = 80000
+const particleSquareGeometry = new THREE.BufferGeometry();
+const particleCount = 50000
 
 const particles = new Float32Array(particleCount * 3);
 
 
 
 for (let i = 0; i < particleCount * 3; i++) {
-    particles[i] = (Math.random() - 0.5)
+    particles[i] = (Math.random() - 0.5) * 0.7
 }
 
 const positionAttribute = new THREE.BufferAttribute(particles, 3);
-particleGeometry.setAttribute('position', positionAttribute);
+particleSquareGeometry.setAttribute('position', positionAttribute);
 
-const cubeParticles = new THREE.Points( particleGeometry, new THREE.PointsMaterial({
-  size: 0.0001,
+const cubeParticles = new THREE.Points( particleSquareGeometry, new THREE.PointsMaterial({
+  size: 0.00001,
   color: 0xffffff,
   transparent: true, // pour que la couleur soit transparente
   opacity: 0.5, // pour que les particules ne soient pas cachées par les autres objets
   blending: THREE.AdditiveBlending, // pour que les particules soient plus lumineuses
-  sizeAttenuation: true // pour que les particules soient plus petites quand elles sont loin
+  sizeAttenuation: true, // pour que les particules soient plus petites quand elles sont loin
 }));
 scene.add(cubeParticles);
 
@@ -277,20 +287,20 @@ function tick() {
 
   // Update objects
 
-  sphere.position.y = Math.cos(elapsedTime) * 0.2
-  sphere.position.x = Math.sin(elapsedTime) * 0.2
+  // sphere.position.y = Math.cos(elapsedTime) * 0.2
+  // sphere.position.x = Math.sin(elapsedTime) * 0.2
   // octahedron.position.x = Math.sin(elapsedTime)
   // octahedron.rotation.y = elapsedTime
   // octahedron.rotation.x = elapsedTime
 
-  cubeMesh.rotation.y += 1
-  cubeParticles.rotation.y += 1
+  // cubeMesh.rotation.y += 1
+  // cubeParticles.rotation.y += 1
   renderer.render(scene, camera) // affiche la scène avec la caméra
   // camera.lookAt(0, 0, 0) // fait regarder la caméra vers le centre de la scène
   const ratio = (mouseX / window.innerWidth - 0.5) * 2 // calcule le ratio de la position de la souris sur l'axe x par rapport à la largeur de la fenêtre (entre -1 et 1)
-  cubeMesh.rotation.y = ratio * Math.PI * 0.5 // fait tourner le groupe sur l'axe y en fonction du ratio
+  // cubeMesh.rotation.y = ratio * Math.PI * 0.5 // fait tourner le groupe sur l'axe y en fonction du ratio
   const ratioY = (mouseY / window.innerHeight - 0.5) * 2 // calcule le ratio de la position de la souris sur l'axe y par rapport à la hauteur de la fenêtre (entre -1 et 1)
-  cubeMesh.rotation.x = ratioY * Math.PI * 0.5 // fait tourner le groupe sur l'axe x en fonction du ratio
+  // cubeMesh.rotation.x = ratioY * Math.PI * 0.5 // fait tourner le groupe sur l'axe x en fonction du ratio
   cubeParticles.rotation.y = ratio * Math.PI * 0.5 // fait tourner le groupe sur l'axe y en fonction du ratio
   cubeParticles.rotation.x = ratioY * Math.PI * 0.5 // fait tourner le groupe sur l'axe x en fonction du ratio
   // bubbles.rotation.y = ratio * Math.PI * 0.5 // fait tourner le groupe sur l'axe y en fonction du ratio
@@ -298,19 +308,20 @@ function tick() {
   // particlesSphere.rotation.y = ratio * Math.PI // fait tourner le groupe sur l'axe y en fonction du ratio
   // particlesSphere.rotation.x = ratioY * Math.PI // fait tourner le groupe sur l'axe x en fonction du ratio
 
+
   if (window.matchMedia("(max-width: 768px)").matches) {
     const ratioTouchX = (touchX / window.innerWidth - 0.5) * 2 // calcule le ratio de la position de la souris sur l'axe x par rapport à la largeur de la fenêtre (entre -1 et 1)
-    cubeMesh.rotation.y = ratioTouchX * Math.PI // fait tourner le groupe sur l'axe y en fonction du ratio
+    // cubeMesh.rotation.y = ratioTouchX * Math.PI // fait tourner le groupe sur l'axe y en fonction du ratio
     const ratioTouchY = (touchY / window.innerHeight - 0.5) * 2 // calcule le ratio de la position de la souris sur l'axe y par rapport à la hauteur de la fenêtre (entre -1 et 1)
-    cubeMesh.rotation.x = ratioTouchY * Math.PI // fait tourner le groupe sur l'axe x en fonction du ratio
+    // cubeMesh.rotation.x = ratioTouchY * Math.PI // fait tourner le groupe sur l'axe x en fonction du ratio
     cubeParticles.rotation.y = ratioTouchX * Math.PI // fait tourner le groupe sur l'axe y en fonction du ratio
     cubeParticles.rotation.x = ratioTouchY * Math.PI // fait tourner le groupe sur l'axe x en fonction du ratio
     // bubbles.rotation.y = ratioTouchX * Math.PI // fait tourner le groupe sur l'axe y en fonction du ratio
     // bubbles.rotation.x = ratioTouchY * Math.PI // fait tourner le groupe sur l'axe x en fonction du ratio
   }
-  cubeParticles.position.z = Math.cos(elapsedTime) * 0.5 // fait bouger le groupe sur l'axe z en fonction du temps
-  bubbles.rotation.y = elapsedTime * 0.1
-  bubbles.rotation.x = elapsedTime * 0.1
+  // cubeParticles.position.z = Math.cos(elapsedTime) * 0.5 // fait bouger le groupe sur l'axe z en fonction du temps
+  bubbles.rotation.y = elapsedTime * 0.03
+  bubbles.rotation.x = elapsedTime * 0.03
 
   requestAnimationFrame(tick) // demande à la fonction tick de s'exécuter à nouveau
 }
