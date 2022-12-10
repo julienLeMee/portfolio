@@ -29,15 +29,13 @@
   color: $ligth;
 }
 
-#hover1:hover {
-  color: $cerise_noire;
-  transform: translateX(8px);
-}
+// #hover1:hover {
+//   color: $cerise_noire;
+// }
 
-#hover2:hover {
-  color: $safran;
-  transform: translateX(8px);
-}
+// #hover2:hover {
+//   color: $safran;
+// }
 
 .name #hover1 {
   animation: apparition 0.8s ease-in-out 0.5s forwards;

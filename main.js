@@ -170,7 +170,7 @@ particlesGeometry.setAttribute('color', new THREE.BufferAttribute(colors, 3))
 const particlesMaterial = new THREE.PointsMaterial({
     size: 0.1,
     sizeAttenuation: true,
-    opacity: 0.7
+    opacity: 0.5
 })
 // on peut aussi instancier un PointsMaterial vide et lui ajouter ensuite les propriétés
 // particlesMaterial.color = new THREE.Color('#ff88cc')
@@ -294,7 +294,8 @@ function tick() {
   // octahedron.rotation.x = elapsedTime
 
   // cubeMesh.rotation.y += 1
-  // cubeParticles.rotation.y += 1
+  // cubeParticles.rotation.x += 5
+  cubeParticles.rotation.y += 10
   renderer.render(scene, camera) // affiche la scène avec la caméra
   // camera.lookAt(0, 0, 0) // fait regarder la caméra vers le centre de la scène
   const ratio = (mouseX / window.innerWidth - 0.5) * 2 // calcule le ratio de la position de la souris sur l'axe x par rapport à la largeur de la fenêtre (entre -1 et 1)

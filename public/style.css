@@ -33,16 +33,6 @@
   color: #F2F2F2;
 }
 
-#hover1:hover {
-  color: #523249;
-  transform: translateX(8px);
-}
-
-#hover2:hover {
-  color: #f19a3e;
-  transform: translateX(8px);
-}
-
 .name #hover1 {
   animation: apparition 0.8s ease-in-out 0.5s forwards;
   transform: translateX(-30px);
@@ -148,7 +138,7 @@
 
 .linkedin:hover {
   text-decoration: underline;
-  color: #151515;
+  color: #f19a3e;
 }
 
 .links-title {
@@ -165,7 +155,7 @@
 }
 
 .links-title a:hover {
-  color: #151515;
+  color: #f19a3e;
   transition: 0.2s ease-in-out;
 }
 
