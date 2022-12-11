@@ -234,6 +234,7 @@ const sphereParticlesMaterial = new THREE.PointsMaterial({
 const sphereParticles = new THREE.Points(sphereParticlesGeometry, sphereParticlesMaterial)
 scene.add(sphereParticles)
 
+
 /**
  * Square Particles
  */
@@ -324,8 +325,8 @@ function tick() {
   // cubeMesh.rotation.x = ratioY * Math.PI * 0.5 // fait tourner le groupe sur l'axe x en fonction du ratio
   cubeParticles.rotation.y = ratio * Math.PI * 0.5 // fait tourner le groupe sur l'axe y en fonction du ratio
   cubeParticles.rotation.x = ratioY * Math.PI * 0.5 // fait tourner le groupe sur l'axe x en fonction du ratio
-  sphereParticles.rotation.y = ratio * Math.PI // fait tourner le groupe sur l'axe y en fonction du ratio
-  sphereParticles.rotation.x = ratioY * Math.PI // fait tourner le groupe sur l'axe x en fonction du ratio
+  sphereParticles.rotation.y = ratio * Math.PI * 0.5 // fait tourner le groupe sur l'axe y en fonction du ratio
+  sphereParticles.rotation.x = ratioY * Math.PI * 0.5 // fait tourner le groupe sur l'axe x en fonction du ratio
   // bubbles.rotation.y = ratio * Math.PI * 0.5 // fait tourner le groupe sur l'axe y en fonction du ratio
   // bubbles.rotation.x = ratioY * Math.PI * 0.5 // fait tourner le groupe sur l'axe x en fonction du ratio
   // particlesSphere.rotation.y = ratio * Math.PI // fait tourner le groupe sur l'axe y en fonction du ratio

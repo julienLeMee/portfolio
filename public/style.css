@@ -781,11 +781,13 @@
   flex-direction: column;
   display: flex;
   justify-content: center;
+  align-items: center;
   background-color: #4e5726;
 }
 
 .tab {
   height: 70px;
+  width: 100%;
   margin: 5px;
   margin-left: 32px;
   margin-right: 32px;
@@ -795,7 +797,7 @@
   position: relative;
   overflow: hidden;
   max-width: 90%;
-  margin: 5px auto;
+  margin: 6px;
 }
 
 .tab:hover {
