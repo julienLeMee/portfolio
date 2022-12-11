@@ -215,9 +215,30 @@ scene.add(bubbles)
 // const octahedron = new THREE.Mesh(octahedronGeometry, octahedronMaterial)
 // scene.add(octahedron)
 
+/**
+ * Sphere Particles
+ */
+// Geometry
+const sphereParticlesGeometry = new THREE.SphereGeometry(0.5, 32, 32)
 
+// Material
+const sphereParticlesMaterial = new THREE.PointsMaterial({
+    size: 0.01,
+    sizeAttenuation: true
+})
+// on peut aussi instancier un PointsMaterial vide et lui ajouter ensuite les propriétés
+// particlesMaterial.size = 0.02
+// particlesMaterial.sizeAttenuation = true
+
+// Points
+const sphereParticles = new THREE.Points(sphereParticlesGeometry, sphereParticlesMaterial)
+scene.add(sphereParticles)
+
+/**
+ * Square Particles
+ */
 const particleSquareGeometry = new THREE.BufferGeometry();
-const particleCount = 50000
+const particleCount = 30000
 
 const particles = new Float32Array(particleCount * 3);
 
@@ -238,7 +259,7 @@ const cubeParticles = new THREE.Points( particleSquareGeometry, new THREE.Points
   blending: THREE.AdditiveBlending, // pour que les particules soient plus lumineuses
   sizeAttenuation: true, // pour que les particules soient plus petites quand elles sont loin
 }));
-scene.add(cubeParticles);
+// scene.add(cubeParticles);
 
 
 // Camera
@@ -295,7 +316,6 @@ function tick() {
 
   // cubeMesh.rotation.y += 1
   // cubeParticles.rotation.x += 5
-  cubeParticles.rotation.y += 10
   renderer.render(scene, camera) // affiche la scène avec la caméra
   // camera.lookAt(0, 0, 0) // fait regarder la caméra vers le centre de la scène
   const ratio = (mouseX / window.innerWidth - 0.5) * 2 // calcule le ratio de la position de la souris sur l'axe x par rapport à la largeur de la fenêtre (entre -1 et 1)
@@ -304,6 +324,8 @@ function tick() {
   // cubeMesh.rotation.x = ratioY * Math.PI * 0.5 // fait tourner le groupe sur l'axe x en fonction du ratio
   cubeParticles.rotation.y = ratio * Math.PI * 0.5 // fait tourner le groupe sur l'axe y en fonction du ratio
   cubeParticles.rotation.x = ratioY * Math.PI * 0.5 // fait tourner le groupe sur l'axe x en fonction du ratio
+  sphereParticles.rotation.y = ratio * Math.PI // fait tourner le groupe sur l'axe y en fonction du ratio
+  sphereParticles.rotation.x = ratioY * Math.PI // fait tourner le groupe sur l'axe x en fonction du ratio
   // bubbles.rotation.y = ratio * Math.PI * 0.5 // fait tourner le groupe sur l'axe y en fonction du ratio
   // bubbles.rotation.x = ratioY * Math.PI * 0.5 // fait tourner le groupe sur l'axe x en fonction du ratio
   // particlesSphere.rotation.y = ratio * Math.PI // fait tourner le groupe sur l'axe y en fonction du ratio
@@ -317,6 +339,8 @@ function tick() {
     // cubeMesh.rotation.x = ratioTouchY * Math.PI // fait tourner le groupe sur l'axe x en fonction du ratio
     cubeParticles.rotation.y = ratioTouchX * Math.PI // fait tourner le groupe sur l'axe y en fonction du ratio
     cubeParticles.rotation.x = ratioTouchY * Math.PI // fait tourner le groupe sur l'axe x en fonction du ratio
+    sphereParticles.rotation.y = ratioTouchX * Math.PI // fait tourner le groupe sur l'axe y en fonction du ratio
+    sphereParticles.rotation.x = ratioTouchY * Math.PI // fait tourner le groupe sur l'axe x en fonction du ratio
     // bubbles.rotation.y = ratioTouchX * Math.PI // fait tourner le groupe sur l'axe y en fonction du ratio
     // bubbles.rotation.x = ratioTouchY * Math.PI // fait tourner le groupe sur l'axe x en fonction du ratio
   }
