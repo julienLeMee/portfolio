@@ -223,8 +223,10 @@ const sphereParticlesGeometry = new THREE.SphereGeometry(0.5, 32, 32)
 
 // Material
 const sphereParticlesMaterial = new THREE.PointsMaterial({
-    size: 0.01,
-    sizeAttenuation: true
+    size: 0.006,
+    sizeAttenuation: true,
+    color: 0xffffff,
+    opacity: 1
 })
 // on peut aussi instancier un PointsMaterial vide et lui ajouter ensuite les propriétés
 // particlesMaterial.size = 0.02
