@@ -5,6 +5,8 @@
   display: flex;
   padding: 0;
   max-width: 70%;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 16px;
 }
 
 .skills li {
@@ -25,5 +27,11 @@
 .threejs-logo {
   width: 200px;
   height: 150px;
+  object-fit: contain;
+}
+
+#heroku {
+  width: 100px;
+  height: 100px;
   object-fit: contain;
 }
