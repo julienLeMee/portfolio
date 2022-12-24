@@ -185,56 +185,151 @@ const bubbles = new THREE.Points(particlesGeometry, particlesMaterial)
 scene.add(bubbles)
 
 /**
- * Objects
+ * Tie fighter
  */
 
-// Cone
-// const coneGeometry = new THREE.ConeGeometry(0.1, 0.2, 32)
-// const coneMaterial = new THREE.MeshMatcapMaterial({ matcap: matCapTexture })
-// const cone = new THREE.Mesh(coneGeometry, coneMaterial)
-// scene.add(cone)
+// Cockpit
+const cockpitGeometry = new THREE.SphereGeometry( 0.2, 16, 16 );
+const cockpitMaterial = new THREE.MeshStandardMaterial({
+  wireframe: true,
+})
 
-// Sphere
-// const sphereGeometry = new THREE.SphereGeometry(0.1, 32, 32)
-// const sphereMaterial = new THREE.MeshMatcapMaterial({ matcap: matCapTexture })
-// const sphere = new THREE.Mesh(sphereGeometry, sphereMaterial)
-// scene.add(sphere)
+// glass
+const glassGeometry = new THREE.ConeGeometry( 0.1, 0.1, 8 ); // (rayon, hauteur, nombre de segments)
+const glassMaterial = new THREE.MeshStandardMaterial({
+  wireframe: true
+})
 
-// Cube
-// const cubeGeometry = new THREE.BoxGeometry(1, 1, 1)
-// const cubeMaterial = new THREE.MeshBasicMaterial({
-//     color: 0xffffff,
-//     wireframe: true
-// })
-// const cubeMesh = new THREE.Mesh(cubeGeometry, cubeMaterial)
-// scene.add(cubeMesh)
 
-// const octahedronGeometry = new THREE.OctahedronGeometry(0.1, 0)
-// const octahedronMaterial = new THREE.MeshNormalMaterial()
+// Wings
+const wingGeometry = new THREE.PlaneGeometry( 0.6, 0.7 ); // (largeur, hauteur, nombre de segments
+const wingMaterial = new THREE.MeshStandardMaterial({
+  wireframe: true
+})
 
-// const octahedron = new THREE.Mesh(octahedronGeometry, octahedronMaterial)
-// scene.add(octahedron)
+// Wings structure
+const wingStructureGeometry = new THREE.PlaneGeometry( 0.6, 0.7 );
+const wingStructureMaterial = new THREE.MeshStandardMaterial({
+  wireframe: true
+})
+
+// Wings structure 2
+const wingStructure2Geometry = new THREE.PlaneGeometry( 0.6, 0.7 ); // (largeur, hauteur)
+const wingStructure2Material = new THREE.MeshStandardMaterial({
+  wireframe: true
+})
+
+// Wings 2
+const wing2Geometry = new THREE.PlaneGeometry( 0.6, 0.7 ); // (largeur, hauteur)
+const wing2Material = new THREE.MeshStandardMaterial({
+  wireframe: true
+})
+
+// Wings2 structure
+const wing2StructureGeometry = new THREE.PlaneGeometry( 0.6, 0.7 );
+const wing2StructureMaterial = new THREE.MeshStandardMaterial({
+  wireframe: true
+})
+
+// Wings2 structure 2
+const wing2Structure2Geometry = new THREE.PlaneGeometry( 0.6, 0.7, 8 );
+const wing2Structure2Material = new THREE.MeshStandardMaterial({
+  wireframe: true
+})
+
+// Cylinder
+const cylinderGeometry = new THREE.CylinderGeometry( 0.05, 0.09, 0.2, 16 ); // géométrie du cylindre (rayon du haut, rayon du bas, hauteur, nombre de segments)
+const cylinderMaterial = new THREE.MeshStandardMaterial({
+  wireframe: true
+})
+
+// Cylinder 2
+const cylinder2Geometry = new THREE.CylinderGeometry( 0.05, 0.09, 0.2, 16 ); // géométrie du cylindre (rayon du haut, rayon du bas, hauteur, nombre de segments)
+const cylinder2Material = new THREE.MeshStandardMaterial({
+  wireframe: true
+})
+
+const tieFighter = new THREE.Group()
+scene.add(tieFighter)
+
+// Cockpit
+const cockpit = new THREE.Mesh( cockpitGeometry, cockpitMaterial );
+tieFighter.add( cockpit );
+
+// glass
+const glass = new THREE.Mesh( glassGeometry, glassMaterial );
+glass.position.z = 0.1 // position du cockpit sur l'axe z (profondeur)
+glass.rotation.x = - Math.PI * 0.5
+tieFighter.add( glass );
+
+// Wings
+const wing = new THREE.Mesh( wingGeometry, wingMaterial );
+wing.rotation.y = Math.PI * 0.5
+wing.position.x = -0.4 // position de l'aile sur l'axe x (largeur)
+tieFighter.add( wing );
+
+// Wings structure
+const wingStructure = new THREE.Mesh( wingStructureGeometry, wingStructureMaterial );
+wingStructure.rotation.y = Math.PI * 0.5
+wingStructure.position.x = 0.4 // position de l'aile sur l'axe x (largeur)
+tieFighter.add( wingStructure );
+
+// Wings structure 2
+const wingStructure2 = new THREE.Mesh( wingStructure2Geometry, wingStructure2Material );
+wingStructure2.rotation.y = Math.PI * 0.5
+wingStructure2.position.x = 0.4 // position de l'aile sur l'axe x (largeur)
+tieFighter.add( wingStructure2 );
+
+// Wings 2
+const wing2 = new THREE.Mesh( wing2Geometry, wing2Material );
+wing2.rotation.y = - Math.PI * 0.5
+wing2.position.x = - 0.4 // position de l'aile sur l'axe x (largeur)
+tieFighter.add( wing2 );
+
+// Wings2 structure
+const wing2Structure = new THREE.Mesh( wing2StructureGeometry, wing2StructureMaterial );
+wing2Structure.rotation.y = - Math.PI * 0.5
+wing2Structure.position.x = 0.4 // position de l'aile sur l'axe x (largeur)
+tieFighter.add( wing2Structure );
+
+// // Wings2 structure 2
+// const wing2Structure2 = new THREE.Mesh( wing2Structure2Geometry, wing2Structure2Material );
+// wing2Structure2.rotation.y = Math.PI * 0.5
+// wing2Structure2.position.x = -0.5 // position de l'aile sur l'axe x (largeur)
+// tieFighter.add( wing2Structure2 );
+
+// Cylinder
+const cylinder = new THREE.Mesh( cylinderGeometry, cylinderMaterial );
+cylinder.rotation.z = - Math.PI * 0.5
+cylinder.position.x = 0.28 // position de l'aile sur l'axe x (largeur)
+tieFighter.add( cylinder );
+
+// Cylinder 2
+const cylinder2 = new THREE.Mesh( cylinder2Geometry, cylinder2Material );
+cylinder2.rotation.z = Math.PI * 0.5
+cylinder2.position.x = - 0.28 // position de l'aile sur l'axe x (largeur)
+tieFighter.add( cylinder2 );
 
 /**
  * Sphere Particles
  */
 // Geometry
-const sphereParticlesGeometry = new THREE.SphereGeometry(0.5, 32, 32)
+// const sphereParticlesGeometry = new THREE.SphereGeometry(0.5, 32, 32)
 
-// Material
-const sphereParticlesMaterial = new THREE.PointsMaterial({
-    size: 0.006,
-    sizeAttenuation: true,
-    color: 0xffffff,
-    opacity: 1
-})
-// on peut aussi instancier un PointsMaterial vide et lui ajouter ensuite les propriétés
-// particlesMaterial.size = 0.02
-// particlesMaterial.sizeAttenuation = true
+// // Material
+// const sphereParticlesMaterial = new THREE.PointsMaterial({
+//     size: 0.006,
+//     sizeAttenuation: true,
+//     color: 0xffffff,
+//     opacity: 1
+// })
+// // on peut aussi instancier un PointsMaterial vide et lui ajouter ensuite les propriétés
+// // particlesMaterial.size = 0.02
+// // particlesMaterial.sizeAttenuation = true
 
-// Points
-const sphereParticles = new THREE.Points(sphereParticlesGeometry, sphereParticlesMaterial)
-scene.add(sphereParticles)
+// // Points
+// const sphereParticles = new THREE.Points(sphereParticlesGeometry, sphereParticlesMaterial)
+// scene.add(sphereParticles)
 
 
 /**
@@ -327,8 +422,10 @@ function tick() {
   // cubeMesh.rotation.x = ratioY * Math.PI * 0.5 // fait tourner le groupe sur l'axe x en fonction du ratio
   cubeParticles.rotation.y = ratio * Math.PI * 0.5 // fait tourner le groupe sur l'axe y en fonction du ratio
   cubeParticles.rotation.x = ratioY * Math.PI * 0.5 // fait tourner le groupe sur l'axe x en fonction du ratio
-  sphereParticles.rotation.y = ratio * Math.PI * 0.5 // fait tourner le groupe sur l'axe y en fonction du ratio
-  sphereParticles.rotation.x = ratioY * Math.PI * 0.5 // fait tourner le groupe sur l'axe x en fonction du ratio
+  tieFighter.rotation.y = ratio * Math.PI * 0.5 // fait tourner le groupe sur l'axe y en fonction du ratio
+  tieFighter.rotation.x = ratioY * Math.PI * 0.5 // fait tourner le groupe sur l'axe x en fonction du ratio
+  // sphereParticles.rotation.y = ratio * Math.PI * 0.5 // fait tourner le groupe sur l'axe y en fonction du ratio
+  // sphereParticles.rotation.x = ratioY * Math.PI * 0.5 // fait tourner le groupe sur l'axe x en fonction du ratio
   // bubbles.rotation.y = ratio * Math.PI * 0.5 // fait tourner le groupe sur l'axe y en fonction du ratio
   // bubbles.rotation.x = ratioY * Math.PI * 0.5 // fait tourner le groupe sur l'axe x en fonction du ratio
   // particlesSphere.rotation.y = ratio * Math.PI // fait tourner le groupe sur l'axe y en fonction du ratio
@@ -344,6 +441,8 @@ function tick() {
     cubeParticles.rotation.x = ratioTouchY * Math.PI // fait tourner le groupe sur l'axe x en fonction du ratio
     // sphereParticles.rotation.y = ratioTouchX * Math.PI // fait tourner le groupe sur l'axe y en fonction du ratio
     // sphereParticles.rotation.x = ratioTouchY * Math.PI // fait tourner le groupe sur l'axe x en fonction du ratio
+    tieFighter.rotation.y = ratioTouchX * Math.PI // fait tourner le groupe sur l'axe y en fonction du ratio
+    tieFighter.rotation.x = ratioTouchY * Math.PI // fait tourner le groupe sur l'axe x en fonction du ratio
     scene.remove(sphereParticles)
     // bubbles.rotation.y = ratioTouchX * Math.PI // fait tourner le groupe sur l'axe y en fonction du ratio
     // bubbles.rotation.x = ratioTouchY * Math.PI // fait tourner le groupe sur l'axe x en fonction du ratio
