@@ -42,6 +42,9 @@ new Typewriter(textAnim, {
 .typeString('<span style="color: #FF6B35;">Ruby on Rails</span>')
 .pauseFor(1000)
 .deleteChars(13)
+.typeString('<span style="color: #00B8D9;">Three.js</span>')
+.pauseFor(1000)
+.deleteChars(8)
 .start();
 
 
