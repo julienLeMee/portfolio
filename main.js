@@ -112,6 +112,16 @@ allTab.forEach((tab) => {
 ///////////////////// THREE JS //////////////////////
 const canvas = document.querySelector('.webgl');
 
+// scroll
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 650) {
+    canvas.style = 'position: absolute';
+  }
+  else {
+    canvas.style = 'position: fixed';
+  }
+});
+
 // Sizes
 const sizes = {
   width: window.innerWidth,
@@ -192,44 +202,44 @@ scene.add(bubbles)
  */
 
 // Cockpit
-const cockpitGeometry = new THREE.SphereGeometry( 0.2, 8, 12 );
+const cockpitGeometry = new THREE.SphereGeometry( 0.2, 12, 12 );
 const cockpitMaterial = new THREE.MeshStandardMaterial({
   wireframe: true
 })
 
 // glass
-const glassGeometry = new THREE.ConeGeometry( 0.1, 0.1, 8 ); // (rayon, hauteur, nombre de segments)
+const glassGeometry = new THREE.ConeGeometry( 0.1, 0.05, 8, 8 );
 const glassMaterial = new THREE.MeshStandardMaterial({
   wireframe: true
 })
 
 
 // Wings
-const wingGeometry = new THREE.PlaneGeometry( 0.6, 0.7 ); // (largeur, hauteur, nombre de segments
+const wingGeometry = new THREE.PlaneGeometry( 0.6, 0.7, 8, 8 ); // (largeur, hauteur)
 const wingMaterial = new THREE.MeshStandardMaterial({
   wireframe: true
 })
 
 // Wings structure
-const wingStructureGeometry = new THREE.PlaneGeometry( 0.6, 0.7 );
+const wingStructureGeometry = new THREE.PlaneGeometry( 0.6, 0.7, 8, 8 );
 const wingStructureMaterial = new THREE.MeshStandardMaterial({
   wireframe: true
 })
 
 // Wings structure 2
-const wingStructure2Geometry = new THREE.PlaneGeometry( 0.6, 0.7 ); // (largeur, hauteur)
+const wingStructure2Geometry = new THREE.PlaneGeometry( 0.6, 0.7, 8, 8 );
 const wingStructure2Material = new THREE.MeshStandardMaterial({
   wireframe: true
 })
 
 // Wings 2
-const wing2Geometry = new THREE.PlaneGeometry( 0.6, 0.7 ); // (largeur, hauteur)
+const wing2Geometry = new THREE.PlaneGeometry( 0.6, 0.7, 8, 8 );
 const wing2Material = new THREE.MeshStandardMaterial({
   wireframe: true
 })
 
 // Wings2 structure
-const wing2StructureGeometry = new THREE.PlaneGeometry( 0.6, 0.7 );
+const wing2StructureGeometry = new THREE.PlaneGeometry( 0.6, 0.7, 8, 8 );
 const wing2StructureMaterial = new THREE.MeshStandardMaterial({
   wireframe: true
 })
@@ -263,7 +273,7 @@ tieFighter.add( cockpit );
 
 // glass
 const glass = new THREE.Mesh( glassGeometry, glassMaterial );
-glass.position.z = 0.1 // position du cockpit sur l'axe z (profondeur)
+glass.position.z = 0.15 // position du cockpit sur l'axe z (profondeur)
 glass.rotation.x = - Math.PI * 0.5
 tieFighter.add( glass );
 
@@ -386,6 +396,7 @@ window.addEventListener('resize', () => {
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2)) // définit le ratio de pixel du renderer
 })
 
+// recuperer la position de la souris sur l'ecran
 let mouseX = 0 // position de la souris sur l'axe x
 let mouseY = 0 // position de la souris sur l'axe y
 window.addEventListener('mousemove', e => {

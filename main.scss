@@ -29,8 +29,8 @@ body {
   scroll-behavior: smooth;
 }
 
-canvas {
-  position: absolute;
+.webgl {
+  position: fixed;
   z-index: -1;
   opacity: 0.4;
   top: 50%;
