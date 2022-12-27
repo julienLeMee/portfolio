@@ -171,9 +171,9 @@ particlesGeometry.setAttribute('color', new THREE.BufferAttribute(colors, 3))
 
 // Material
 const particlesMaterial = new THREE.PointsMaterial({
-    size: 0.1,
+    size: 0.07,
     sizeAttenuation: true,
-    opacity: 0.5
+    opacity: 0.8
 })
 // on peut aussi instancier un PointsMaterial vide et lui ajouter ensuite les propriétés
 // particlesMaterial.color = new THREE.Color('#ff88cc')
@@ -192,9 +192,9 @@ scene.add(bubbles)
  */
 
 // Cockpit
-const cockpitGeometry = new THREE.SphereGeometry( 0.2, 16, 16 );
+const cockpitGeometry = new THREE.SphereGeometry( 0.2, 8, 12 );
 const cockpitMaterial = new THREE.MeshStandardMaterial({
-  wireframe: true,
+  wireframe: true
 })
 
 // glass
@@ -235,24 +235,26 @@ const wing2StructureMaterial = new THREE.MeshStandardMaterial({
 })
 
 // Wings2 structure 2
-const wing2Structure2Geometry = new THREE.PlaneGeometry( 0.6, 0.7, 8 );
+const wing2Structure2Geometry = new THREE.PlaneGeometry( 0.6, 0.7 );
 const wing2Structure2Material = new THREE.MeshStandardMaterial({
   wireframe: true
 })
 
 // Cylinder
-const cylinderGeometry = new THREE.CylinderGeometry( 0.05, 0.09, 0.2, 16 ); // géométrie du cylindre (rayon du haut, rayon du bas, hauteur, nombre de segments)
+const cylinderGeometry = new THREE.CylinderGeometry( 0.05, 0.09, 0.2, 12 ); // géométrie du cylindre (rayon du haut, rayon du bas, hauteur, nombre de segments)
 const cylinderMaterial = new THREE.MeshStandardMaterial({
   wireframe: true
 })
 
 // Cylinder 2
-const cylinder2Geometry = new THREE.CylinderGeometry( 0.05, 0.09, 0.2, 16 ); // géométrie du cylindre (rayon du haut, rayon du bas, hauteur, nombre de segments)
+const cylinder2Geometry = new THREE.CylinderGeometry( 0.05, 0.09, 0.2, 12 ); // géométrie du cylindre (rayon du haut, rayon du bas, hauteur, nombre de segments)
 const cylinder2Material = new THREE.MeshStandardMaterial({
   wireframe: true
 })
 
 const tieFighter = new THREE.Group()
+// reduire la taile du tie fighter
+tieFighter.scale.set(0.6, 0.6, 0.6)
 scene.add(tieFighter)
 
 // Cockpit
@@ -361,7 +363,6 @@ const cubeParticles = new THREE.Points( particleSquareGeometry, new THREE.Points
   sizeAttenuation: true, // pour que les particules soient plus petites quand elles sont loin
 }));
 // scene.add(cubeParticles);
-
 
 // Camera
 const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height)
