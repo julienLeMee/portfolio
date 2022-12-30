@@ -376,7 +376,7 @@ const cubeParticles = new THREE.Points( particleSquareGeometry, new THREE.Points
 
 // Camera
 const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height)
-camera.position.z = 3
+camera.position.z = 4
 scene.add(camera)
 
 

@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@200;300;400;500;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Special+Elite&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@200;300;400;500;900&display=swap");
 .main-content {
@@ -1005,6 +1006,59 @@
   }
   iframe {
     width: 80% !important;
+  }
+  .slider-container {
+    display: none;
+  }
+}
+.slider-container {
+  max-width: 600px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.slider {
+  animation: slider-1 12s infinite ease-in-out;
+  display: flex;
+}
+
+.slider p {
+  flex-shrink: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 36px;
+  color: #f1f1f1;
+  font-family: "Special Elite", cursive;
+  font-size: 2rem;
+}
+
+.slider-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes slider-1 {
+  0%, 10% {
+    transform: translateX(0);
+  }
+  15%, 25% {
+    transform: translateX(-100%);
+  }
+  30%, 40% {
+    transform: translateX(-200%);
+  }
+  45%, 55% {
+    transform: translateX(-300%);
+  }
+  60%, 70% {
+    transform: translateX(-400%);
+  }
+  75%, 85% {
+    transform: translateX(-500%);
+  }
+  90%, 100% {
+    transform: translateX(-600%);
   }
 }
 * {

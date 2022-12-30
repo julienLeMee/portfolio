@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@200;300;400;500;900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
 // COLORS //
 $safran: #f19a3e;
 $dark-gray: #333;
@@ -13,6 +13,8 @@ $shadow: rgba(0,0,0,0.2);
 
 // FONTS //
 $font-main: 'Roboto', sans-serif;
+$font-title: 'Poppins', sans-serif;
+$font-slider: 'Special Elite', cursive;
 
 // RANDOM NUMBER //
 $randomNumber: random(100);
