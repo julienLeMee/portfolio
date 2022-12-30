@@ -300,3 +300,19 @@
   justify-content: center;
   border-radius: 8px;
 }
+
+.projet-perso {
+  position: relative;
+}
+
+.techno {
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  color: $ligth;
+  background-color: $black;
+  padding: 8px;
+  border-radius: 0 8px 8px;
+  margin-bottom: 0;
+  font-size: 12px;
+}
