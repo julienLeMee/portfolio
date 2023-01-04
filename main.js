@@ -27,7 +27,7 @@ new Typewriter(textAnim, {
   delay: 75,
 })
 .pauseFor(2000)
-.typeString('Développeur web <span style="color: #D8829D;">HTML</span>')
+.typeString('Développeur web <span style="color: #D8829D;"><br>HTML</span>')
 .pauseFor(1000)
 .deleteChars(4)
 .typeString('<span style="color: #8EDCE6;">CSS</span>')
@@ -376,7 +376,7 @@ const cubeParticles = new THREE.Points( particleSquareGeometry, new THREE.Points
 
 // Camera
 const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height)
-camera.position.z = 4
+camera.position.z = 5
 scene.add(camera)
 
 
@@ -445,7 +445,6 @@ function tick() {
   // bubbles.rotation.x = ratioY * Math.PI * 0.5 // fait tourner le groupe sur l'axe x en fonction du ratio
   // particlesSphere.rotation.y = ratio * Math.PI // fait tourner le groupe sur l'axe y en fonction du ratio
   // particlesSphere.rotation.x = ratioY * Math.PI // fait tourner le groupe sur l'axe x en fonction du ratio
-
 
   if (window.matchMedia("(max-width: 768px)").matches) {
     const ratioTouchX = (touchX / window.innerWidth - 0.5) * 2 // calcule le ratio de la position de la souris sur l'axe x par rapport à la largeur de la fenêtre (entre -1 et 1)
