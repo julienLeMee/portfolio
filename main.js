@@ -22,6 +22,22 @@ const btnHomepage = document.getElementById('btn-homepage');
 //   }
 // });
 
+const cursorElement = document.querySelector('.custom-cursor');
+const titleName = document.querySelector('.name');
+
+document.addEventListener('mousemove', (e) => {
+  cursorElement.style.top = e.clientY + 'px';
+  cursorElement.style.left = e.clientX + 'px';
+});
+
+titleName.addEventListener('mouseover', () => {
+  cursorElement.classList.add('hovered');
+});
+
+titleName.addEventListener('mouseout', () => {
+  cursorElement.classList.remove('hovered');
+});
+
 new Typewriter(textAnim, {
   loop: true,
   delay: 75,

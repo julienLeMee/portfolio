@@ -16,6 +16,31 @@
   margin-bottom: 100px;
 }
 
+.name {
+  width: 530px;
+  height: 400px;
+  padding: 32px;
+}
+
+.name:hover {
+  cursor: none;
+}
+
+.custom-cursor {
+  display: none;
+}
+
+.custom-cursor.hovered {
+  display: block;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 0.1px solid $ligth;
+  position: absolute;
+  z-index: 100;
+  backdrop-filter: blur(10px);
+}
+
 .name h1 {
   display: flex;
   flex-direction: column;
