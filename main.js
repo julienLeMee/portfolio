@@ -218,64 +218,64 @@ scene.add(bubbles)
  */
 
 // Cockpit
-const cockpitGeometry = new THREE.SphereGeometry( 0.2, 8, 8 );
-const cockpitMaterial = new THREE.MeshStandardMaterial({
-  wireframe: true
+const cockpitGeometry = new THREE.SphereGeometry( 0.2, 16, 16 );
+const cockpitMaterial = new THREE.MeshMatcapMaterial({
+  matcap: matCapTexture
 })
 
 // glass
-const glassGeometry = new THREE.ConeGeometry( 0.1, 0.05, 8, 8 );
+const glassGeometry = new THREE.ConeGeometry( 0.1, 0.07, 8, 8 );
 const glassMaterial = new THREE.MeshStandardMaterial({
-  wireframe: true
+  color: 0x000000
 })
 
 
 // Wings
 const wingGeometry = new THREE.PlaneGeometry( 0.6, 0.7, 8, 8 ); // (largeur, hauteur)
-const wingMaterial = new THREE.MeshStandardMaterial({
-  wireframe: true
+const wingMaterial = new THREE.MeshMatcapMaterial({
+  matcap: matCapTexture
 })
 
 // Wings structure
-const wingStructureGeometry = new THREE.PlaneGeometry( 0.6, 0.7, 8, 8 );
-const wingStructureMaterial = new THREE.MeshStandardMaterial({
-  wireframe: true
+const wingStructureGeometry = new THREE.PlaneGeometry( 0.6, 0.7);
+const wingStructureMaterial = new THREE.MeshMatcapMaterial({
+  matcap: matCapTexture
 })
 
 // Wings structure 2
 const wingStructure2Geometry = new THREE.PlaneGeometry( 0.6, 0.7, 8, 8 );
-const wingStructure2Material = new THREE.MeshStandardMaterial({
-  wireframe: true
+const wingStructure2Material = new THREE.MeshMatcapMaterial({
+  matcap: matCapTexture
 })
 
 // Wings 2
 const wing2Geometry = new THREE.PlaneGeometry( 0.6, 0.7, 8, 8 );
-const wing2Material = new THREE.MeshStandardMaterial({
-  wireframe: true
+const wing2Material = new THREE.MeshMatcapMaterial({
+  matcap: matCapTexture
 })
 
 // Wings2 structure
 const wing2StructureGeometry = new THREE.PlaneGeometry( 0.6, 0.7, 8, 8 );
-const wing2StructureMaterial = new THREE.MeshStandardMaterial({
-  wireframe: true
+const wing2StructureMaterial = new THREE.MeshMatcapMaterial({
+  matcap: matCapTexture
 })
 
 // Wings2 structure 2
 const wing2Structure2Geometry = new THREE.PlaneGeometry( 0.6, 0.7 );
-const wing2Structure2Material = new THREE.MeshStandardMaterial({
-  wireframe: true
+const wing2Structure2Material = new THREE.MeshMatcapMaterial({
+  matcap: matCapTexture
 })
 
 // Cylinder
 const cylinderGeometry = new THREE.CylinderGeometry( 0.05, 0.09, 0.2, 12 ); // géométrie du cylindre (rayon du haut, rayon du bas, hauteur, nombre de segments)
-const cylinderMaterial = new THREE.MeshStandardMaterial({
-  wireframe: true
+const cylinderMaterial = new THREE.MeshMatcapMaterial({
+  matcap: matCapTexture
 })
 
 // Cylinder 2
 const cylinder2Geometry = new THREE.CylinderGeometry( 0.05, 0.09, 0.2, 12 ); // géométrie du cylindre (rayon du haut, rayon du bas, hauteur, nombre de segments)
-const cylinder2Material = new THREE.MeshStandardMaterial({
-  wireframe: true
+const cylinder2Material = new THREE.MeshMatcapMaterial({
+  matcap: matCapTexture
 })
 
 const tieFighter = new THREE.Group()
@@ -478,8 +478,8 @@ function tick() {
     // bubbles.rotation.x = ratioTouchY * Math.PI // fait tourner le groupe sur l'axe x en fonction du ratio
   }
   // cubeParticles.position.z = Math.cos(elapsedTime) * 0.5 // fait bouger le groupe sur l'axe z en fonction du temps
-  bubbles.rotation.y = elapsedTime * 0.03
-  bubbles.rotation.x = elapsedTime * 0.03
+  bubbles.rotation.y = elapsedTime * 0.01
+  bubbles.rotation.x = elapsedTime * 0.01
 
   requestAnimationFrame(tick) // demande à la fonction tick de s'exécuter à nouveau
 }
