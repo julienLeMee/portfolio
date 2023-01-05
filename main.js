@@ -218,7 +218,7 @@ scene.add(bubbles)
  */
 
 // Cockpit
-const cockpitGeometry = new THREE.SphereGeometry( 0.2, 12, 12 );
+const cockpitGeometry = new THREE.SphereGeometry( 0.2, 8, 8 );
 const cockpitMaterial = new THREE.MeshStandardMaterial({
   wireframe: true
 })
@@ -279,8 +279,7 @@ const cylinder2Material = new THREE.MeshStandardMaterial({
 })
 
 const tieFighter = new THREE.Group()
-// reduire la taile du tie fighter
-tieFighter.scale.set(0.6, 0.6, 0.6)
+tieFighter.scale.set(0.8, 0.8, 0.8)
 scene.add(tieFighter)
 
 // Cockpit
@@ -392,7 +391,7 @@ const cubeParticles = new THREE.Points( particleSquareGeometry, new THREE.Points
 
 // Camera
 const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height)
-camera.position.z = 5
+camera.position.z = 8
 scene.add(camera)
 
 
