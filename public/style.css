@@ -21,9 +21,18 @@
   margin-bottom: 100px;
 }
 
+.typewriter-bloc {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
 .name {
   width: 530px;
-  height: 400px;
+  height: 350px;
   padding: 32px;
 }
 
@@ -43,7 +52,8 @@
   border: 0.1px solid #F2F2F2;
   position: absolute;
   z-index: 100;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(5px);
+  filter: invert(2);
 }
 
 .name h1 {
@@ -173,7 +183,7 @@
   display: flex;
   justify-content: start;
   align-items: center;
-  margin-top: 100px;
+  margin-top: 150px;
 }
 
 .links-title a {
