@@ -41,7 +41,7 @@
   display: flex;
   justify-content: start;
   align-items: center;
-  margin-top: 150px;
+  margin-bottom: 50px;
 }
 
 .links-title a {
@@ -79,7 +79,7 @@
 .btn-to-top {
   width: 32px;
   height: 32px;
-  z-index: 1;
+  z-index: 10;
   color: $ligth;
   border: 0.1px solid $ligth;
   border-radius: 50%;

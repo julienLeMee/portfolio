@@ -6,6 +6,13 @@
     opacity: 0.2;
   }
 
+  .homepage-bloc {
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    display: flex;
+  }
+
   .main-bloc {
     flex-direction: column;
     justify-content: center;

@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@200;300;400;500;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Special+Elite&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@200;300;400;500;900&display=swap");
 .main-content {
@@ -34,6 +35,8 @@
   width: 530px;
   height: 350px;
   padding: 32px;
+  font-family: "Righteous", cursive;
+  text-transform: lowercase;
 }
 
 .name:hover {
@@ -99,6 +102,83 @@
   font-size: 32px;
   font-weight: 500;
   color: #F2F2F2;
+}
+
+.webgl {
+  position: fixed;
+  top: 0;
+  left: 0;
+  outline: none;
+}
+
+.section {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  font-family: "Cabin", sans-serif;
+  color: #ffeded;
+  text-transform: uppercase;
+  font-size: 7vmin;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+section:nth-child(odd) {
+  justify-content: flex-end;
+}
+
+.text-section {
+  font-family: "Roboto", sans-serif;
+  font-size: 64px;
+  font-weight: 900;
+  color: #F2F2F2;
+  width: 50%;
+}
+
+.project-shortcut {
+  color: #FF6B35;
+  text-decoration: none;
+}
+
+.project-shortcut:hover {
+  color: #523249;
+}
+
+.email-shortcut {
+  color: #E9B44C;
+  text-decoration: none;
+}
+
+.email-shortcut:hover {
+  color: #f19a3e;
+}
+
+.question-shortcut {
+  color: #f19a3e;
+}
+
+.homepage-message {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  font-weight: 100;
+  color: #F2F2F2;
+  transform: rotate(-90deg);
+  position: absolute;
+  top: 20%;
+  left: -5%;
+  text-transform: lowercase;
+}
+
+.homepage-message2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  font-weight: 100;
+  color: #F2F2F2;
+  position: absolute;
+  top: 4%;
+  left: 4%;
+  text-transform: lowercase;
 }
 
 .barre-section {
@@ -183,7 +263,7 @@
   display: flex;
   justify-content: start;
   align-items: center;
-  margin-top: 150px;
+  margin-bottom: 50px;
 }
 
 .links-title a {
@@ -221,7 +301,7 @@
 .btn-to-top {
   width: 32px;
   height: 32px;
-  z-index: 1;
+  z-index: 10;
   color: #F2F2F2;
   border: 0.1px solid #F2F2F2;
   border-radius: 50%;
@@ -632,7 +712,8 @@
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  border: 1.2px solid #F2F2F2;
+  border: 1px solid #f19a3e;
+  transform: scale(1.1);
   position: absolute;
   top: 10%;
   right: 10%;
@@ -642,8 +723,8 @@
 }
 
 .bubble-btn:hover {
-  border: 0.1px solid #f19a3e;
-  transform: scale(1.1);
+  border: 0.1px solid #F2F2F2;
+  transform: scale(1);
 }
 
 .bubble {
@@ -859,7 +940,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #4e5726;
+  background-color: #151515;
 }
 
 .tab {
@@ -942,8 +1023,9 @@
 
 .title-writer {
   color: #F2F2F2;
-  position: absolute;
   margin-right: 48px;
+  width: 400px;
+  height: 100px;
 }
 
 @media screen and (max-width: 768px) {
@@ -951,6 +1033,12 @@
     width: 100% !important;
     height: auto !important;
     opacity: 0.2;
+  }
+  .homepage-bloc {
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    display: flex;
   }
   .main-bloc {
     flex-direction: column;
@@ -1113,11 +1201,9 @@ body {
 
 .webgl {
   position: fixed;
-  z-index: -1;
-  opacity: 0.4;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 0;
+  left: 0;
+  outline: none;
 }
 
 iframe {
@@ -1166,10 +1252,10 @@ iframe:hover {
 
 .wave-white {
   position: relative;
-  top: 10px;
+  top: 50px;
   width: 100%;
   height: 100%;
-  z-index: 1;
+  z-index: -1;
 }
 
 /*# sourceMappingURL=style.css.map */

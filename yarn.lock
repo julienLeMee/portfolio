@@ -2,6 +2,11 @@
 # yarn lockfile v1
 
 
+"gsap@^3.5.1":
+  "integrity" "sha512-EMV0RSUKZNeTUzLKAizGlwxVOUyif3/g8I3S1aA/hf3gbqwBvmQ02x1RdTBQNQMOpHCVBv9y/vaHwfctoAg8zw=="
+  "resolved" "https://registry.npmjs.org/gsap/-/gsap-3.5.1.tgz"
+  "version" "3.5.1"
+
 "js-tokens@^3.0.0 || ^4.0.0":
   "integrity" "sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ=="
   "resolved" "https://registry.npmjs.org/js-tokens/-/js-tokens-4.0.0.tgz"

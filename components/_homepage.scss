@@ -29,6 +29,8 @@
   width: 530px;
   height: 350px;
   padding: 32px;
+  font-family: $font-name;
+  text-transform: lowercase;
 }
 
 .name:hover {
@@ -102,4 +104,85 @@
   font-size: 32px;
   font-weight: 500;
   color: $ligth;
+}
+
+
+.webgl
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    outline: none;
+}
+
+.section
+{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    font-family: 'Cabin', sans-serif;
+    color: #ffeded;
+    text-transform: uppercase;
+    font-size: 7vmin;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+section:nth-child(odd)
+{
+    justify-content: flex-end;
+}
+
+.text-section {
+  font-family: $font-main;
+  font-size: 64px;
+  font-weight: 900;
+  color: $ligth;
+  width: 50%;
+}
+
+.project-shortcut {
+  color: $red;
+  text-decoration: none;
+}
+
+.project-shortcut:hover {
+  color: $cerise_noire;
+}
+
+.email-shortcut {
+  color: $yellow;
+  text-decoration: none;
+}
+
+.email-shortcut:hover {
+  color: $safran;
+}
+
+.question-shortcut {
+  color: $safran;
+}
+
+.homepage-message {
+  font-family: $font-main;
+  font-size: 12px;
+  font-weight: 100;
+  color: $ligth;
+  transform: rotate(-90deg);
+  position: absolute;
+  top: 20%;
+  left: -5%;
+  text-transform: lowercase;
+}
+
+.homepage-message2 {
+  font-family: $font-main;
+  font-size: 12px;
+  font-weight: 100;
+  color: $ligth;
+  position: absolute;
+  top: 4%;
+  left: 4%;
+  text-transform: lowercase;
 }

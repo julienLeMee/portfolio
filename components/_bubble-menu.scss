@@ -17,7 +17,8 @@
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  border: 1.2px solid $ligth;
+  border: 1px solid $safran;
+  transform: scale(1.1);
   position: absolute;
   top: 10%;
   right: 10%;
@@ -27,8 +28,8 @@
 }
 
 .bubble-btn:hover {
-  border: 0.1px solid $safran;
-  transform: scale(1.1);
+  border: 0.1px solid $ligth;
+  transform: scale(1);
 }
 
 .bubble {
