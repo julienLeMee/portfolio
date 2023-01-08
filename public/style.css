@@ -1040,6 +1040,15 @@ section:nth-child(odd) {
     width: 100%;
     display: flex;
   }
+  .homepage-message {
+    display: none;
+  }
+  .homepage-message2 {
+    display: none;
+  }
+  .last-section {
+    margin-bottom: 500px;
+  }
   .main-bloc {
     flex-direction: column;
     justify-content: center;
