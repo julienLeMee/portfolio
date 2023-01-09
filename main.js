@@ -551,6 +551,31 @@ scene.add(mesh2, mesh3, mesh4)
 const sectionMeshes = [mesh1, mesh2, mesh3, mesh4]
 
 /**
+ * Sphere Particles
+ */
+//Geometry
+const sphereParticlesGeometry = new THREE.SphereGeometry(0.5, 32, 32)
+
+// Material
+// const sphereParticlesMaterial = new THREE.PointsMaterial({
+//     size: 0.006,
+//     sizeAttenuation: true,
+//     color: 0xffffff,
+//     opacity: 1
+// })
+const sphereParticlesMaterial = new THREE.MeshNormalMaterial()
+// on peut aussi instancier un PointsMaterial vide et lui ajouter ensuite les propriétés
+// particlesMaterial.size = 0.02
+// particlesMaterial.sizeAttenuation = true
+
+// Points
+const sphereParticles = new THREE.Points(sphereParticlesGeometry, sphereParticlesMaterial)
+sphereParticles.scale.set(0.5, 0.5, 0.5)
+sphereParticles.position.y = - 1.4
+sphereParticles.position.x = 3.3
+scene.add(sphereParticles)
+
+/**
  * Particles
  */
 // Geometry
@@ -570,7 +595,7 @@ particlesGeometry.setAttribute('position', new THREE.BufferAttribute(positions, 
 const particlesMaterial = new THREE.PointsMaterial({
   color: parameters.materialColor,
   sizeAttenuation: true,
-  size: 0.03,
+  size: 0.01,
   alphaMap: alphaMap,
   blending: THREE.AdditiveBlending
 })
@@ -673,21 +698,21 @@ window.addEventListener('mousemove', (event) =>
     cursor.y = event.clientY / sizes.height - 0.5
 })
 
-// // recuperer la position de la souris sur l'ecran
-// let mouseX = 0 // position de la souris sur l'axe x
-// let mouseY = 0 // position de la souris sur l'axe y
-// window.addEventListener('mousemove', e => {
-//   mouseX = e.clientX // récupère la position de la souris sur l'axe x
-//   mouseY = e.clientY // récupère la position de la souris sur l'axe y
-// })
+// recuperer la position de la souris sur l'ecran
+let mouseX = 0 // position de la souris sur l'axe x
+let mouseY = 0 // position de la souris sur l'axe y
+window.addEventListener('mousemove', e => {
+  mouseX = e.clientX // récupère la position de la souris sur l'axe x
+  mouseY = e.clientY // récupère la position de la souris sur l'axe y
+})
 
-// // recuperer la position du doigt sur l'ecran
-// let touchX = 0 // position du doigt sur l'axe x
-// let touchY = 0 // position du doigt sur l'axe y
-// window.addEventListener('touchmove', e => {
-//   touchX = e.touches[0].clientX // récupère la position du doigt sur l'axe x
-//   touchY = e.touches[0].clientY // récupère la position du doigt sur l'axe y
-// })
+// recuperer la position du doigt sur l'ecran
+let touchX = 0 // position du doigt sur l'axe x
+let touchY = 0 // position du doigt sur l'axe y
+window.addEventListener('touchmove', e => {
+  touchX = e.touches[0].clientX // récupère la position du doigt sur l'axe x
+  touchY = e.touches[0].clientY // récupère la position du doigt sur l'axe y
+})
 
 /**
  * Animate
@@ -715,6 +740,10 @@ const tick = () =>
         mesh.rotation.x += deltaTime * 0.1 // permet de faire tourner les objets en x, deltaTime permet de faire tourner les objets à la même vitesse sur tous les ordinateurs
         mesh.rotation.y += deltaTime * 0.12
     }
+
+    // Animate sphere particles
+    sphereParticles.rotation.y += deltaTime * 0.1
+    sphereParticles.rotation.x += deltaTime * 0.1
 
     // Render
     renderer.render(scene, camera)
