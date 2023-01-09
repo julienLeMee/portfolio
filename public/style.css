@@ -387,7 +387,7 @@ section:nth-child(odd) {
 
 .card-project {
   max-width: 400px;
-  margin-left: 32px;
+  margin: 16px;
   border: 1px solid #F2F2F2;
   padding: 24px;
   border-radius: 8px;
@@ -1208,6 +1208,10 @@ section:nth-child(odd) {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+html {
+  background-color: #151515;
 }
 
 body {

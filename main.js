@@ -595,7 +595,7 @@ particlesGeometry.setAttribute('position', new THREE.BufferAttribute(positions, 
 const particlesMaterial = new THREE.PointsMaterial({
   color: parameters.materialColor,
   sizeAttenuation: true,
-  size: 0.01,
+  size: 0.03,
   alphaMap: alphaMap,
   blending: THREE.AdditiveBlending
 })
