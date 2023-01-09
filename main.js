@@ -43,7 +43,7 @@ new Typewriter(textAnim, {
   delay: 75,
 })
 .pauseFor(2000)
-.typeString('Développeur web <span style="color: #D8829D;">HTML</span>')
+.typeString('Développeur web <br> <span style="color: #D8829D;">HTML</span>')
 .pauseFor(1000)
 .deleteChars(4)
 .typeString('<span style="color: #8EDCE6;">CSS</span>')

@@ -1,23 +1,25 @@
 .footer {
   display: flex;
   align-items: center;
-  height: 100px;
-  background-color: $white;
+  height: 120px;
+  border-top: 0.1px solid $ligth;
+  margin-top: 64px;
 }
 .footer-links {
   display: flex;
   align-items: center;
 }
 .footer-links a {
-  color: $black;
+  color: $ligth;
   opacity: 0.5;
   text-decoration: none;
   font-size: 32px;
   padding: 0px 10px;
   margin: 16px;
+  transition: 0.2s ease-in-out;
+  z-index: 1;
 }
 .footer-links a:hover {
   opacity: 1;
   transition: 0.2s ease-in-out;
 }
-
