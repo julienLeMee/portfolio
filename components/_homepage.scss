@@ -152,6 +152,17 @@ section:nth-child(odd)
   color: $cerise_noire;
 }
 
+.portfolio-shortcut {
+  color: $red;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.portfolio-shortcut:hover {
+  color: $ligth;
+  text-decoration: underline;
+}
+
 .email-shortcut {
   color: $yellow;
   text-decoration: none;
@@ -172,8 +183,8 @@ section:nth-child(odd)
   color: $ligth;
   transform: rotate(-90deg);
   position: absolute;
-  top: 24%;
-  left: -7%;
+  top: 28%;
+  left: -8%;
   text-transform: lowercase;
 }
 
@@ -186,4 +197,8 @@ section:nth-child(odd)
   top: 4%;
   left: 4%;
   text-transform: lowercase;
+}
+
+#l-letter {
+  text-transform: uppercase;
 }

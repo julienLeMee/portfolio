@@ -146,6 +146,17 @@ section:nth-child(odd) {
   color: #523249;
 }
 
+.portfolio-shortcut {
+  color: #FF6B35;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.portfolio-shortcut:hover {
+  color: #F2F2F2;
+  text-decoration: underline;
+}
+
 .email-shortcut {
   color: #E9B44C;
   text-decoration: none;
@@ -166,8 +177,8 @@ section:nth-child(odd) {
   color: #F2F2F2;
   transform: rotate(-90deg);
   position: absolute;
-  top: 24%;
-  left: -7%;
+  top: 28%;
+  left: -8%;
   text-transform: lowercase;
 }
 
@@ -180,6 +191,10 @@ section:nth-child(odd) {
   top: 4%;
   left: 4%;
   text-transform: lowercase;
+}
+
+#l-letter {
+  text-transform: uppercase;
 }
 
 .barre-section {
