@@ -562,6 +562,21 @@ section:nth-child(odd) {
   background-image: url("../ressources/star-wars-empire-base.png");
 }
 
+.next-portfolio {
+  background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.2) 50%), url("../ressources/next-portfolio.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+  text-decoration: none;
+  text-align: center;
+}
+
+.next-portfolio:hover {
+  transition: 0.3s ease-in-out;
+  background-image: url("../ressources/next-portfolio.png");
+}
+
 .haunted-house {
   background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.2) 50%), url("../ressources/haunted-house.png");
   background-size: cover;
