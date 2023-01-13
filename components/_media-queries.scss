@@ -123,16 +123,11 @@
   }
 
   .skills {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
     margin: 0;
     margin-top: 16px;
     width: 100%;
-  }
-
-  .skills li {
-    width: 72px;
-    height: 72px;
   }
 
   .projet-promo {

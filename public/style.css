@@ -166,8 +166,8 @@ section:nth-child(odd) {
   color: #F2F2F2;
   transform: rotate(-90deg);
   position: absolute;
-  top: 20%;
-  left: -5%;
+  top: 24%;
+  left: -7%;
   text-transform: lowercase;
 }
 
@@ -378,6 +378,10 @@ section:nth-child(odd) {
   height: 32px;
   transition: all 0.2s 0.1s ease-in-out;
   margin-bottom: 8px;
+}
+
+#XP {
+  margin-top: 150px;
 }
 
 .projets {
@@ -708,6 +712,7 @@ section:nth-child(odd) {
   border-radius: 0 8px 8px;
   margin-bottom: 0;
   font-size: 12px;
+  box-shadow: 0 0 10px #151515;
 }
 
 .container-bubble-menu {
@@ -888,16 +893,18 @@ section:nth-child(odd) {
 .skills {
   list-style: none;
   margin-top: 32px;
-  flex-wrap: wrap;
-  display: flex;
   padding: 0;
-  max-width: 70%;
-  background-color: rgba(255, 255, 255, 0.3);
+  max-width: 90%;
   border-radius: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .skills li {
-  width: 100px;
+  background-color: rgba(255, 255, 255, 0.3);
+  width: 300px;
   height: 100px;
   border-radius: 16px;
   margin: 16px;
@@ -907,12 +914,26 @@ section:nth-child(odd) {
 }
 
 .skills li img {
-  width: 80%;
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.skills li p {
+  font-size: 16px;
+  color: #F2F2F2;
+  text-transform: uppercase;
 }
 
 .threejs-logo {
   width: 200px;
   height: 150px;
+  object-fit: contain;
+}
+
+#css-logo {
+  width: 200px;
+  height: 110px;
   object-fit: contain;
 }
 
@@ -1147,15 +1168,11 @@ section:nth-child(odd) {
     font-size: 2.5vw;
   }
   .skills {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
     margin: 0;
     margin-top: 16px;
     width: 100%;
-  }
-  .skills li {
-    width: 72px;
-    height: 72px;
   }
   .projet-promo {
     max-width: 100%;

@@ -1,3 +1,7 @@
+#XP {
+  margin-top: 150px;
+}
+
 .projets {
   display: flex;
   justify-content: center;
@@ -330,4 +334,5 @@
   border-radius: 0 8px 8px;
   margin-bottom: 0;
   font-size: 12px;
+  box-shadow: 0 0 10px $black;
 }
