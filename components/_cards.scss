@@ -172,6 +172,21 @@
   background-image: url("../ressources/poule-mange-dans-la-main.jpg");
 }
 
+.la-berjotine {
+  background-image: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%), url("../ressources/la-berjotine.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+  text-decoration: none;
+  text-align: center;
+}
+
+.la-berjotine:hover {
+  transition: 0.3s ease-in-out;
+  background-image: url("../ressources/la-berjotine.png");
+}
+
 .star-wars {
   background-image: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%), url("../ressources/star-wars-empire-base.png");
   background-size: cover;
@@ -188,7 +203,7 @@
 }
 
 .next-portfolio {
-  background-image: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%), url("../ressources/next-portfolio.png");
+  background-image: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%), url("../ressources/next-portfolio2.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -199,7 +214,7 @@
 
 .next-portfolio:hover {
   transition: 0.3s ease-in-out;
-  background-image: url("../ressources/next-portfolio.png");
+  background-image: url("../ressources/next-portfolio2.png");
 }
 
 .haunted-house {
