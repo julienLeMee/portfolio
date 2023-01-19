@@ -584,7 +584,7 @@ const sphereParticles = new THREE.Points(sphereParticlesGeometry, sphereParticle
 sphereParticles.scale.set(0.5, 0.5, 0.5)
 sphereParticles.position.y = - 1.4
 sphereParticles.position.x = 3.3
-scene.add(sphereParticles)
+// scene.add(sphereParticles)
 
 /**
  * Particles
