@@ -6,7 +6,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@200;300;400;500;900&display=swap");
 .main-content {
   height: 100vh;
-  width: 100wh;
+  width: 100vw;
   background-color: #4e5726;
 }
 
@@ -1291,6 +1291,7 @@ body {
   top: 0;
   left: 0;
   outline: none;
+  max-width: 100vw;
 }
 
 iframe {

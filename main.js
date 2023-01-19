@@ -61,6 +61,9 @@ new Typewriter(textAnim, {
 .typeString('<span style="color: #00B8D9;">Three.js</span>')
 .pauseFor(1000)
 .deleteChars(8)
+.typeString('<span style="color: #5F9A41;">Next.js</span>')
+.pauseFor(1000)
+.deleteChars(8)
 .start();
 
 
@@ -579,8 +582,13 @@ const sphereParticlesMaterial = new THREE.MeshNormalMaterial()
 // Points
 const sphereParticles = new THREE.Points(sphereParticlesGeometry, sphereParticlesMaterial)
 sphereParticles.scale.set(0.5, 0.5, 0.5)
-sphereParticles.position.y = - 1.4
-sphereParticles.position.x = 3.3
+if (window.matchMedia("(max-width: 768px)").matches) {
+  sphereParticles.position.y = -1.4
+  sphereParticles.position.x = 0
+} else {
+  sphereParticles.position.y = - 1.4
+  sphereParticles.position.x = 3.3
+}
 scene.add(sphereParticles)
 
 /**
