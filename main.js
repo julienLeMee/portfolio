@@ -541,10 +541,18 @@ mesh2.position.y = - objectsDistance * 1
 mesh3.position.y = - objectsDistance * 2
 mesh4.position.y = - objectsDistance * 3
 
-mesh1.position.x = 2
-mesh2.position.x = - 2
-mesh3.position.x = 2
-mesh4.position.x = - 2
+
+if (window.matchMedia("(max-width: 768px)").matches) {
+  mesh1.position.x = 0
+  mesh2.position.x = 0
+  mesh3.position.x = 0
+  mesh4.position.x = 0
+} else {
+  mesh1.position.x = 2
+  mesh2.position.x = - 2
+  mesh3.position.x = 2
+  mesh4.position.x = - 2
+}
 
 scene.add(mesh2, mesh3, mesh4)
 
