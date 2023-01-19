@@ -582,13 +582,8 @@ const sphereParticlesMaterial = new THREE.MeshNormalMaterial()
 // Points
 const sphereParticles = new THREE.Points(sphereParticlesGeometry, sphereParticlesMaterial)
 sphereParticles.scale.set(0.5, 0.5, 0.5)
-if (window.matchMedia("(max-width: 768px)").matches) {
-  sphereParticles.position.y = -1.4
-  sphereParticles.position.x = 0
-} else {
-  sphereParticles.position.y = - 1.4
-  sphereParticles.position.x = 3.3
-}
+sphereParticles.position.y = - 1.4
+sphereParticles.position.x = 3.3
 scene.add(sphereParticles)
 
 /**
