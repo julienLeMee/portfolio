@@ -550,6 +550,7 @@ if (window.matchMedia("(max-width: 768px)").matches) {
   mesh2.position.x = 0
   mesh3.position.x = 0
   mesh4.position.x = 0
+  mesh1.position.y = -2
 } else {
   mesh1.position.x = 2
   mesh2.position.x = - 2
