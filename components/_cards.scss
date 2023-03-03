@@ -263,32 +263,32 @@
   background-image: url("../ressources/watchlist.png");
 }
 
-.to-do-list {
+// .to-do-list {
+//   background-size: cover;
+//   background-image: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%), url("../ressources/to-do-list.png");
+//   background-position: center;
+//   background-repeat: no-repeat;
+//   border: none;
+//   text-decoration: none;
+// }
+
+// .to-do-list:hover {
+//   transition: 0.3s ease-in-out;
+//   background-image: url("../ressources/to-do-list.png");
+// }
+
+.registration {
+  background-image: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%), url("../ressources/registration.png");
   background-size: cover;
-  background-image: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%), url("../ressources/to-do-list.png");
   background-position: center;
   background-repeat: no-repeat;
   border: none;
   text-decoration: none;
 }
 
-.to-do-list:hover {
+.registration:hover {
   transition: 0.3s ease-in-out;
-  background-image: url("../ressources/to-do-list.png");
-}
-
-.airbnb-react {
-  background-image: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%), url("../ressources/airbnb-clone-react.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  border: none;
-  text-decoration: none;
-}
-
-.airbnb-react:hover {
-  transition: 0.3s ease-in-out;
-  background-image: url("../ressources/airbnb-clone-react.png");
+  background-image: url("../ressources/registration.png");
 }
 
 .business-card {
