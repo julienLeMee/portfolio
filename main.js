@@ -543,6 +543,10 @@ mesh1.position.y = - objectsDistance * 0
 mesh2.position.y = - objectsDistance * 1
 mesh3.position.y = - objectsDistance * 2
 mesh4.position.y = - objectsDistance * 3
+mesh1.scale.set(0.7, 0.7, 0.7)
+mesh2.scale.set(0.7, 0.7, 0.7)
+mesh3.scale.set(0.7, 0.7, 0.7)
+mesh4.scale.set(0.7, 0.7, 0.7)
 
 
 if (window.matchMedia("(max-width: 768px)").matches) {
