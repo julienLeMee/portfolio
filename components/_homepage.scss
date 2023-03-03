@@ -30,7 +30,7 @@
   height: 350px;
   padding: 32px;
   // font-family: $font-name;
-  text-transform: lowercase;
+  text-transform: capitalize;
 }
 
 .name:hover {
@@ -57,15 +57,20 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-}
-
-.name span {
   font-weight: 900;
   font-size: 150px;
   letter-spacing: -8px;
   line-height: 0.8;
   color: $ligth;
 }
+
+// .name span {
+//   font-weight: 900;
+//   font-size: 150px;
+//   letter-spacing: -8px;
+//   line-height: 0.8;
+//   color: $ligth;
+// }
 
 // #hover1:hover {
 //   color: $cerise_noire;
@@ -182,8 +187,8 @@ section:nth-child(odd)
   color: $ligth;
   transform: rotate(-90deg);
   position: absolute;
-  top: 28%;
-  left: -8%;
+  top: 200px;
+  left: -120px;
   text-transform: lowercase;
 }
 
@@ -193,8 +198,8 @@ section:nth-child(odd)
   font-weight: 100;
   color: $ligth;
   position: absolute;
-  top: 4%;
-  left: 4%;
+  top: 20px;
+  left: 40px;
   text-transform: lowercase;
 }
 

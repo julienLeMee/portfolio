@@ -519,6 +519,19 @@ const material = new THREE.MeshToonMaterial({
     gradientMap: gradientTexture
 })
 
+// Set initial material color
+material.color.set(parameters.materialColor)
+
+// Listen for scroll event
+window.addEventListener('scroll', function() {
+  // Calculate new material color based on scroll position
+  const color = new THREE.Color()
+  color.setHSL(window.scrollY / window.innerHeight, 0.7, 0.8) // (hue, saturation, lightness)
+
+  // Set material color
+  material.color.copy(color)
+})
+
 // Meshes
 const objectsDistance = 4
 
