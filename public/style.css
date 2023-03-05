@@ -903,7 +903,7 @@ section:nth-child(odd) {
 
 .skills {
   list-style: none;
-  margin-top: 32px;
+  margin-top: 36px;
   padding: 0;
   max-width: 90%;
   border-radius: 16px;
@@ -922,6 +922,7 @@ section:nth-child(odd) {
   display: flex;
   align-items: center;
   justify-content: center;
+  max-width: 90%;
 }
 
 .skills li img {
@@ -1099,6 +1100,7 @@ section:nth-child(odd) {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    max-width: 100vw;
   }
   .title-writer {
     max-width: 500px;
