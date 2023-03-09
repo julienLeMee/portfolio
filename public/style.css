@@ -636,8 +636,8 @@ section:nth-child(odd) {
   background-image: url("../ressources/threejs.png");
 }
 
-.watchlist {
-  background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.2) 50%), url("../ressources/watchlist.png");
+.sollum {
+  background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.2) 50%), url("../ressources/sollum.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -646,9 +646,9 @@ section:nth-child(odd) {
   text-align: center;
 }
 
-.watchlist:hover {
+.sollum:hover {
   transition: 0.3s ease-in-out;
-  background-image: url("../ressources/watchlist.png");
+  background-image: url("../ressources/sollum.png");
 }
 
 .registration {
