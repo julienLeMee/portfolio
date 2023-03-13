@@ -142,8 +142,22 @@
   max-width: 80%;
 }
 
-.test-technique {
-  background-image: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%), url("../ressources/test-technique.png");
+// .test-technique {
+//   background-image: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%), url("../ressources/test-technique.png");
+//   background-size: cover;
+//   background-position: center;
+//   background-repeat: no-repeat;
+//   border: none;
+//   text-decoration: none;
+// }
+
+// .test-technique:hover {
+//   transition: 0.3s ease-in-out;
+//   background-image: url("../ressources/test-technique.png");
+// }
+
+.disney {
+  background-image: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%), url("../ressources/disney2.jpeg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -151,9 +165,9 @@
   text-decoration: none;
 }
 
-.test-technique:hover {
+.disney:hover {
   transition: 0.3s ease-in-out;
-  background-image: url("../ressources/test-technique.png");
+  background-image: url("../ressources/disney2.jpeg");
 }
 
 
