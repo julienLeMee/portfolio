@@ -539,6 +539,7 @@ section:nth-child(odd) {
   background-repeat: no-repeat;
   border: none;
   text-decoration: none;
+  text-align: center;
 }
 
 .disney:hover {
