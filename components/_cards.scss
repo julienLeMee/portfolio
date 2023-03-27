@@ -294,6 +294,22 @@
   background-image: url("../ressources/sollum.png");
 }
 
+.tesla {
+  background-image: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%), url("../ressources/tesla.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+  text-decoration: none;
+  text-align: center;
+
+}
+
+.tesla:hover {
+  transition: 0.3s ease-in-out;
+  background-image: url("../ressources/tesla.png");
+}
+
 // .to-do-list {
 //   background-size: cover;
 //   background-image: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%), url("../ressources/to-do-list.png");
@@ -322,19 +338,19 @@
   background-image: url("../ressources/registration.png");
 }
 
-.business-card {
-  background-image: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%), url("../ressources/business-card.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  border: none;
-  text-decoration: none;
-}
+// .business-card {
+//   background-image: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%), url("../ressources/business-card.png");
+//   background-size: cover;
+//   background-position: center;
+//   background-repeat: no-repeat;
+//   border: none;
+//   text-decoration: none;
+// }
 
-.business-card:hover {
-  transition: 0.3s ease-in-out;
-  background-image: url("../ressources/business-card.png");
-}
+// .business-card:hover {
+//   transition: 0.3s ease-in-out;
+//   background-image: url("../ressources/business-card.png");
+// }
 
 .projet-perso h2 {
   display: flex;
