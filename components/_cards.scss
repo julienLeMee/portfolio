@@ -217,8 +217,8 @@
   background-image: url("../ressources/star-wars-empire-base.png");
 }
 
-.next-portfolio {
-  background-image: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%), url("../ressources/portfolio-next.jpeg");
+.yum-list {
+  background-image: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%), url("../ressources/yum-list.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -227,9 +227,9 @@
   text-align: center;
 }
 
-.next-portfolio:hover {
+.yum-list:hover {
   transition: 0.3s ease-in-out;
-  background-image: url("../ressources/portfolio-next.jpeg");
+  background-image: url("../ressources/yum-list.png");
 }
 
 .haunted-house {
