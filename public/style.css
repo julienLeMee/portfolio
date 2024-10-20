@@ -653,7 +653,7 @@ section:nth-child(odd) {
 }
 
 .tesla {
-  background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.2) 50%), url("../ressources/tesla.png");
+  background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.2) 50%), url("../ressources/tesla.jpeg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -664,7 +664,7 @@ section:nth-child(odd) {
 
 .tesla:hover {
   transition: 0.3s ease-in-out;
-  background-image: url("../ressources/tesla.png");
+  background-image: url("../ressources/tesla.jpeg");
 }
 
 .registration {
